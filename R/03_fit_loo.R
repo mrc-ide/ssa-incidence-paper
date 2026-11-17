@@ -23,6 +23,9 @@ stopifnot(!anyDuplicated(studies$doi))
 progress_file <- file.path(path_fits, "loo_progress.log")
 cat("", file = progress_file)
 
+# Fit the cohort slope prior once here, so the forked workers share it
+invisible(slope_prior())
+
 loo <- parallel::mclapply(studies$doi, function(x) {
   df <- model_frame(filter(data, doi != x), years_main)
   # One thread per fit: parallelism is across studies

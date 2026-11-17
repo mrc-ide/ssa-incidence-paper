@@ -7,6 +7,7 @@
 #'   coefficients_<variant>.csv          exp(fixed effects) and exp(internal hyperparameters)
 #'   main_predictions.csv                Fig 2: log ratio by recruitment type, sex and year
 #'   modelled_correlation.csv            Fig S1: weighted correlation of empirical and modelled incidence
+#'   cohort_slope_prior.csv              prior for the SD of study random slopes, from the cohorts
 #'
 #' Zenodo: to start here without regenerating the data from the original files,
 #' download the analysis datasets from https://doi.org/10.5281/zenodo.24284889
@@ -53,61 +54,73 @@ model_frame <- function(data, years, anchor_year = reference_year) {
         study_type %in% c("Cross-sectional incidence", "Retrospective Cohort") ~ study_type
       ) %>%
         factor(levels = c("aaprospective", "Cross-sectional incidence", "Retrospective Cohort")),
-      # Recruitment type varies fastest within year
-      id.year.recruitment = (match(year, years) - 1L) * length(recruitment_levels) + as.integer(recruitment_type)
-    )
+      slope_idx = study_idx
+    ) %>%
+    # Covariate for the study random slope: scaled year centred on the study's
+    # pys-weighted mean year. It is 0 for single-year studies, so only studies
+    # observed in 2+ years inform (or are affected by) the slopes. NA on grid rows.
+    group_by(study_idx) %>%
+    mutate(slope_x = std_year - weighted.mean(std_year, pys)) %>%
+    ungroup() %>%
+    mutate(slope_x = ifelse(is.na(study_idx), NA_real_, slope_x))
 }
 
-#' Constraints identifying the time trends.
-#' Shared RW2 by sex: level and (scaled-year) slope are zero at the reference
-#' year, so the linear trend is carried by the fixed effects.
-#' Year x recruitment type RW2 deviations: zero level and zero slope (from the
-#' previous year) at the reference year for each type, and summing to zero over
-#' types in every other year.
-model_constraints <- function(years, anchor_year = reference_year) {
-  n_years <- length(years)
-  n_types <- length(recruitment_levels)
-  anchor_i <- match(anchor_year, years)
-  previous_i <- match(anchor_year - 1L, years)
-  stopifnot(!is.na(anchor_i), !is.na(previous_i))
+#' Prior for the SD of study random slopes on scaled year, from the population
+#' cohorts (the studies with long within-study follow-up): a cohort-only model with
+#' a cohort intercept and random slope (PC priors, 1% probability an SD exceeds 1).
+#' Returns the posterior mean and precision of the slopes' log precision, used as
+#' a normal prior on the log precision in the main model.
+cohort_slope_prior <- function(data = read_analysis_data()) {
+  co <- data %>%
+    filter(doi %in% cohort_dois) %>%
+    mutate(std_year = (year - reference_year) / 5) %>%
+    group_by(doi) %>%
+    mutate(slope_x = std_year - weighted.mean(std_year, pys)) %>%
+    ungroup() %>%
+    mutate(cohort_idx = as.integer(factor(doi)), slope_idx = cohort_idx, obs_iid = row_number())
+  pc_sd <- list(prec = list(prior = "pc.prec", param = c(1, 0.01)))
+  fit <- inla(infections ~ 1 + std_year * sex +
+                f(cohort_idx, model = "iid", hyper = pc_sd) +
+                f(slope_idx, slope_x, model = "iid", hyper = pc_sd) +
+                f(obs_iid, model = "iid", hyper = pc_sd) +
+                offset(log(extrapolated_value)),
+              family = "xpoisson", data = co, E = pys)
+  m <- fit$internal.marginals.hyperpar[["Log precision for slope_idx"]]
+  mean <- inla.emarginal(identity, m)
+  sd <- sqrt(inla.emarginal(function(x) x^2, m) - mean^2)
+  q <- inla.qmarginal(c(0.975, 0.5, 0.025), m)
+  list(mean = mean, prec = 1 / sd^2, sd_slope = exp(-q / 2))
+}
 
-  index <- function(year_i, type_i) (year_i - 1L) * n_types + type_i
-
-  A_level <- A_slope <- matrix(0, nrow = n_types, ncol = n_years * n_types)
-  for (type_i in seq_len(n_types)) {
-    A_level[type_i, index(anchor_i, type_i)] <- 1
-    A_slope[type_i, index(previous_i, type_i)] <- -1
-    A_slope[type_i, index(anchor_i, type_i)] <- 1
+#' Computed once per session (the same prior for every variant and leave-one-out fit)
+slope_prior <- local({
+  cache <- NULL
+  function() {
+    if (is.null(cache)) cache <<- cohort_slope_prior()
+    cache
   }
-  sum_years <- setdiff(seq_len(n_years), c(previous_i, anchor_i))
-  A_sum <- matrix(0, nrow = length(sum_years), ncol = n_years * n_types)
-  for (row_i in seq_along(sum_years)) A_sum[row_i, index(sum_years[row_i], seq_len(n_types))] <- 1
+})
 
-  #' RW2 structure scaled to unit generalised variance (as scale.model = TRUE), so
-  #' the precision is on the same scale as the sex-specific RW2
-  Q_rw2 <- inla.scale.model(dfertility::make_rw_structure_matrix(n_years, 2),
-                            constr = list(A = rbind(rep(1, n_years), seq_len(n_years)), e = c(0, 0)))
-
-  list(
-    A_year = rbind(as.numeric(years == anchor_year), as.vector(scale(years - anchor_year))),
-    Q_interaction = kronecker(Q_rw2, as(diag(1, n_types), "sparseMatrix")),
-    A_interaction = rbind(A_level, A_slope, A_sum),
-    rankdef = n_years + n_types - 1
-  )
+#' Constraint identifying the shared RW2 by sex: level and (scaled-year) slope
+#' are zero at the reference year, so the linear trend is carried by the fixed
+#' effects. (A recruitment type x year RW2 deviation was dropped: with study
+#' random slopes its SD was estimated at zero and the fixed effects were unchanged.)
+model_constraints <- function(years, anchor_year = reference_year) {
+  stopifnot(anchor_year %in% years)
+  list(A_year = rbind(as.numeric(years == anchor_year), as.vector(scale(years - anchor_year))))
 }
 
 fit_model <- function(df, years, family = "xpoisson", measurement = FALSE, num.threads = NULL,
-                      anchor_year = reference_year) {
+                      anchor_year = reference_year, slope_hyper = slope_prior()) {
   cons <- model_constraints(years, anchor_year)
+  slope_prec <- list(prec = list(prior = "normal", param = c(slope_hyper$mean, slope_hyper$prec)))
   formula <- infections ~ 0 + sex_int * std_year + recruitment_type +
     f(year2, model = "rw2", replicate = binary_sex, scale.model = TRUE,
       extraconstr = list(A = cons$A_year, e = matrix(0, nrow = 2))) +
-    # PC prior: 1% probability that the typical deviation of a recruitment type's
-    # trend from the shared trend exceeds 0.5 on the log scale
-    f(id.year.recruitment, model = "generic0", Cmatrix = cons$Q_interaction, rankdef = cons$rankdef,
-      hyper = list(prec = list(prior = "pc.prec", param = c(0.5, 0.01))),
-      extraconstr = list(A = cons$A_interaction, e = matrix(0, nrow = nrow(cons$A_interaction)))) +
     f(study_idx, model = "iid", constr = TRUE) +
+    # Study random slopes, so a single study's within-study trend (e.g. Seri 2018,
+    # 18% of person-years) cannot set the shared year effect; prior from the cohorts
+    f(slope_idx, slope_x, model = "iid", hyper = slope_prec) +
     f(obs_iid, model = "iid") +
     offset(log(extrapolated_value))
   if (measurement) formula <- update(formula, . ~ . + study2)
@@ -134,7 +147,7 @@ variants <- list(
   spectrum_national = list(data = "spectrum_national", years = years_main),
   since_2010 = list(data = "", years = 2010:2022),
   # Observations from 2015, so this variant is anchored at 2015 (no data in the
-  # main reference year); the grid keeps 2014 for the 2014-15 slope constraint
+  # main reference year); the grid keeps 2014 as in the submitted analysis
   since_2015 = list(data = "", years = 2014:2022, anchor_year = 2015L, prepare = function(d) filter(d, year > 2014)),
   # Measurement method, total population only (FSW/MSM observations excluded; their grid rows kept)
   measurement = list(data = "", years = years_main, measurement = TRUE,
@@ -204,6 +217,10 @@ if (sys.nframe() == 0L) {
   to_run <- commandArgs(trailingOnly = TRUE)
   if (length(to_run) == 0) to_run <- names(variants)
   stopifnot(all(to_run %in% names(variants)))
+
+  with(slope_prior(), tibble(log_prec_mean = mean, log_prec_sd = 1 / sqrt(prec),
+                             sd_slope_lower = sd_slope[1], sd_slope_median = sd_slope[2], sd_slope_upper = sd_slope[3])) %>%
+    write_csv(file.path(path_fits, "cohort_slope_prior.csv"))
 
   for (name in to_run) {
     res <- run_variant(name)

@@ -238,6 +238,9 @@ record("Results", "Correlation of log empirical and log modelled incidence (zero
        with(read_fit("modelled_correlation.csv") %>% filter(zero_incidence == "omit_zero"),
             sprintf("%.2f (%.2f-%.2f)", r, lower, upper)))
 
+record("Methods", "Prior for study slope SD per 5 years, from population cohorts (median, 95% CrI)",
+       with(read_fit("cohort_slope_prior.csv"),
+            sprintf("%.2f (%.2f, %.2f)", sd_slope_median, sd_slope_lower, sd_slope_upper)))
 record("Abstract; Results", "Calendar time per five years", coef_txt(main, "std_year"))
 record("Abstract; Results", "Population cohorts and UTT trials", coef_txt(main, type_term("UTT/Cohort")))
 record("Abstract; Results", "Nationally-representative household surveys", coef_txt(main, type_term("National HHS")))
@@ -281,9 +284,9 @@ table_1_rows <- tribble(
   "Sex [male] : five-year interaction", "sex_int:std_year",
   "Random effect standard deviation", NA,
   "Study (IID)", "SD for study_idx",
+  "Study slope per 5 years (IID)", "SD for slope_idx",
   "Observation (IID)", "SD for obs_iid",
-  "Sex-specific time trend (RW2)", "SD for year2",
-  "Study type-specific time trend (RW2)", "SD for id.year.recruitment"
+  "Sex-specific time trend (RW2)", "SD for year2"
 )
 
 studies_by_type <- data %>% distinct(doi, recruitment_type) %>% count(recruitment_type, name = "n_studies")
