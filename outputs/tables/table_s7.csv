@@ -1,0 +1,21 @@
+parameter,estimate
+Study recruitment type/population (N studies),
+Matched modelled estimates,1.00 (Reference)
+Studies representative of the total adult population,
+Population cohort studies and UTT trials [control clusters],"1.16 (0.73, 1.84)"
+Nationally-representative household surveys,"1.56 (0.82, 2.94)"
+Other household surveys,"1.45 (0.96, 2.19)"
+Studies not representative of the total adult population,
+"Clinical trials, excluding UTT trials [control arms]","2.64 (1.81, 3.87)"
+Pregnant/post-partum women,"2.38 (1.53, 3.72)"
+Other studies,"2.00 (1.32, 3.02)"
+Convenience sample from total population,"1.49 (0.52, 4.23)"
+HIV incidence measurement method,
+Prospective cohorts,1.00 (Reference)
+Retrospective cohorts,"0.96 (0.53, 1.76)"
+Cross-sectional assay,"0.77 (0.44, 1.32)"
+Sex,
+Female,1.00 (Reference)
+Male,"0.88 (0.82, 0.94)"
+Per 5 calendar years [reference year = 2014],"0.95 (0.85, 1.08)"
+Sex [male] : five-year interaction,"0.89 (0.85, 0.93)"

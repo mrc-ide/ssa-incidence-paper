@@ -1,0 +1,356 @@
+StudyClass,study_type,author,pubyear,doi/url,sexual_activity,method,mdri,med_age,IQR,representative,remove,study_name,notes,UR,full_inclusion,new,transactional_sex,all_sti,chlam,syph,gon,trich,hsv
+PC,,Abaasa,2015,10.1186/S13104-015-1804-6,,,,,,0,1,,Remove: HR FF,,,,,,,,,,
+PC,,Akullian,2017,10.1097/QAD.0000000000001553,,,,,,0,1,,Remove: AHRI (have agg data),,,,,,,,,,
+CT,HIVPT,Altini,2010,10.1016/j.contraception.2010.04.019,9999,,,27,,Specified inclusion criteria,,Carraguard Phase II,,periurban,"Eligible participants were HIV-negative women 18 years or older, who were in good health based on medical history, physical examination and laboratory screening tests. Participants were recruited from peri-urban family planning and general health clinics in Gugulethu (outside Cape Town) and Ga-Rankuwa (near Pretoria) and had to be willing and able to comply with the study protocol and give informed consent. Women were excluded if they were pregnant or wanted to become pregnant at the time of study participation; had had a delivery, abortion or genital surgery within six weeks of screening; had a recent history of non-menstrual vaginal bleeding with intercourse; had a clinically detectable genital abnormality; had clinical signs of a reproductive tract infection (defined as the presence of a genital ulcer visible to the naked eye; an abnormal vaginal discharge or purulent cervicitis; or untreated positive STI test result); had an abnormal Pap smear; had a history of sensitivity/allergy to latex; were participating in a trial of another vaginal product; or reported injection of recreational drugs.",,,,,,,,
+SCS,PC,Aulagnier,2011,10.1371/journal.pone.0025860,,,,,,Representative,,,,,HHS,,,,,,,,
+CSI,CSI,Auvert,2013,10.1371/journal.pmed.1001509,,BED,,,,Representative,,ANRS-12126/Bophelo Pele,Remove: BED,,HHS,,,,,,,,
+CT,,Baeten,2012,10.1056/NEJMoa1108524,Sexual adjust,,,30,,0,1,,Remove: HR serodiscordant couple,,,,,,,,,,
+CT,HIVPT,Auvert,2005,10.1371/journal.pmed.0020298,,,,21,,No inclusion criteria,,ANRS 1265,,periurban,Male 18-24; reside in Orange Farm or surrounding areas,,,,,,,,
+CT,HIVPT,Baeten,2016,10.1056/NEJMoa1506110,90,,,26,,Specified inclusion criteria,,MTN-020/ASPIRE,,,"1) Age 18 through 45 years (inclusive) at screening,
+2) Able and willing to provide written informed consent to be screened for and to take part in the study
+3) Able and willing to provide adequate locator information
+4) HIV uninfected based on testing performed at screening and enrollment
+5) Per participant report, sexually active, defined as having vaginal intercourse at least once in the 3 months prior to screening
+6) Using an effective method of contraception at enrollment, and intending to use an effective method for the duration of study
+participation; effective methods include hormonal methods (except contraceptive rings); intrauterine device (IUD); and
+sterilization (of participant)",,6,,11,,4,,
+PC,HIVPT,Bailey,2007,10.1016/S0140-6736(07)60312-2,365,,,20,19-22,Specified inclusion criteria,,,,,Sexually active last 12mo. Kisumu district resident,,18,,4,0.6,2,2,
+,PC,Bahemuka 2020,2020,10.1371/journal.pone.0231640,,,,,,,1,,Remove: HR,,,1,,,,,,,
+PC,CT,Balkus,2015,10.1097/QAI.0000000000000715,Sexual adjust,,,,,0,1,,Remove: VOICE re-analysis,,,,,,,,,,
+STA,,Balkus,2016,10.1016/j.contraception.2015.10.010,Sexual adjust,,,25,,0,1,,Remove: HPTN035 reanalysis,,,,,,,,,,
+CSI,CSI,Bernasconi,2010,10.1016/j.jcv.2010.04.010,Pregnant,Old avidity assay,,,,0,1,,Remove: BED,,,,,,,,,,
+PC,PC,Bhowan,2012,10.4102/ajlm.v1i1.4,,,,,,0,1,,Remove: No incidence data,,,,,,,,,,
+PC,PC,Biraro,2013,10.1111/tmi.12176,,,,,,1,1,Uganda GPC,Remove: GPC (have agg data),,,,,,,,,,
+PC,,Birdthistle,2013,10.1007/s10461-012-0378-8,,,,,,0,1,,Remove: Subanalysis of GPC SW UGA,,,,,,,,,,
+CSI,CSI,Lissouba,2011,10.1186/1471-2334-11-253,,BED,,,,Representative,,,Remove: BED,urban,HHS,,,,,,,,
+PC,PC,Borgdorff,2018,10.1016/S2352-3018(18)30025-0,,,,,,0,1,,Remove: Kisumu HDSS (have agg data),,,,,,,,,,
+PC,,Borgdorff,2015,10.1097/OLQ.0000000000000245,,,,,,0,1,,Remove: (HR) FSW,,,,,,,,,,
+PC,PC,Byrne,2016,10.1016/S1473-3099(15)00429-6,,,,,,Specified inclusion criteria,,FRESH,,,"We included women aged 18–23 years residing in Umlazi, South Africa, who were able to understand the information and consent forms, willing to adhere to study requirements, and willing to give voluntary consent for participation. We excluded individuals with unknown HIV status and unwilling to have HIV tests done; unwilling to consent to blood storage; enrolled in any other study that involves frequent blood sampling or might otherwise interfere with this study; with any conditions or conflict that is likely to prevent adherence to the study protocol and that might interfere with the outcome of the study, particularly adherence to the follow-up schedule, such as low likelihood to stay in or near Umlazi in the next 2–4 years or a chronic condition that requires regular blood sampling; pregnancy; and haemoglobin concentrations of less than 10 g/dL. ",,,,13,,6,11,4
+PC,PC,Cawley,2014,10.1186/1471-2334-14-159,,,,,,1,1,,Remove: Kisesa (have agg data),rural,,,,,,,,,
+PC,PC,Chetty,2017,10.1186/s12884-017-1421-6,Sexual adjust,,,24,,0,1,,Remove: AHRI (have agg data),,,,,,,,,,
+PC,PC,Baisley,2018,10.1371/journal.pone.0208689,,,,,,0,1,,Remove: AHRI (have agg data),,,,,,,,,,
+STA,,Christofides,2014,10.7448/IAS.17.1.18585,Sexual adjust,,,,,0,1,,Remove:  reanalysis of Stepping Stones,,,,,,,,,,
+PC,PC,De Schacht,2014,10.7448/IAS.17.1.18808,Pregnant,,,24,20-29,No inclusion criteria,,,,rural,"Women aged ≥18 years who delivered in a study health facility or attended a postnatal visit within two months of delivery, and tested HIV-negative at that time, were invited to participate.",,,,,,,,
+CT,HIVPT,Delany-Moretlwe,2018,10.1016/S1473-3099(18)30428-6,30,,,23,,Specified inclusion criteria,,FACTS-001,,,"sexually active (defined as reporting at least two episodes of vaginal intercourse in the previous 30 days). Participants were enrolled if they were not pregnant (breastfeeding women were not excluded), agreed to use an effective modern method of contraception as well as condoms",,,,,,,,40
+,CSI,Braunstein,2011,10.1371/journal.pone.0024321,,BED,,,,,1,,Remove: BED,,,,,,,,,,
+,RCT,Celum 2021,2021,10.1371/journal.pmed.1003670,30,,,,,,PrEP,HPTN082,Remove: HR risk score,,,1,,,,,,,
+PC,,Dobra,2017,10.1097/QAD.0000000000001292,,,,,,0,1,,Remove: AHRI (have agg data),,,,,,,,,,
+PC,,Dzomba,2019,10.1186/s12889-019-6494-x,,,,,,0,1,,Remove: AHRI (have agg data),,,,,,,,,,
+PC,PC,Egbe,2016,10.1155/2016/7397695,Pregnant,,,,,No inclusion criteria,,,,,"This was a hospital based cohort study of women attending antenatal care (ANC) clinics and labour rooms of the maternity units of seven healthcare facilities in the Fako Division, South West Region, Cameroon, during the period between September 12 and December 4, 2011. Study participants were women who attended their booking or first antenatal care visit in any of the seven selected health facilities in the last six months and for whom an HIV test was done using the Determine test strips on this booking (first) ANC visit between 16 and 20 weeks of gestation. ",,,,,,,,
+PC,PC,Abrahams 2021,2021,10.1097/QAD.0000000000002779,,,,24,,Specified inclusion criteria,,Rape Impact Cohort Evaluation study,,,"Women aged 16–40 years old were enrolled into a comparative cohort study, the Rape Impact Cohort Evaluation study. Women who attended postrape services after rape exposure (defined as nonconsensual penile-vaginal penetration) were included in the exposed group. Women in the control group were recruited from primary healthcare (PHC) clinics. Women recruited at PHC clinics were screened for lifetime exposure to rape/forced sex and were excluded if childhood, intimate partner or nonpartner rape/forced sex were reported. Also excluded from both arms were women enrolled in other studies, more than 14 weeks pregnant or who were lactating, since HIV-positive lactating women are managed by different protocols.",1,8,,,,,,53
+PC,,Chimbindi,2018,10.1371/journal.pone.0203193,,,,,,0,1,,Remove: AHRI (have agg data),,,,,,,,,,
+PC,PC,Geis,2011,10.1097/QAI.0b013e3182118fa3,,,,,,No inclusion criteria,,,,Ghana: Urban area in Mbeya town. Itende: semiurban village near Mbeya,"Between September 2002 and April 2003, we used two different approaches to recruit 3,096 volunteers of both sexes from Mbeya Region in South-western Tanzania. Volunteers from Ghana ward, an urban area in Mbeya Town, and from Itende, a small semi-urban village close to Mbeya town, were recruited in a door-to-door campaign. A third subgroup of volunteers was recruited by advertisement in all wards of Mbeya Town. During the door-to-door campaign trained staff visited all households in the designated study areas to inform them about the planned cohort study and to invite all eligible household members to community meetings. The “advertisement” recruitment strategy involved use of IRB approved banners, fliers, posters and public announcements in Mbeya town in order to also invite potential participants to our community meetings. ",,,,,,,,
+RC,RC,Grabbe,2015,10.1521/aeap.2015.27.4.350,,,,,,Specified inclusion criteria,,,,,"Records were reviewed for all clients aged 15 years and older for whom an intake form was completed, including assignment of a CID, and test results recorded at any of the HTC sites during the 4.5-year data collection period. A confirmed re-tester was defined as anyone who received an initial HIV test and at least one subsequent HIV test documented during the data collection period. Confirmation of the re-test was performed by matching CIDs recorded on the intake forms. Seroconverters were defined as individuals who initially tested HIV-negative and who subsequently tested HIV-positive within the data collection period",,,,,,,,
+CT,,Gray,2011,10.1016/S1473-3099(11)70098-6,Sexual adjust,,,22,,0,1,,Remove: Included in long term follow up of HVTN 503/Phambili,,,,,,,,,,
+CT,,Gray,2014,10.1016/S1473-3099(14)70020-9,,,,,,0,1,,Remove: Included in long term follow up of HVTN 503/Phambili,,,,,,,,,,
+CT,HIVPT,Gray,2012,10.1097/QAD.0b013e3283504a3f.,,,,,,No inclusion criteria,,,,rural,"Our aim was to enrol 5000 HIV-negative, uncircumcised men aged 15–49 years who agreed to receive their HIV results through voluntary counselling and HIV testing provided by the study, and who consented to be randomly assigned to receive circumcision within about 2 weeks of enrolment (intervention group), or to have circumcision delayed for 24 months (control group).",,2 MSW,,,,,,
+PC,PC,DeSchacht,2014,10.1371/journal.pone.0115014,Sexual adjust,,,24,20-29,0,1,,Remove: subanalysis of 10.7448/IAS.17.1.18808,,,,,,,,,,
+PC,,Gregson,2011,10.1111/j.1728-4457.2011.00413.x,,,,,,0,1,,Remove: Manicaland (have agg data),,,,,,,,,,
+PC,,Gregson,2011,10.1097/OLQ.0b013e3182080877,,,,,,0,1,,Remove: Manicaland (have agg data),,,,,,,,,,
+PC,,Gregson,2017,10.1136/bmjopen-2017-015898,,,,,,0,1,,Remove: Manicaland (have agg data),,,,,,,,,,
+PC,,Harling,2014,10.1097/QAI.0000000000000198,,,,,,0,1,,Remove: AHRI (have agg data),,,,,,,,,,
+PC,,Harling,2015,10.1007/s10461-014-0952-3,,,,,,0,1,,Remove: AHRI (have agg data),,,,,,,,,,
+PC,PC,Dinh,2015,10.1371/journal.pone.0125525,Pregnant,,,27,,Representative,,,,,we conducted a facility-based survey designed to recruit a representative sample of infants aged 4–8 weeks from all nine provinces in SA. we only included mother-infant pairs in which the mother had ≥ 1 antenatal care (ANC) visit and their infants aged 4–8 weeks had provided an appropriate iDBS sample for HIV testing,,,,,,,,
+PC,,Fatti,2017,10.1371/journal.pone.0181691,Sexual adjust,,,23,,0,1,,Remove: intervention study,,,,,,,,,,
+PC,PC,Humphrey,2010,10.1136/bmj.c6580,Pregnant,,,,,No inclusion criteria,,,,,"Between November 1997 and January 2000, mothers and their newborn infants at 14 maternity clinics and hospitals in greater Harare, Zimbabwe, were enrolled within 96 hours of delivery.11 12 Mother-infant pairs were eligible if the infant was a singleton with birth weight greater than or equal to 1500 g, the mother planned to stay in Harare after delivery, and neither mother nor infant had an acutely life threatening condition. ",,,,,,,,
+PC,PC,Imade,2013,https://pubmed.ncbi.nlm.nih.gov/24689325/,Pregnant,,,,,No inclusion criteria,,,,,"The pregnant women included in this evaluation had been seen in delivery between March 2010-January 2012 at one of three Harvard/APIN PEPFAR sites: the Jos University Teaching Hospital (JUTH), a governbment tertiary health centre, Our Lady of Apostles (OLA) Hospital, a faith based hispital and Solat Women's Hospital, a private health facility",,,,,,,,
+SCS,SCS,Isingo,2012,10.1111/j.1365-3156.2011.02877.x,,,,,,0,1,,Remove: No incidence data,,,,,,,,,,
+CT,CT,Iwuji,2018,10.1016/S2352-3018(17)30205-9,,,,,,0,1,,Remove: TasP (have agg data),,,,,,,,,,
+CT,CT,Jewkes,2008,10.1136/bmj.a506 ,,,,19,,No inclusion criteria,,Stepping Stones,,rural,"In each cluster we recruited about 20 men and 20 women volunteers. Those eligible were aged 16-23, normally resident in the village where they were at school, and mature enough to understand the study and the consent process. There was a difference between the actual and intended age of participants, which is discussed in detail elsewhere.13 Most were recruited from schools. In each cluster recruitment started with general community mobilisation, and the study was explained to key local figures. In most villages the chief (or his representative) called a monthly community meeting. Typically the staff member attended and made a brief presentation and then took questions from the community, including from parents of potential participants. After the community meeting project staff went to the school to raise interest in the study and invited possible participants to a meeting. Here they explained the study to a group of about 60 young men and women in the targeted age group. Names were taken and the group was asked to decide on the 40 people who were most likely to be able to participate in the study. The presenter read aloud the study’s consent form to the 40 and gave an opportunity for questions. The form explained the procedures that would occur in some detail. After the group presentation we asked for confirmation that there was still general interest in participation and asked the young people to talk with their families before committing themselves. Each potential participant received a Xhosa language leaflet describing the study in terms understandable to a lay audience. Those who decided to participate were asked to report at an assigned time anywhere from two to seven days later. At that time, they provided and signed formal informed consent forms and study recruitment was finalised.",,22 FSW; 27 MSW/CFSW,,,,,,31 F; 10 M
+PC,PC,Justman,2017,10.1016/S2352-3018(16)30190-4,,,,,,Representative,,,,,HHS,,,,,,,,
+PC,PC,Kamali,2016,10.1136/sextrans-2015-052179,,,,,,0,1,Uganda GPC,Remove: GPC (have agg data),rural,,,,,,,,,
+,PC,Folayan 2022,2022,10.1371/journal.pone.0268011,,,,,,,PrEP,,Remove: HR serodiscordant couples,,,1,,,,,,,
+CT,HIVPT,Karim,2010,10.1126/science.1193748,30,,,24,,Specified inclusion criteria,,CAPRISA 004,,,"HIV negative women, from 18 to 40 years, who were sexually active (defined as having engaged in vaginal sex at least twice in the 30 days prior to screening), not pregnant, and using a non-barrier form of contraceptive were eligible for enrolment. Participants who had a history of adverse reactions to latex, planned to either travel away from the study site for more than 30 consecutive days, relocate away from the study site, become pregnant, or enroll in any other behavioral or investigational product study were excluded. Participants who had a creatinine clearance <50ml/min, (22), had evidence of genital deep epithelial disruption, had in the past year participated in any research related to any vaginally applied product/s, or had an untreated STI or reproductive tract infection were also excluded. ",,,,,,,,49
+CT,HIVPT,Karim,2011,10.1097/QAD.0b013e32834541d9,90,,,26,17-24,Specified inclusion criteria,,HPTN035,,urban,"HIV negative non-pregnant women, at least 18 years of age, who were sexually active, defined as having had vaginal intercourse at least once in the past three months were eligible for the study. The exclusion criteria included a history of adverse reactions to latex, use of non-therapeutic injection drugs in the past 12 months, and a history of vaginal intercourse more than an average of two times per day in the past two weeks.",,,,,,,,
+PC,PC,Karim,2011,10.1093/ije/dyq176,90,,,22,18-23,0,1,,Remove: Replicate of Karim et al 2012,Vulindlela: rural; eThekwini: urban,,,,,,,,,
+PC,PC,Karim,2012,10.1007/s10461-012-0209-y,90,,,22,18-23,Specified inclusion criteria,,,Recruited from FP and STI clinic..,Vulindlela: rural; eThekwini: urban,"This prospective open cohort study recruited volunteers between March 2004 and May 2007 from a public sector rural family planning (FP) clinic and an urban STI clinic in the province of KwaZulu-Natal, South Africa. Following individual written informed consent, sexually active, HIV uninfected women aged 14–30 years were enrolled. ",,,,,,,,
+CSI,,Grebe,2018,10.1371/journal.pone.0203638,,Recency,,,,0,1,,Remove: AHRI (have agg data),,,,,,,,,,
+CSI,,Kharsany,2010,10.1080/09540120903254005,,RNA backcalculation,,27,,0,1,,Remove: HR STD clinic,,,,,,,,,,
+CSI,CSI,Mohammed,2014,https://www.cabidigitallibrary.org/doi/full/10.5555/20143418989,,BED,,,,Specified inclusion criteria,,,Remove: BED,,,,,,,,,,
+PC,,Kilburn,2018,10.1097/QAD.0000000000001866,,,,,,0,1,,Remove: HR FSW,,,,,,,,,,
+CSI,CSI,Otecko,2016,10.1038/srep37964,90,Lag,,21,,Specified inclusion criteria,,,,,"Through convenience sampling, the study enrolled male or female residents of Kisumu aged 16–34 years, sexually active in the past three months, not pregnant, and HIV uninfected",,,,,,,,
+PC,PC,Kim,2014,10.1080/09540121.2013.824536,Pregnant,,,,,Specified inclusion criteria,,,,,"Pregnant women were eligible if they were HIV-uninfected, aged ≥16 years, had a gestational age of ≤32 weeks, and lived ≤30 kilometers from TDH. Women were excluded if they were enrolled in an antiretroviral HIV prevention trial. Study staff enrolled eligible pregnant women by convenience sampling over a 3-month period.",,,,,,,,
+RC,RC,Kinuthia,2010,UNKNOWN-KINUTHIA,,,,,,Specified inclusion criteria,,,,,,,,,,,,,
+PC,PC,Kinuthia,2015,10.1097/QAD.0000000000000793,Pregnant,,,22,,No inclusion criteria,,,,rural,"Between May 2011 and June 2013, we recruited HIV-seronegative pregnant women seeking ANC at the Ahero sub-District and Bondo District Hospitals in rural western Kenya into a prospective cohort study. Women were eligible for inclusion if they were pregnant, ≥14 years of age, had a documented HIV-negative rapid HIV test at enrollment or ≤3 months prior during routine care, planned to reside in the study area until 9 months postpartum, would provide locator information and have a home visit, and were not participating in other research. Women who were 28–36 weeks gestation, calculated by last menstrual period, were initially eligible; eligibility criteria were expanded to include women 14–28 weeks gestation in June 2011, >36 weeks gestation in November 2011 and <14 weeks gestation in March 2012. Gestational age eligibility criteria were broadened to increase enrollment, and generalize to women throughout the pregnancy/postpartum continuum. Enrollment at <14 weeks gestation required a protocol modification to incorporate urine pregnancy test confirmation.",,10,,5,1,3,6,
+CT,CT,Homsy,2019,10.1371/journal.pone.0212119,Pregnant,,,24,20-28,No inclusion criteria,,PRIMAL,,urban,"Inclusion criteria for women were: age 18–49 years; confirmed pregnancy (at any gestational age); documented HIV-negative sero-status at the time of screening; and intention to breastfeed. Partners’ inclusion criteria were: age ≥18 years; being recognized by the eligible pregnant woman as her current husband/partner for at least 3 months. Additional inclusion criteria for all included: a) residing within 30 km of the study clinic and not planning to move; b) agreeing to come the study clinic for scheduled appointments, to undergo study procedures, and to be called or visited at home by trained home visitors as needed to ensure retention; c) absence of medical condition likely to interfere with participants’ ability to adhere to study procedures; and e) providing written informed consent.",,,,0.7,1.2,0.2,0.7,
+PC,PC,Kapiga,2013,10.1371/journal.pone.0068825,,,,27,22-33,0,1,,Remove: HR,,,,,,,,,,
+PC,PC,Kiwanuka,2014,10.1186/1471-2458-14-986,,,,,,0,1,,Remove: HR FF,,,,,,,,,,
+PC,,Kong,2016,10.1001/jama.2016.7292,,,,,,0,1,,Remove: RCCS (have agg data),,,,,,,,,,
+PC,PC,Kroidl,2016,10.1016/S0140-6736(16)31252-1,,,,,,Representative,,,,,"We enrolled a geographically stratified random
+sample of about 10% of the households in nine distinct
+sites. There were no exclusion criteria except for
+unwillingness to participate or to donate a biological
+sample. ",,,,,,,,
+PC,PC,Lawi,2015,10.1186/s12884-015-0434-2,Pregnant,,,25,,No inclusion criteria,,,,,All eligible consented pregnant women with antenatal card (document showing number of visits and services provided) on admission were recruited into the study until a desired sample size was reached.,,,,,4,,,
+PC,PC,le Roux,2019,10.1097/QAD.0000000000002224,Pregnant,,,,,No inclusion criteria,,HU2,,urban,"The study was based at a primary antenatal care clinic (ANC) in Cape Town, South Africa, which serves a population of ±350 000 (antenatal HIV-prevalence, 30%); the prevention of MTCT service has provided universal ART since 2014",,,,,,,,
+PC,PC,Lemos,2019,10.1097/QAI.0000000000002015,30,,,,,Specified inclusion criteria,1,,Remove: HR,,"HVTN915 enrolled 50 healthy, HIV-seronegative, sexually active women, 18–25 years of age, reporting at least three acts of vaginal sex with men in the 30 days prior to screening. Women were recruited through community face-to-face contact with study recruiters in hotspots around Soweto, South Africa. (e.g. taverns, brothels). In addition to age and recruitment location, sexual behavior eligibility criteria used epidemiological data on HIV prevalence in South Africa26: i) women who had vaginal intercourse 4 or more times per week in the 30 days preceding screening, ii) women who engaged in transactional sex, iii) unmarried women living together with a partner, iv) women who engaged in unprotected vaginal or anal sex (sex without a condom), and v) women with any history of genital ulcer disease.",,,,,,,,
+STA,,Lippman,2018,10.1002/jia2.25182,,,,,,0,1,,Remove: HPTN068 reanalysis,,,,,,,,,,
+CSI,CSI,Huerga,2017,10.1186/s12879-017-2740-y,,Lag,,,,Representative,,,Lag 0.2% FRR,,HHS,,,,,,,,
+RC,RC,Keating,2012,10.1371/journal.pone.0039109,Pregnant,,,22,,No inclusion criteria,,,,,"All study activities were conducted at Bwaila Hospital, the largest government antenatal facility in Lilongwe District, Malawi. Bwaila provides antenatal, labor & delivery, postnatal, and family planning services, including antenatal PMTCT and labor ward HIV testing.",,,,,,,,
+CT,,Makhema,2019,10.1056/NEJMoa1812281,,,,,,0,1,,Remove: YaTsie (have agg data),,,,,,,,,,
+CSI,CSI,Kim,2018,10.1089/AID.2017.0316,,Lag,,,,Representative,,,,,HHS,,,,,,,,
+CSI,CSI,Maman,2015,10.1097/QAD.0000000000000741,,Lag,,,,Representative,,,,rural,HHS,,,,,,,,
+PC,PC,Mandala,2019,10.1177/2325958218823530,Pregnant,,,,,No inclusion criteria,,,,rural,"The study population consisted of all pregnant women and their infants registered in antenatal clinics, labor and delivery settings, and postnatal service points from 10 selected health facilities supported by ZPCT between February 2010 and December 2013 in 5 provinces.",,,,,,,,
+CT,HIVPT,Marrazzo,2015,10.1056/NEJMoa1402269,90,,,24,,Specified inclusion criteria,,,Surprisingly high levels of anal sex ,,"Per participant report, sexually active, defined as having vaginal intercourse at least once in the 3 months prior to screening. Using an effective method of contraception at enrollment. Not pregnant/planning. Not leaving",,,,13,1,4,5,47
+STA,,Mavedzenge,2011,10.1097/QAI.0b013e3182254038,,,,,,0,1,,Remove: MIRA reanalysis,,,,,,,,,,
+PC,PC,Mbena,2014,10.4103/2141-9248.141539,Pregnant,,,26,,No inclusion criteria,,,,,The study enrolled consecutively 400 pregnant women coming for delivery at BMC who tested HIV negative during ANC visits at least 3 month prior to the study period. Pregnant women with unknown HIV serostatus on ANC card and those with no ANC card on admission as well as those who were in the active phase of labor were excluded from the study.,,,,,2.5,,,
+CT,HIVPT,McCormack,2010,10.1016/S0140-6736(10)61086-0,9999,,,30,,Specified inclusion criteria,,MDP301,,,Eligible women were 18 years or older (≥16 years in Tanzania and Uganda); did not have HIV-1 infection at screening and were willing to be tested for HIV-1 infection and receive the result; were willing to have regular speculum examinations and urinary pregnancy tests; were willing to use gel as instructed; were likely to be sexually active; were willing to receive health education about condoms; and were willing and able to give informed consent. Women were not eligible if they were unable or unwilling to provide a reliable method of contact; were likely to move out of the area within 12 months; were likely to have sex more than 14 times a week on a regular basis (a regulatory requirement was that no more than 60 applicators were to be dispensed at every 4 weekly visit); used spermicides regularly; were pregnant or within 6 weeks post partum; had a severe clinical or laboratory abnormality; needed referral for assessment of a suspicious cervical lesion; had received treatment to the cervix or other gynaecological procedure within 30 days of enrolment; were allergic to latex; or were participating or had participated in another clinical trial that was likely to affect the primary efficacy endpoint within 30 days before enrolment.,,,,8,4,4,9,60
+STA,PC,Mehta,2012,10.1097/QAD.0b013e328352d116,Sexual adjust,,,19,,0,1,,Remove: replicate of Bailey,,,,,,,,,,
+PC,PC,Mehta,2013,10.1097/01.aids.0000432444.30308.2d,365,,,19,,Specified inclusion criteria,,,,,"For inclusion, men had to be uncircumcised, HIV-negative, sexually active in the previous 12 months, and aged 18–24 years; have a hemoglobin more than 9.0 g/dl; and reside in Kisumu district. Exclusion criteria included foreskin covering less than half of the glans, a bleeding disorder, keloid formation, other conditions that might increase the risks of elective surgery, or a medical indication for circumcision. Participants with STIs or other treatable medical conditions were deferred until cured.",,,,4,,2,2,
+PC,PC,Minnis,2010,10.1136/sti.2009.036731,9999,,,26,,Specified inclusion criteria,,,,,"Between November 1999 and January 2004, women were recruited from four family-planning and maternal-health clinics in Chitungwiza, Epworth and Harare, Zimbabwe. Participants included in the study were sexually active women age 18–35, uninfected with HIV, without intravenous drug use or blood transfusions within the previous 3_months, without depot-medroxyrogesterone (DMPA) use in the previous 6_months and not pregnant.",,,5,,,,,
+PC,,Kiwanuka,2014,10.1371/journal.pone.0094932,,,,29,24-35,0,1,,Remove: HR FF,,,,,,,,,,
+PC,,Kiwanuka,2017,10.1371/journal.pone.0171200,,,,,,0,1,,Remove: HR FF and re-analysis,,,,,,,,,,
+,CSI,Laeyendecker,2013,10.1371/journal.pone.0068349,,BED,,,,,1,,Remove: BED,,,,,,,,,,
+PC,PC,Moodley,2011,10.1093/infdis/jir017,Pregnant,,,24,,No inclusion criteria,,,,,"Pregnant women older than 18 y who registered for antenatal care <28 wk of gestation provided a written informed consent to participate in this exploratory cohort study during 2005–2007 in KwaZulu Natal, South Africa.",,,,,,,,
+CSI,CSI,Maman,2016,10.7448/IAS.19.1.20673,,Lag,135,,,Representative,,,,rural,HHS,,,,,,,,
+PC,PC,Munjoma,2010,10.1186/1471-2458-10-668,Pregnant,,,,,No inclusion criteria,,,,urban,The study participants were HIV-uninfected women who were enrolled around 36 weeks gestation. The women were attending routine antenatal clinics at three randomly selected primary health care clinics around Harare between April 2002 and September 2004 and followed up until August 2008.,,,,,0.4,,9,34
+PC,PC,Munseri,2013,10.1186/1471-2458-13-722,,,,35,,Specified inclusion criteria,,,,,police men and women aged 18 years or above from Dar es Salaam Tanzania. They were prospectively recruited into the study following educational sessions on HIV and AIDS that were done in their respective stations.,,,,,,,,
+PC,PC,Nazziwa,2013,10.1089/aid.2012.0123,Sexual adjust,,,27,,0,1,,Remove: HR FF,,,,,,,,,,
+,,Adinan 2020,2020,10.1016/j.ijid.2020.09.568,,,,,,,,,REVIEW: abstract with no incidence data?,,,1,,,,,,,
+PC,PC,Machekano,2018,10.1371/journal.pone.0209782,Pregnant,,,23,,No inclusion criteria,,,,,Between September 2013 and August 2015 we enrolled pregnant women presenting for antenatal care at 13 health facilities in 3 districts of Lesotho into a prospective observational study.,,,,,,,,
+,PC,Matthews 2023,2023,10.1371/journal.pmed.1004088,,,,,,,PrEP,,Remove: HR serodiscordant?,,,1,,,,,,,
+CSI,CSI,Mayaphi,2016,10.1371/journal.pone.0164943,Pregnant,Lag,,27,23-31,No inclusion criteria,,,,,,,,,,,,,
+CSI,CSI,SABSSM V,2018,https://hsrc.ac.za/uploads/pageContent/10779/SABSSM%20V.pdf,,Lag,,,,Representative,,SABSSM V,Lag 0.06% FRR,,HHS,,,,,,,,
+CT,HIVPT,Nel,2016,10.1056/NEJMoa1602046,30,,,26,,Specified inclusion criteria,,Ring Study,,,"1. Women ≥ 18 and ≤ 45 years of age, at screening, who can provide informed consent.
+2. Available for all visits and consent to follow all procedures scheduled for the trial.
+3. Self-reported sexually active (defined as an average of at least one penetrative penile-vaginal coital act per month for the last
+3 months prior to screening).
+4. HIV-negative as determined by the HIV algorithm applied at screening and enrollment.
+5. On a stable form of contraception (defined as oral contraceptives, transdermal patches, long-acting injectable progestins,
+subcutaneous implants, intra-uterine devices or surgical sterilization), and willing to continue on stable contraception for the
+duration of the clinical trial, unless post-menopausal or surgically sterilized.
+6. Asymptomatic for genital infections at the time of enrollment (if a woman is diagnosed with any clinically significant treatable
+STI, she must have initiated treatment at least 1 week prior to enrollment and have completed the full course of treatment).
+7. Willing to provide adequate locator information for trial retention purposes and be reachable per local standard procedures
+(e.g., by home visit or telephone; or via family or close neighbor contacts); confidentiality to be maintained.
+8. Willing to refrain from participation in another research trial using drugs, vaccines, medical devices, microbicides, or oral pre-
+exposure prophylaxis investigational drugs for the duration of The Ring Study.",,,,,,,,
+STA,,Nguyen,2019,10.1097/QAI.0000000000002096,,,,,,0,1,,Remove: HPTN068 reanalysis,,,,,,,,,,
+PC,PC,Nsanzimana,2017,10.1016/S2352-3018(17)30124-8,,,,,,Representative,,,,,HHS,,,,,,,,
+PC,RC,Nyoyoko,2016,10.11604/pamj.2016.25.247.6715,Pregnant,,,,,No inclusion criteria,,,,,HIV sero-negative clients who booked for ANC at a gestational age earlier than 26 weeks gestation were consecutively recruited over a 12 weeks period until the sample size was obtained.,,,,,,,,
+SCS,PC,Okiria,2014,10.1007/s10461-013-0502-4,,,,34,,Representative,,,,rural,HHS,,,,,,,,
+CSI,CSI,SABSSM IV,2012,https://hsrc.ac.za/uploads/pageContent/4565/SABSSM%20IV%20LEO%20final.pdf,,Lag,,,,Representative,,SABSSM IV,Lag 0% FRR,,HHS,,,,,,,,
+CT,HIVPT,Paidan,2007,10.1016/S0140-6736(07)60950-7 ,30,,,30,,Specified inclusion criteria,,NCT00121459,,urban,"    Aged 18–49 years*
+    Sexually active (defined as an average of four acts per month)
+    HIV-negative
+    C trachomatis and N gonorrhoeae negative or treated† at enrolment
+    Healthy cervix
+    Intending to live in study area for 24 months
+    Willing to be randomised
+    Willing to provide informed consent",,,16,,,,,60
+STA,,Palanee-Phillips,2019,10.1097/QAD.0000000000002260,,,,,,0,1,,Remove: MTN-020/ASPIRE reanalysis,,,,,,,,,,
+CSI,,Pastor,2017,10.1038/s41598-017-08218-0,,,,,,0,1,,Remove: No incidence data,,,,,,,,,,
+CT,HIVPT,Pettifor,2016,10.1016/S2214-109X(16)30253-4,,,,,,Specified inclusion criteria,,HPTN068,,rural,"Women aged 13–20 years were included in the HPTN 068 study if they were enrolled in school grades 8–11 of the South African educational system, not married or pregnant, able to read, having the documentation necessary to open a bank account, having a parent or guardian with documentation necessary to open a bank account, and currently residing in the study area and intending to remain until trial completion.",,15,,,,,,5
+PC,,Pintyre,2017,10.1093/cid/ciw850,Sexual adjust,,,22,,0,1,,Remove: Reanalysis of Mama Salama (Kinuthia),,,,,,,,,,
+PC,,Price,2012,10.1097/QAI.0b013e31823d8693,,,,,,0,1,,Remove: (HR) MSM/MSW,,,,,,,,,,
+PC,,Ramjee,2012,10.1007/s10461-011-0043-7,,,,,,0,1,,Remove: MIRA + MDP031 + HPTN035 + VOICE + Carraguard  reanalysis,,,,,,,,,,
+PC,,Ramjee,2018,10.1093/infdis/jiy388,,,,,,0,1,,Remove: MIRA + MDP031 + HPTN035 + VOICE + Carraguard reanalysis,,,,,,,,,,
+STA,,Ramjee,2019,10.1186/s12879-019-4080-6,,,,,,0,1,,Remove: MIRA + MDP031 + HPTN035  + VOICE + Carraguard reanalysis,,,,,,,,,,
+PC,PC,Ramjee,2008,10.1097/QAI.0b013e31815c71f7,9999,,,,,Specified inclusion criteria,,HPTN055,Exclude Moshi (HR),,"Women in Durban and Hlabisa were recruited from surrounding communities through community meetings and door-to-door recruitment. In Lusaka, women were recruited from the lower middle class socioeconomic communities of Chilenje and Kamwala through community meetings and local family planning clinics. In Moshi, 50% of the women were recruited from a family planning clinic representing a more general population and 50% were recruited from a pool of high-risk bar and hotel workers. Women were eligible for this study if they met the following criteria: sexually active, HIV-negative at screening, willingness to provide written consent and follow study procedures, absence of clinical STIs (women with treatable STIs were treated before enrollment), not pregnant with intention to maintain their nonpregnant status, and residing in and around the study area for a minimum of 1 year.",,,,5,6,5,6,
+PC,,Robb,2016,10.1056/NEJMoa1508952,,,,,,0,1,,Remove: HR High risk participants/FSW/CFSW,,,,,,,,,,
+RC,RC,Rogers,2017,10.1002/jia2.25036,Pregnant,,,24,,No inclusion criteria,,,,,"In early 2015, longitudinal antenatal record data for the full pregnancy were abstracted from paper ANC registers for all women attending the antenatal clinic of the hospital in the years 2011 to 2014.",,,,,,,,
+PC,,Rosenberg,2013,10.1097/01.aids.0000432454.68357.6a,,,,,,0,1,,Remove: AHRI (have agg data),,,,,,,,,,
+PC,,Rositch,2014,10.1097/QAD.0000000000000092,,,,,,0,1,,"Remove: HR - among men with HPV. As above, prefer https://pubmed.ncbi.nlm.nih.gov/17321310/",,,,,,,,,,
+PC,PC,Mocumbi,2017,10.1371/journal.pone.0173243,30,,,25,,Specified inclusion criteria,,,,urban Mavalane and rural Manhiça,"At the initial visit, women who provided informed consent were screened against the following eligibility criteria: 18 years of age or above, HIV negative, not pregnant, sexually active in the last month, willing and able to give informed consent, and willing to undergo regular urine pregnancy tests, HIV testing, and speculum examinations.",,,,4,8,2,8,
+CSI,CSI,Kharsany,2010,10.1111/j.1468-1293.2010.00838.x,Pregnant,RNA,,19,,No inclusion criteria,,,,rural,"This study was undertaken as part of the annual, cross sectional surveys conducted from 1 October to 30 November in 2007 and 2008. This survey coincided with the South African Department of Health’s National Antenatal Sentinel HIV and Syphilis Prevalence Surveys conducted annually among pregnant women and blood samples from this survey are tested using a single ELISA assay (Abbot Axysm System for HIV-1 / HIV-2) [10]. We included consecutive pregnant women who presented for their first prenatal care visit at one of the seven primary health care clinics, regardless of age.",,,,,,,,
+PC,CSI,Gay,2010,10.1016/j.diagmicrobio.2009.12.001,Pregnant,RNA backcalculation,,,,Specified inclusion criteria,,,No incidence data?,,,,,,,,,,
+CT,,Santelli,2013,10.1097/QAI.0b013e3182926795,,,,,,0,1,,Remove: RCCS (have agg data),,,,,,,,,,
+PC,,Schaefer,2017,10.1097/QAD.0000000000001506,,,,,,0,1,,Remove: Manicaland (have agg data),,,,,,,,,,
+PC,PC,Schmidt,2014,10.4161/hv.27559,,,,27,,0,1,,Remove: No incidence data,,,,,,,,,,
+PC,PC,Seeley,2012,10.1097/OLQ.0b013e318251555d,,,,,,0,1,,Remove: (HR) FF,,,,,,,,,,
+PC,RC,Seri,2018,10.1093/ofid/ofy060,,,,22,20-28,Specified inclusion criteria,,,Blood donor,,"At each contact, volunteers are screened for the following eligibility criteria: (1) apyrexia, (2) age 17 to 65 years, (3) body weight at least 50 kilograms, and (4) no contraindication for blood donation as determined by a self-questionnaire and medical examination. At the end of the self-questionnaire, persons with at least 1 contraindication (previous transfusion, history of infectious or cardiovascular diseases, previous sexually transmitted disease, engaging in at-risk behavior) were not considered eligible for blood donation.",,,,,,,,
+PC,PC,Shaffer,2010,10.1097/QAI.0b013e3181bcdae0,,,,30,,No inclusion criteria,,,,rural,"Participants were recruited from June to December 2003. Inclusion criteria for both men and women were: age between 18 and 55 years, the capability of providing informed consent, and plans to live in the community for at least 3 years.",,,,,,,,
+CT,HIVPT,Skoler-Karpoff,2008,10.1016/S0140-6736(08)61842-5,90,,,28,,Specified inclusion criteria,,Carraguard,,,"Eligible volunteers were sexually-active, HIV-negative women, aged 16 years and older, who were recruited from local health clinics, malls (shopping centres), churches, taxi ranks, and other community venues. We excluded women who were pregnant, or indicated a desire to become pregnant in the next 2 years at the time of screening; were within 4 weeks of last pregnancy outcome at time of enrolment; had a papanicolaou smear at screening graded as carcinoma; injected illicit drugs in the 12 months before screening; or were participating in any other clinical trial or HIV prevention study.",,,26,,,,,
+STA,,Smith,2010,10.1086/652408,,,,,,0,1,,Remove: HR subgroup analysis? Better to use https://pubmed.ncbi.nlm.nih.gov/17321310/ ?,,,,,,,,,,
+STA,,Stoner,2017,10.1097/QAD.0000000000001584,,,,,,0,1,,Remove: HPTN068 re-analysis,,,,,,,,,,
+STA,,Stoner,2019,10.1097/QAD.0000000000002037,,,,,,0,1,,Remove: HPTN068 re-analysis,,,,,,,,,,
+PC,,Tanser,2017,10.1126/scitranslmed.aam8012,,,,,,0,1,,Remove: AHRI (have agg data),,,,,,,,,,
+PC,PC,Tanser,2011,10.1016/S0140-6736(11)60779-4,,,,,,0,1,,Remove: AHRI (have agg data),,,,,,,,,,
+CT,HIVVT,Moodie,2015,10.1371/journal.pone.0137666,,,,22,,Specified inclusion criteria,,,,,"We aimed
+to enrol predominantly heterosexual adults aged
+18–35 years. Because of the generalised nature of the
+HIV-1 epidemic in South Africa, the only behavioural-
+risk eligibility criterion was being sexually active within
+the 6 months before enrolment. Pregnant or breastfeeding
+women were ineligible, and women had to agree to use
+two methods of contraception (barrier and another
+effective method, such as hormonal contraception) to
+avoid pregnancy from 21 days before their first vaccination
+until 1 month after their last vaccination.",,,,,,,,67
+CT,HIVPT,Thigpen,2012,10.1056/NEJMoa1110711,90,,,,,Specified inclusion criteria,,,,urban,"Eligible participants were HIV-seronegative, sexually active adults, 18 to 39 years of age, with normal results on serum chemical and hematologic tests, a negative test result for hepatitis B virus surface antigen, and no chronic illnesses or long-term medication use. Female participants could not be pregnant or breast-feeding and had to be willing to use effective contraception to enroll in the study.",,,,10,,2,6,37
+PC,,Ukaire,2015,https://pubmed.ncbi.nlm.nih.gov/26897922/,,,,,,0,1,,Remove: No incidence data,,,,,,,,,,
+PC,PC,Moodie,2015,10.1371/journal.pone.0137666,,,,22,,Specified inclusion criteria,,,,,"We aimed
+to enrol predominantly heterosexual adults aged
+18–35 years. Because of the generalised nature of the
+HIV-1 epidemic in South Africa, the only behavioural-
+risk eligibility criterion was being sexually active within
+the 6 months before enrolment. Pregnant or breastfeeding
+women were ineligible, and women had to agree to use
+two methods of contraception (barrier and another
+effective method, such as hormonal contraception) to
+avoid pregnancy from 21 days before their first vaccination
+until 1 month after their last vaccination.",,1 FSW; 5 CFSW,,,,,,67
+SCS,PC,Van Tienen,2010,10.1097/QAI.0b013e3181bf1a25,,,,,,Representative,,,,rural,HDSS/HHS,,,,,,,,
+PC,,Vandormael,2014,10.1016/S2214-109X(14)70018-X,,,,,,0,1,,Remove: AHRI (have agg data),,,,,,,,,,
+PC,,Venkatesh,2011,10.1258/ijsa.2010.010385,,,,,,0,1,,Remove: MIRA + STI  reanalysis,,,,,,,,,,
+PC,,Venkatesh,2011,10.1097/QAI.0b013e318220379b,,,,,,0,1,,Remove: MIRA reanalysis,,,,,,,,,,
+,,Bj√∂rkmanNyqvist 2022,2022,10.1002/hec.4476,,,,,,,,,Not primary data but can't access original study: https://www.aeaweb.org/articles?id=10.1257/app.20160469,,,1,,,,,,,
+PC,PC,Wallrauch,2010,10.7196/samj.4181,,,,,,0,1,,Remove: AHRI (have agg data),,,,,,,,,,
+STA,,Wand,2015,10.7448/IAS.18.1.19866,,,,,,0,1,,Remove: Carraguard reanalysis,,,,,,,,,,
+PC,,Wand,2011,10.1007/s10461-010-9845-2,Sexual adjust,,,28,22-36,0,1,,Remove: MIRA + MDP031 + HPTN Site Preparedness  reanalysis,,,,,,,,,,
+PC,,Wand,2012,10.1136/bmjopen-2011-000285,Sexual adjust,,,26,22-33,0,1,,Remove: MIRA reanalysis,,,,,,,,,,
+STA,,Wand,2013,10.7448/IAS.16.1.18589,,,,,,0,1,,Remove: MIRA reanalysis,,,,,,,,,,
+STA,,Wand,2015,10.1080/09540121.2015.1096896,Sexual adjust,,,,,0,1,,Remove: MIRA reanalysis,,,,,,,,,,
+CT,CT,Wand,2017,10.1007/s10461-016-1471-1,Sexual adjust,,,27,22-37,0,1,,Remove: Carraguard reanalysis,,,,,,,,,,
+PC,PC,Yeatman,2019,10.1111/sifp.12080,,,,,,Representative,,Tsogolo la Thanzi (TLT),Same study ID as van Tienen?,,HDSS/HHS,,,,,,,,
+,,,,10.1093/infdis/jis325,,,,,,0,1,,Remove: RCCS (have agg data),,,,,,,,,,
+,,,,10.1097/QAI.0b013e3182a7f08a,,,,,,0,1,,Remove: RCCS (have agg data),,,,,,,,,,
+,,,,10.1016/j.jegh.2014.09.003,,,,,,0,1,,Remove: RCCS (have agg data),,,,,,,,,,
+,,,,10.1097/QAD.0000000000000533,,,,,,0,1,,Remove: RCCS (have agg data),,,,,,,,,,
+,,,,10.1016/S2352-3018(18)30009-2,,,,,,0,1,,Remove: RCCS (have agg data),,,,,,,,,,
+,,,,10.1016/S2214-109X(14)70344-4,,,,,,0,1,,Remove: RCCS (have agg data),,,,,,,,,,
+,,,,10.1056/NEJMoa1702150,,,,,,0,1,,Remove: RCCS (have agg data),,,,,,,,,,
+,CT,,,PopART,,,,,,Representative,,PopART,,rural,,,,,,,,,
+,PC,,,RCCS,,,,,,Representative,,RCCS,,rural,,,,,,,,,
+,PC,,,Manicaland,,,,,,Representative,,Manicaland,,rural,,,,,,,,,
+,PC,,,AHRI,,,,,,Representative,,AHRI,,rural,,,,,,,,,
+,CT,,,SEARCH,,,,,,Representative,,SEARCH,,rural,,,,,,,,,
+,CT,,,TasP,,,,,,Representative,,TasP,,rural,,,,,,,,,
+,CSI,,,CMR2017PHIA,,,,,,Representative,,,,,,,,,,,,,
+,CSI,,,CIV2018PHIA,,,,,,Representative,,,,,,,,,,,,,
+,CSI,,,SWZ2017PHIA,,,,,,Representative,,,,,,,,,,,,,
+,CSI,,,ETH2018PHIA,,,,,,Representative,,,,,,,,,,,,,
+,CSI,,,KEN2018PHIA,,,,,,Representative,,,,,,,,,,,,,
+,CSI,,,LSO2017PHIA,,,,,,Representative,,,,,,,,,,,,,
+,CSI,,,MWI2016PHIA,,,,,,Representative,,,,,,,,,,,,,
+,CSI,,,NAM2017PHIA,,,,,,Representative,,,,,,,,,,,,,
+,CSI,,,RWA2019PHIA,,,,,,Representative,,,,,,,,,,,,,
+,CSI,,,TZA2017PHIA,,,,,,Representative,,,,,,,,,,,,,
+,CSI,,,UGA2017PHIA,,,,,,Representative,,,,,,,,,,,,,
+,CSI,,,ZMB2016PHIA,,,,,,Representative,,,,,,,,,,,,,
+,CSI,,,ZWE2016PHIA,,,,,,Representative,,,,,,,,,,,,,
+,CSI,,,NGA2021PHIA,,,,,,Representative,,,,,,,,,,,,,
+,CSI,,,LSO2020PHIA,,,,,,Representative,,,,,,,,,,,,,
+,CSI,,,MOZ2021PHIA,,,,,,Representative,,,,,,,,,,,,,
+,CSI,,,MWI2020PHIA,,,,,,Representative,,,,,,,,,,,,,
+,CSI,,,SWZ2021PHIA,,,,,,Representative,,,,,,,,,,,,,
+,CSI,,,ZWE2020PHIA,,,,,,Representative,,,,,,,,,,,,,
+,CSI,,,ZMB2021PHIA,,,,,,Representative,,,,,,,,,,,,,
+,CSI,,,BWA2021PHIA,,,,,,Representative,,,,,,,,,,,,,
+,CSI,,,UGA2020PHIA,,,,,,Representative,,,,,,,,,,,,,
+,CSI,,,TZA2022PHIA,,,,,,Representative,,,,,,,,,,,,,
+,PC,,,Kisumu HDSS,,,,,,Representative,,Kisumu HDSS,,,,,,,,,,,
+,CT,,,BCCP/YaTsie,,,,,,Representative,,BCCP/YaTsie,,rural,,,,,,,,,
+,,Fiamma,,10.1186/1471-2334-10-137,,,,,,,1,,Remove: Reanalysis,,,,,,,,,,
+,,Jewkes,,10.1016/S0140-6736(10)60548-X,,,,,,,1,,Remove: Reanalysis of Stepping Stones,,,,,,,,,,
+,,Jewkes,,10.1016/j.chiabu.2010.05.002,,,,,,,1,,Remove: Reanalysis of Stepping Stones,,,,,,,,,,
+,,Paz-Bailey,,10.1086/652785,,,,,,,1,,Remove: HR HSV2+,,,,,,,,,,
+CT,CT,ECHO,2019,10.1016/S0140-6736(19)31288-7,90,,,23,20-26,Specified inclusion criteria,,ECHO,,,"We included non-pregnant, HIV-seronegative women aged 16–35 years (women aged 16–17 were included where permissible by national regulations and local ethics review committee approval), who desired effective contraception, had no medical contraindications to the trial contraceptive methods, agreed to use the assigned method for 18 months, and reported not using injectable, intrauterine, or implantable contraception for the previous 6 months (appendix p 11). The only sexual behavioural eligibility criterion was being sexually active.",,1,,18,,5,,38
+CSI,CSI,Blaizot,2017,10.1089/aid.2016.0123,,Lag,,,,Representative,,,Lag 0.5% FRR,,HHS,,,,,,,,
+PC,PC,Jaspan,2011,10.1016/j.jadohealth.2010.10.009,,,,,,Specified inclusion criteria,,,,,Eligibility criteria included: age between 14 and 17 years; HIV-negative at screening; and a negative urine pregnancy test for females.,,,,,,,,
+,PC,,,Kyamulibwa GPC,,,,,,Representative,,Kyamulibwa GPC,,rural,,,,,,,,,
+,PC,,,Karonga,,,,,,Representative,,Karonga,,rural,,,,,,,,,
+,PC,,,Kisesa,,,,,,Representative,,Kisesa,,,,,,,,,,,
+,,Graham 2023,2023,10.1007/s10461-022-03860-w,,,,,,,PrEP,,MSM,,,1,,,,,,,
+CT,RCT,Chamie 2021,2021,10.1371/journal.pmed.1003630,,,,,,Specified inclusion criteria,,,"REVIEW: Maybe HR, but probably doesn’t matter. so small.",,,1,,,,,,,
+CSI,CSI,Conan 2020,2020,10.1002/jia2.25613,,Lag,130,,,Representative,,,Lag FRR 0.0001%,,HHS,1,,,,,,,
+,PC,Celum 2022,2022,10.1002/jia2.25962,90,,,21,19-23,0,PrEP,POWER,29% chlamydia; 10% gonorrhea,,,1,,,,,,,
+,PC,Mansoor 2022,2022,10.1002/jia2.25957,Sexual adjust,,,,,0,PreP,CAPRISA 082,22% STI+,,,1,,,,,,,
+,PC,Ngure 2022,2022,10.1016/S2352-3018(22)00126-6,,,,,,,PrEP,,Remove: HR serodiscordant couples,,,1,,,,,,,
+CSI,CSI,Moyo,2018,10.1371/journal.pone.0204840,,Lag,130,,,Representative,,BCCP/YaTsie,,,HHS,,,,,,,,
+,PC,Delany-Moretlwe 2022,2022,10.1016/S0140-6736(22)00538-4,30,,,,,,PrEP,HPTN084,"Remove: HR risk score. 41% FSW, 19% chlamydia, 7% gonorrhea",,,1,,,,,,,
+CSI,CSI,Conan 2021,2021,10.1111/tmi.13688,,Lag,130,,,Representative,,,Lag 0.5% FRR,,HHS,1,,,,,,,
+CT,HIVVT,Corey 2021,2021,10.1056/NEJMoa2031738,180,,,26,,Specified inclusion criteria,,HVTN703/704,,,"Persons born Female (assigned female sex at birth) and
+identifying as female, who, in the 6 months prior to randomization, had had vaginal
+and/or anal intercourse with a male partner. Volunteers who had been in a mutually
+monogamous relationship with an HIV-1 seronegative partner for > 1 year were
+excluded.",1,16,,17,2,6,7,
+RC,RC,deBeer 2020,2020,10.1002/jia2.25441,Pregnant,,,,,No inclusion criteria,,,,,"pregnant women, irrespective of HIV status, were passively enrolled at their first ANC visit at MPMOU, or alternatively, upon presentation for delivery if they had not received ANC. HIV tests (rapid antibody assay) were performed by community care workers as part of routine ANC services and by nurses in the labour ward of MPMOU and the labour/postnatal ward of the hospitals.
+
+We included data from the CTG e_register for all enrolled women who delivered at MPMOU or one of its referral sites, between 1 July 2014 and 31 December 2016, with a live or still birth pregnancy outcome. We excluded data from women who (a) presented for delivery having attended ANC at a BANC since we did not have access to complete longitudinal HIV testing data for these individuals or (b) for whom no pregnancy outcome could be found as we could not exclude pregnancy loss, in which case PMTCT testing guidelines would no longer be applicable.",1,,,,,,,
+,PC,Haberer 2022,2022,10.1097/QAI.0000000000002876,90,,,20,19-22,0,PrEP,Monitoring PrEP among Young Adult women Study,Remove: HR risk score,,,1,,,,,,,
+,,Mosha 2022,2022,10.1177/09564624211065232,,,,,,,1,,Remove: Kisesa (have agg data),,,1,,,,,,,
+,RCT,Mujugira 2022,2022,10.1097/QAI.0000000000002895,,,,,,,PrEP,Empower,"FSW, MSM",,,1,,,,,,,
+PC,PC,Ejikunle 2019,2019,10.4103/njcp.njcp_130_17,Pregnant,,,,,No inclusion criteria,,,,,"This was a prospective observational study among all booked pregnant women in labor who had earlier tested HIV negative in the antenatal clinic and infants of the mothers who tested HIV positive during labor at Imo State University Teaching Hospital Orlu, Imo state in South East Nigeria.",1,,,,,,,13
+,RCT,Irungu 2021,2021,10.1016/S2214-109X(21)00391-0,,,,,,,PrEP,Partners Scale-Up Project,Remove: HR,,,1,,,,,,,
+PC,PC,G√≥mez-Oliv√© 2020,2020,10.1097/QAI.0000000000002404,,,,,,Representative,,Agincort,,,HDSS,1,,,,,,,
+,PC,Braitstein 2021,2021,10.1001/jamanetworkopen.2021.25365,,,,,,Specified inclusion criteria,1,OSCAR,Remove: paediatric HR population,,"The study enrolled participants 18 years and younger between May 31, 2010, and April 24, 2013, with follow-up until November 30, 2019. The OSCAR cohort comprised participants from communities within 8 administrative locations in Uasin Gishu County, which included 300 randomly selected households (family-based settings) caring for children who were orphaned from all causes, 19 of 21 charitable children’s institutions (institutional settings) that were operating in the county at the time of study initiation, and a convenience sample of 100 children who were practicing self-care on the streets (street settings)",1,,,,,,,
+,PC,Mugwanya 2019,2019,10.1371/journal.pmed.1002885,,,,,,0,PrEP,PrEP Implementation in Young Women and Adolescents (PrIYA),,,,1,,,,,,,
+CT,RCT,Gorgens 2022,2022,10.1136/bmjgh-2021-007206,,,,18,,No inclusion criteria,,,,80% rural,"HIV-negative AGYW aged 15–22 at
+the time of enrolment were enrolled as study participants
+if they further met three eligibility criteria: willingness to
+go back to some form of education, not planning to leave Eswatini for the duration of the study and being a Swati
+resident. ",1,,,,,,,
+,PC,Laurent 2021,2021,10.1016/S2352-3018(21)00005-9,,,,,,,PrEP,CohMSM-PrEP,MSM,,,1,,,,,,,
+SCS,,Negin,2016,10.1371/journal.pone.0162967,,,,,,0,1,,Remove: Manicaland (have agg data),,,,,,,,,,
+CT,HIVVT,Gray 2021,2021,10.1056/NEJMoa2031499,,,,,,Specified inclusion criteria,,HVTN702,,,,1,21 F; 16 MSW/CFSW,,23,,,,
+CSI,CSI,Nel,2011,10.1371/journal.pone.0021528,30,BED,,24,,Specified inclusion criteria,1,,Remove: BED,Madibeng - rural; Mbekwini - urban,"Women were recruited from local family planning clinics in Madibeng and from family planning clinics, community events, and door-to-door visits in Mbekweni. Women were eligible for the cross-sectional studies if they were 18–35 years, not HIV-positive or pregnant by self-report, not breastfeeding, and sexually active (defined as at least one penetrative vaginal coital act per month for the previous three months). Women who tested HIV- and pregnancy-negative in the cross-sectional cohort studies, still met the entry criteria described above, and met additional entry criteria for the cohort studies were subsequently offered enrollment into the cohort studies. These additional entry criteria included using a reliable WHO-approved contraceptive method [7], not injecting non-therapeutic drugs, not participating in other studies, not suffering from specified chronic diseases or allergies, refraining from anal sex and planning to stay in the study area for the duration of the study. ",,,,,,,,
+CSI,CSI,Hansoti 2019,2019,10.1016/j.eclinm.2019.08.007,,Lag,248,,,Specified inclusion criteria,,,,,"This prospective cross-sectional observational study was conducted in the ED in three hospitals in the Eastern Cape province between June 2017 and July 2018. Each hospital was sampled for a period of six weeks, during which all eligible patients, were approached study staff and offered point-of-care (POC) HIV testing. In addition, all previously known, and newly diagnosed HIV positive patients were requested to provide an additional blood sample for further laboratory testing.",1,,,,,,,
+RC,RC,Hoque 2021,2021,10.4102/sajid.v36i1.296,Pregnant,,,,,No inclusion criteria,,,,,"All 
+pregnant women who attended for booking visits between 
+January and December 2018 were included and followed up 
+until their last visits to the clinic. ",1,,,,3.8,,,
+PC,PC,Jahn 2024,2024,10.1007/s10508-023-02726-z,Pregnant,,,,,No inclusion criteria,,,,,"Women who had a confirmed pregnancy, had not exceeded 28 gestational weeks, and were tested HIV-negative at first ANC encounter were eligible for recruitment if they were at least 15 years old (UNCST, 2014) and provided written informed consent.",1,,,,,,,
+PC,PC,Katamba 2020,2020,10.1016/j.eclinm.2020.100408,,,,,,Representative,,,,,HHS,1,1,,,,,,
+,RC,Bantigen 2021,2021,10.2147/HIV.S281281,,,,,,0,1,,Remove: HR serodiscordant couple,,,1,,,,,,,
+,PC,Wall 2021,2021,10.1093/infdis/jiab071,,,,,,,1,,Remove: HR serodiscordant couple,,,1,,,,,,,
+,PC,Baeten 2021,2021,10.1016/S2352-3018(20)30304-0,,,,,,0,PrEP (ring),MTN-025/HOPE,,,,1,,,,,,,
+,PC,Nel 2021,2021,10.1016/S2352-3018(20)30300-3,,,,,,0,PrEP (ring),DREAM,,,,1,,,,,,,
+,PC,Nyombayire 2021,2021,10.1097/OLQ.0000000000001350,,,,,,,1,,Remove: HR serodiscordant couple,,,1,,,,,,,
+PC,PC,KharsanyABM 2019,2019,10.1001/jamanetworkopen.2019.14378,,,,,,Representative,,HIPSS,,,HHS,1,,,,,,,
+,RCT,Celum 2020,2020,10.1002/jia2.25636,30,,,19,17-21,,PrEP,3Ps for Prevention Study,25% STI,,,1,,,,,,,
+,PC,Wahome 2020,2020,10.1016/j.eclinm.2020.100541,,,,,,,PrEP,,MSM,,,1,,,,,,,
+PC,PC,Kidman 2022,2022,10.1097/QAD.0000000000003377,,,,,,Representative,,,,rural,HHS,1,,,,,,,
+PC,PC,Kiragga 2021,2021,10.1177/09564624211000973,,,,28,25-34,Specified inclusion criteria,,,,,We offered point-of-care HIV and syphilis testing for men located at five gambling centers in Uganda and assessed HIV risky sexual behavior.,1,,,,4,,,
+,PC,Sarr 2020,2020,10.1177/0956462420943704,,,,,,0,PrEP,,FSW,,,1,,,,,,,
+CT,HIVVT,Laher 2020,2020,10.1371/journal.pmed.1003038,,,,,,Specified inclusion criteria,,HVTN100,,,"Volunteers were eligible for enrolment if they were aged 18–40 years, could give written informed consent, were healthy, were not infected with HIV, were at low risk for HIV acquisition, and had not previously received an HIV vaccine. We defined low risk for HIV acquisition as either being sexually abstinent, in a mutually monogamous relationship with a partner known to have HIV-uninfected status, or having one partner believed not to be infected with HIV and with whom he or she regularly used condoms for vaginal or anal intercourse; furthermore, participants had to have no history of newly acquired sexually transmitted infections in the 12 months before enrolment. We required women to be on contraception, not pregnant, and non-lactating.",1,,,,,,,
+,CSI,Vermeulen 2021,2021,10.1111/vox.12987,0,Lag,180,,,Specified inclusion criteria,,,Blood donor,,,,,,,,,,
+PC,PC,leRoux 2020,2020,10.1080/09540121.2019.1679706,Pregnant,,,,,No inclusion criteria,,,,,"Between January and April 2013, a consecutive series of mothers giving birth at Zithulele Hospital and in the area covered by its 10 closest clinics were approached to participate in the study. This included mothers who delivered at home (10%) or on the way to a health facility (3%), as well as those who delivered at primary care clinics (9%). Mothers who travelled to the hospital from outside this catchment area to give birth at the hospital were excluded from the sample.",1,,,,,,,
+,RC,Gitahi 2020,2020,10.1155/2020/1675987,,,,,,,1,,Remove: HR serodiscordanct couples,,,1,,,,,,,
+PC,PC,Li 2024,2024,10.1007/s43032-023-01351-4 ,Pregnant,,,,,No inclusion criteria,,,,,"Briefly, from November 2017 to July 2018, we enrolled pregnant women ≥ 18 years of age with and without HIV presenting to the ANC for prenatal care.",1,,,,,,,
+CSI,CSI,Nel,2012,10.1371/journal.pone.0035278,30,BED,,23,,Specified inclusion criteria,,,Remove: BED,periurban,"Women were eligible for the cross-sectional studies if they were 18–35 years, not HIV-positive or pregnant by self-report, not breastfeeding, and sexually active (defined as at least one penetrative vaginal coital act per month for the previous three months). Women who tested HIV- and pregnancy-negative in the cross-sectional studies, still met the entry criteria described above, and met additional entry criteria for the cohort studies, were subsequently offered enrollment into the cohort studies. These additional entry criteria included using a condom plus a hormonal (oral or injectable) contraceptive method [12], not injecting non-therapeutic drugs, not participating in other studies, not suffering from specified chronic diseases or allergies, refraining from anal sex and planning to stay in the study area for the duration of the study. ",,,,,,,,
+PC,PC,Nel,2011,10.1371/journal.pone.0021528,30,,,23,,Specified inclusion criteria,,,,Madibeng - rural; Mbekwini - urban,"Women were eligible for the cross-sectional studies if they were 18–35 years, not HIV-positive or pregnant by self-report, not breastfeeding, and sexually active (defined as at least one penetrative vaginal coital act per month for the previous three months). Women who tested HIV- and pregnancy-negative in the cross-sectional cohort studies, still met the entry criteria described above, and met additional entry criteria for the cohort studies were subsequently offered enrollment into the cohort studies. These additional entry criteria included using a reliable WHO-approved contraceptive method [7], not injecting non-therapeutic drugs, not participating in other studies, not suffering from specified chronic diseases or allergies, refraining from anal sex and planning to stay in the study area for the duration of the study. ",,,,,,,,
+PC,PC,Maher 2020,2020,10.2196/17107,,,,,,Representative,,,,,HHS,1,3,,,,,,
+PC,PC,Nel,2012,10.1371/journal.pone.0035278,30,,,23,,Specified inclusion criteria,,,,periurban,"Women were eligible for the cross-sectional studies if they were 18–35 years, not HIV-positive or pregnant by self-report, not breastfeeding, and sexually active (defined as at least one penetrative vaginal coital act per month for the previous three months). Women who tested HIV- and pregnancy-negative in the cross-sectional cohort studies, still met the entry criteria described above, and met additional entry criteria for the cohort studies were subsequently offered enrollment into the cohort studies. These additional entry criteria included using a reliable WHO-approved contraceptive method [7], not injecting non-therapeutic drugs, not participating in other studies, not suffering from specified chronic diseases or allergies, refraining from anal sex and planning to stay in the study area for the duration of the study. ",,,,,,,,
+PC,PC,Ruzagira,2011,10.1371/journal.pone.0020684,,,,,,Representative,,,,rural,HHS,,,,,,,,
+PC,FSW,Mayanja 2019,2019,10.1186/s12879-019-4328-1,,,,,,Specified inclusion criteria,,,FSW,,,1,,,,,,,
+PC,PC,Mensch 2020,2020,10.1080/00324728.2019.1656282,,,,,,Representative,,Malawi Schooling and Adolescent Study,,,,1,,,,,,,
+PC,PC,Moses 2021,2021,10.1371/journal.pone.0257049,,,,29,22-39,Specified inclusion criteria,,,,,,1,,,,,,,
+CT,RCT,Mujugira 2023,2023,10.1002/jia2.26156,Pregnant,,,,,Specified inclusion criteria,,Obumu,,,"Women were eligible if they were ≥18 years, currently pregnant, reported no IPV and had a partner of unknown status.",1,,,,,,,
+RC,RC,Mushamiri 2020,2020,10.1371/journal.pone.0233396,Pregnant,,,,,No inclusion criteria,,,,,"Eligibility criteria included: negative HIV status; age 15 or above; resident status within the Sauri cluster. Nurses informed eligible pregnant women of the study’s aims, procedures, risks and benefits. Interested adult pregnant women (age 18 and above) were enrolled in the study after signing a standardized consent form.",1,,,,,,,
+RC,RC,Mussa 2023,2023,10.1002/jia2.26008,Pregnant,,,,,No inclusion criteria,,Tsepamo Study,,,"We used data collected from women who gave birth at 18 public maternity wards (2 cities, 2 towns and 14 villages) between 7th May 2017 and 20th August 2021, accounting for approximately 70% of all births in Botswana during this period.",1,,,,,,,
+,PC,Mansoor 2019,2019,10.1002/jia2.25381,,,,,,0,PrEP,exntension of CAPRISA 004,,,,1,,,,,,,
+PC,PC,Muyinda 2023,2023,10.1097/QAI.0000000000003234,,,,,,No inclusion criteria,,,Find other healing the elephant study….,,,1,,,,,,,
+CSI,CSI,Negedu-Momoh 2021,2021,10.1002/jia2.25669,,Lag,130,,,Representative,,,Lag 0% FRR,,HHS,1,,,,,,,
+,PC,Haberer 2024,2024,10.1002/jia2.26217,90,,,,,,PrEP,,50-60% FSW,,,1,,,,,,,
+,PC,Stewart 2023,2023,10.1056/NEJMoa2304007,,,,,,,PrEP,,~35% FSW,,,1,,,,,,,
+,RCT,Landovitz 2023,2023,10.1016/S2352-3018(23)00261-8,,,,,,,PrEP,,Remove: Reanalysis HPTN083,,,1,,,,,,,
+PC,PC,Nungu 2019,2019,10.1186/s12879-019-4062-8,Pregnant,,,,,No inclusion criteria,,,,,"The study population included all the pregnant mothers who had just delivered at the selected health facilities from 14th December 2015 to 12th February 2016. The inclusion criteria were those women who had HIV-negative during their first test with at least three months from the first HIV test. All the mothers who were severely ill at postnatal, those with mental problems and the deaf were excluded from the study.",1,,,,,,,
+RC,RC,Ortblad 2022,2022,10.1186/s12963-022-00287-2,Pregnant,,,26,22-31,No inclusion criteria,,,,,"we limited our sample to women_≥_15 years of age who underwent HIV testing through ANC care from January 2018 to September 2019. We excluded individuals who previously self-reported testing HIV-positive prior to their first identified ANC visit, enabling us to measure detection of previously undiagnosed HIV infection. Additionally, we excluded women with an indeterminate or missing HIV test result.",1,,,,,,,
+RC,RC,Penumetsa 2022,2022,10.9745/GHSP-D-21-00451,Pregnant,,,23,21-28,No inclusion criteria,,,,,"Women seeking ANC or postnatal/infant immunization care services between January 2017 and July 2019 at these facilities were eligible if they were aged 14 years or older and willing to be tested for HIV and provide written informed consent. Additionally, pregnant women were eligible if their gestational age was 28 weeks or more with a history of an HIV-negative test in pregnancy; postpartum women were eligible if they were 6 weeks, 6 months, or 9 months postpartum and either had a documented HIV-negative test result during pregnancy at least 3 months before study enrollment or were not tested for HIV in ANC.",1,,,,,,,
+,RCT,Nair 2023,2023,10.1016/S2352-3018(23)00227-8,,,,18,17-19,0,PrEP,MTN-034/REACH,27% FSW,,,1,,,,,,,
+PC,PC,Rosenberg 2020,2020,10.1097/OLQ.0000000000001242,,,,,,Specified inclusion criteria,,Girl Power-Malawi,,,"Two hundred fifty AGYW were recruited to each health center and followed for one year (N=1000 total). Persons were eligible if they were female, 15–24 years old, from the clinic’s catchment area, and willing to participate for one year. We actively recruited AGYW who had experienced sexual debut.",1,,,,,,,
+RC,RC,Schumann 2020,2020,10.1371/journal.pone.0234174,Pregnant,,,24.7,,No inclusion criteria,,,,,"Any woman who met the following criteria was considered eligible for recruitment in the study: She was an ANC client who visited one of the health facilities in her third trimester, or a delivery client in the maternity ward; she had been tested and was HIV-negative in the first or second trimester of pregnancy, and this was clearly documented in her ANC card; she was at least 15 years old (mature minor); and she was willing to give written informed consent to participate in the study. Exclusion criteria were age below 15 years, and any clinical condition disturbing the ability of the client to give informed consent and to participate, including mental illness or an acute health condition.",1,,,,,,,
+RC,RC,Singogo 2023,2023,10.1111/tme.13006,,,,,,Specified inclusion criteria,,,Blood donor,,"The study population was all voluntary nonremunerated blood donors who donated blood at a MBTS facility or MBTS sponsored blood drive in the period from January 2015 to October 2021. The exclusion criteria for blood donation are extensive and include, among others, health requirements; restrictions on those who engage in behaviour that increase risk for TTIs; age requirements (16–65_years); past medical history suggestive of HIV, hepatitis or syphilis; past or present history of renal, cardiovascular, central nervous system and metabolic disorders such as insulin dependent diabetes; haemoglobin below 12.5_g/dL and weight below 42_kgs.",1,,,,,,,
+,RCT,Ortblad 2023,2023,10.1001/jamanetworkopen.2023.18590,,,,,,0,PrEP,JiPime-JiPrEP,,,,1,,,,,,,
+,PC,Diabat√© 2023,2023,10.1002/jia2.26130,,,,,,0,PrEP,,MSM,,,1,,,,,,,
+,PC,Phiri 2023,2023,10.4102/sajhivmed.v24i1.1482,,,,,,,1,,Remove: HR,,"individuals who previously tested HIV-negative through index contact testing from March 2019 to September 2021. The implementation of the project started in October 2021, and we report data through September 2022. These individuals were identified by reviewing the index testing registers completed during the time of their last HIV test. We targeted individuals who were in sero-different relationships (index client tested positive and elicited partner tested negative), grouped them according to the date of their last test, telephonically traced them and invited them to facilities for repeat HIV testing through Anova’s HIV testing counsellors.",1,,,,,,,
+CT,FSW,VazquezGuillamet 2023,2023,10.1080/09540121.2023.2275048,,,,,,Specified inclusion criteria,,,FSW,,,1,,,,,,,
+,RCT,Kinuthia 2023,2023,10.1002/jia2.26061,Pregnant,,,,,0,PrEP,PrEP Implementation for Mothers in Antenatal Care (PrIMA),,,,1,,,,,,,
+STA,,Teasdale,2018,10.1371/journal.pone.0197696,Sexual adjust,,,27,22-34,0,1,,Remove: MIRA reanalysis,,,,,,,,,,
+CSI,CSI,Vermeulen 2021,2021,10.1111/vox.12987,,Lag,180,,,Specified inclusion criteria,,,Blood donor,,,1,,,,,,,
+PC,MSM,Wahome 2024,2024,10.1097/QAD.0000000000003782,,,,,,Specified inclusion criteria,,,MSM,,,1,,,,,,,
+CSI,CSI,Woldesenbet 2021,2021,10.1371/journal.pone.0249953,Pregnant,Lag,161,,,Representative,,,Lag 0% FRR,,"The South African Antenatal Sentinel HIV Survey is a cross–sectional survey, conducted every two years, to measure HIV prevalence among pregnant women attending ANC at public health care facilities in South Africa. The 2017 survey envisaged enrolment of 36,015 pregnant women, aged 15–49 years, from 1,595 public facilities selected from all 52 districts of South Africa. Public health facilities included in the survey were selected from each district using probability proportional to size sampling method. Consenting women were sampled consecutively from each selected facility until the required sample size was reached or until the end of the study, which ever one comes first.",1,,,,,,,
+RC,RC,Wongjarupong 2021,2021,10.4269/ajtmh.20-0601,,,,25,,Specified inclusion criteria,,,Blood donor,,"Volunteer non-remunerated blood donors were all healthy subjects, aged 17–64 years, with a body weight of more than 50 kg. Health officers administered a standard pre-donation questionnaire at each site. Donors who were tested positive for HBV, HCV, HIV, or syphilis at initial donation were not eligible for further blood donation.",1,,,,,,,
+RC,RC,Yooda 2019,2019,10.2147/JBM.S189079,,,,,,Specified inclusion criteria,,,Blood donor,,,1,,,,,,,
+,PC,Wall 2019,2019,10.1093/ije/dyy203,,,,,,,1,,Remove: HR serodiscordant couples,,,1,,,,,,,
+,CSI,Truong,2011,10.1089/aid.2010.0249,,BED,,,,,1,,Remove: BED,,,,,,,,,,
+,CSI,Combes,2013,10.1089/aid.2012.0163,,BED,,,,,1,,Remove: BED,,,,,,,,,,
+PC,PC,Vallely,2010,10.1371/journal.pone.0010661,,,,,,0,1,,Remove: HR,,,,,,,,,,
+,CSI,Kim,2010,10.1089/aid.2009.0218,,BED,,,,,1,,Remove: BED,,,,,,,,,,
+,CSI,Bussmann,2011,10.1089/aid.2009.0299,,BED,,,,,1,,Remove: BED,,,,,,,,,,
+PC,PC,Viegas,2015,10.1371/journal.pone.0121452,,,,20,,Specified inclusion criteria,,,,urban,"This prospective cohort study was conducted at the Maputo Central Hospital, Mozambique, between August 2009 and October 2011. The participants were recruited and followed-up at an outpatient youth clinic specializing in provision of sexual and reproductive health services including STI/HIV prevention and care.",,,,,,,,
+CT,RCT,Zulaika 2023,2023,10.1016/j.eclinm.2023.102261,,,,17,16-18,Specified inclusion criteria,,Cups or Cash for Girls,,,"Girls were eligible if they were day-scholars (non-boarders), in select class years, had a history of three or more menses, no visible or declared pregnancy, no disability precluding participation, and resided in the study area.",1,,,,,,,
+CSI,CSI,Kim,2016,10.1371/journal.pone.0155498 ,,Lag,,,,Representative,,2007 KAIIS,,,,,,,,,,,
+CSI,CSI,SABSSM VI,2024,https://hsrc.ac.za/wp-content/uploads/2024/07/SABSSM_VI_EXEC_REPORT_2PP.pdf,,Lag,,,,Representative,,SABSSM VI,,,,1,,,,,,,
+,HIVVT,Gray,2022,https://www.natap.org/2022/CROI/croi_159a.htm,,,,23,,Specified inclusion criteria,,HVTN705,,,,1,0.46,0.32,0.21,,,,

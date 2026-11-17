@@ -1,0 +1,20 @@
+parameter,estimate
+Year (Reference year = 2014),"0.94 (0.92, 0.96)"
+Age group,
+15-24,1.00 (Reference)
+25+,"1.06 (0.47, 2.42)"
+Gender,
+Female,1.00 (Reference)
+Male,"0.31 (0.24, 0.39)"
+Sex : year interaction,
+Male : year,"0.96 (0.94, 0.98)"
+Year : age interaction,
+Year : 25+,"1.04 (1.01, 1.07)"
+Sex : age interaction,
+Male: 25+,"2.73 (2.47, 3.03)"
+Hyperparameters,SD (95% CrI)
+Age-specific cohort intercepts (IID),"0.76 (0.51, 1.12)"
+Age-specific time trend (AR2),"0.17 (0.08, 0.30)"
+"Cohort-specific time trend, women (AR2)","0.21 (0.12, 0.38)"
+"Cohort-specific time trend, men (AR2)","0.22 (0.13, 0.37)"
+Cohort-specific age : time slope (IID),"0.017 (0.005, 0.041)"

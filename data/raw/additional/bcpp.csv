@@ -1,0 +1,600 @@
+random_arm,community,sex,age_group,n,infections,person_years,incidence
+Intervention,Digawana,Female,15-19,23,0,28.05208761122519,0
+Intervention,Digawana,Female,20-24,33,0,40.751471594798076,0
+Intervention,Digawana,Female,25-29,21,0,28.990075290896648,0
+Intervention,Digawana,Female,30-34,23,0,28.274880219028063,0
+Intervention,Digawana,Female,35-39,10,0,12.31601642710472,0
+Intervention,Digawana,Female,40-44,11,1,15.256808599633331,0.06554450712739708
+Intervention,Digawana,Female,45-49,12,0,13.5681724845996,0
+Intervention,Digawana,Female,50-54,18,0,22.991923340177955,0
+Intervention,Digawana,Female,55-59,19,0,22.00335386721425,0
+Intervention,Digawana,Female,60-64,15,0,18.54462696783026,0
+Intervention,Digawana,Male,15-19,21,0,30.113415468856953,0
+Intervention,Digawana,Male,20-24,22,0,30.046064339493505,0
+Intervention,Digawana,Male,25-29,20,0,29.9271047227926,0
+Intervention,Digawana,Male,30-34,13,0,22.294045174537995,0
+Intervention,Digawana,Male,35-39,6,0,7.477686516084866,0
+Intervention,Digawana,Male,40-44,9,0,15.690485968514707,0
+Intervention,Digawana,Male,45-49,3,0,4.536071184120466,0
+Intervention,Digawana,Male,50-54,6,0,6.973169062286111,0
+Intervention,Digawana,Male,55-59,8,0,11.398767967145787,0
+Intervention,Digawana,Male,60-64,4,0,5.836139630390143,0
+Intervention,Gumare,Female,15-19,23,1,26.242335662183535,0.0381063641923096
+Intervention,Gumare,Female,20-24,75,0,128.62573579739902,0
+Intervention,Gumare,Female,25-29,79,0,112.96427104722792,0
+Intervention,Gumare,Female,30-34,66,0,97.3022587268994,0
+Intervention,Gumare,Female,35-39,51,0,75.01088295687885,0
+Intervention,Gumare,Female,40-44,22,0,35.5227241615332,0
+Intervention,Gumare,Female,45-49,18,0,24.642710472279255,0
+Intervention,Gumare,Female,50-54,19,0,34.4715947980835,0
+Intervention,Gumare,Female,55-59,13,0,19.611909650924026,0
+Intervention,Gumare,Female,60-64,9,0,13.724914442162891,0
+Intervention,Gumare,Male,15-19,24,0,38.098425735797406,0
+Intervention,Gumare,Male,20-24,39,1,63.005493181214135,0.015871631972212898
+Intervention,Gumare,Male,25-29,41,0,57.62559890485967,0
+Intervention,Gumare,Male,30-34,39,0,68.48726899383985,0
+Intervention,Gumare,Male,35-39,24,0,34.390896646132816,0
+Intervention,Gumare,Male,40-44,9,0,16.365982203969878,0
+Intervention,Gumare,Male,45-49,5,0,9.94271047227926,0
+Intervention,Gumare,Male,50-54,5,0,9.001505817932923,0
+Intervention,Gumare,Male,55-59,7,0,13.937508555783701,0
+Intervention,Gumare,Male,60-64,5,0,9.019986310746063,0
+Intervention,Gweta,Female,15-19,23,0,32.77405886379192,0
+Intervention,Gweta,Female,20-24,58,1,110.7434180341545,0.009029882025960124
+Intervention,Gweta,Female,25-29,52,1,78.5582385262561,0.012729409655306556
+Intervention,Gweta,Female,30-34,39,0,67.8180013689254,0
+Intervention,Gweta,Female,35-39,26,2,35.26637991186318,0.056711236168791576
+Intervention,Gweta,Female,40-44,23,0,41.973921971252565,0
+Intervention,Gweta,Female,45-49,16,0,26.73463381245722,0
+Intervention,Gweta,Female,50-54,28,0,46.41505817932923,0
+Intervention,Gweta,Female,55-59,29,1,44.11368895260163,0.02266870043614941
+Intervention,Gweta,Female,60-64,27,1,46.69500477625485,0.02141556692823203
+Intervention,Gweta,Male,15-19,13,0,22.29678302532512,0
+Intervention,Gweta,Male,20-24,49,0,83.61115674195756,0
+Intervention,Gweta,Male,25-29,35,0,54.76016427104724,0
+Intervention,Gweta,Male,30-34,21,0,35.06872005475701,0
+Intervention,Gweta,Male,35-39,9,1,16.41698295335545,0.060912532031082545
+Intervention,Gweta,Male,40-44,9,0,13.690075290896651,0
+Intervention,Gweta,Male,45-49,6,0,10.35373032169747,0
+Intervention,Gweta,Male,50-54,7,0,11.870431211498982,0
+Intervention,Gweta,Male,55-59,10,0,20.628542094455845,0
+Intervention,Gweta,Male,60-64,8,0,17.50520191649555,0
+Intervention,Lentsweletau,Female,15-19,23,1,37.229530434271936,0.026860397870595815
+Intervention,Lentsweletau,Female,20-24,41,2,69.51089466739697,0.02877246810834201
+Intervention,Lentsweletau,Female,25-29,42,1,62.741751895650125,0.015938349978865188
+Intervention,Lentsweletau,Female,30-34,35,0,58.16064339493499,0
+Intervention,Lentsweletau,Female,35-39,27,0,38.2394250513347,0
+Intervention,Lentsweletau,Female,40-44,24,1,33.98151250239705,0.029427766051598206
+Intervention,Lentsweletau,Female,45-49,19,0,27.304243668720048,0
+Intervention,Lentsweletau,Female,50-54,22,0,38.635386721423686,0
+Intervention,Lentsweletau,Female,55-59,25,0,51.370020533880904,0
+Intervention,Lentsweletau,Female,60-64,20,0,27.895824777549628,0
+Intervention,Lentsweletau,Male,15-19,24,0,33.48015058179329,0
+Intervention,Lentsweletau,Male,20-24,35,0,53.996919917864474,0
+Intervention,Lentsweletau,Male,25-29,35,0,51.83326488706364,0
+Intervention,Lentsweletau,Male,30-34,41,0,66.7669404517454,0
+Intervention,Lentsweletau,Male,35-39,27,0,47.66769336071185,0
+Intervention,Lentsweletau,Male,40-44,11,0,12.334017796030125,0
+Intervention,Lentsweletau,Male,45-49,12,0,24.646543463381235,0
+Intervention,Lentsweletau,Male,50-54,9,0,15.230047912388784,0
+Intervention,Lentsweletau,Male,55-59,10,0,14.382203969883626,0
+Intervention,Lentsweletau,Male,60-64,9,0,16.914236824093088,0
+Intervention,Lerala,Female,15-19,24,1,33.59687230641368,0.029764675440014068
+Intervention,Lerala,Female,20-24,52,1,78.99354471617139,0.012659262267480981
+Intervention,Lerala,Female,25-29,43,2,67.4861411377548,0.02963571433011021
+Intervention,Lerala,Female,30-34,28,3,37.43558161813412,0.08013766236095485
+Intervention,Lerala,Female,35-39,19,1,28.337811548558122,0.03528854012902354
+Intervention,Lerala,Female,40-44,12,0,22.822792607802867,0
+Intervention,Lerala,Female,45-49,12,0,15.785968514715954,0
+Intervention,Lerala,Female,50-54,17,0,31.71868583162219,0
+Intervention,Lerala,Female,55-59,24,0,37.68138261464749,0
+Intervention,Lerala,Female,60-64,29,0,55.54017796030114,0
+Intervention,Lerala,Male,15-19,29,1,43.218214911460876,0.023138392042536995
+Intervention,Lerala,Male,20-24,53,0,81.59979466119094,0
+Intervention,Lerala,Male,25-29,33,1,47.85515076910784,0.020896392215433886
+Intervention,Lerala,Male,30-34,21,0,28.40102669404518,0
+Intervention,Lerala,Male,35-39,14,0,13.609240246406564,0
+Intervention,Lerala,Male,40-44,10,0,18.39219712525668,0
+Intervention,Lerala,Male,45-49,6,0,10.50006844626968,0
+Intervention,Lerala,Male,50-54,5,0,7.969952087611233,0
+Intervention,Lerala,Male,55-59,10,0,17.947364818617373,0
+Intervention,Lerala,Male,60-64,9,0,16.049418206707756,0
+Intervention,Masunga,Female,15-19,43,1,68.15191903007072,0.014673101128066099
+Intervention,Masunga,Female,20-24,47,1,68.2188191889999,0.014658711655936244
+Intervention,Masunga,Female,25-29,44,1,74.86887316507305,0.01335668559876908
+Intervention,Masunga,Female,30-34,31,0,55.947638603696106,0
+Intervention,Masunga,Female,35-39,18,0,29.609993155373033,0
+Intervention,Masunga,Female,40-44,12,0,20.16844626967829,0
+Intervention,Masunga,Female,45-49,10,0,17.2750855578371,0
+Intervention,Masunga,Female,50-54,13,0,21.573511293634496,0
+Intervention,Masunga,Female,55-59,15,0,21.454893908282003,0
+Intervention,Masunga,Female,60-64,13,0,20.25674195756332,0
+Intervention,Masunga,Male,15-19,32,0,55.41793292265573,0
+Intervention,Masunga,Male,20-24,38,0,59.23942505133471,0
+Intervention,Masunga,Male,25-29,35,0,50.8167693360712,0
+Intervention,Masunga,Male,30-34,41,0,66.95941136208076,0
+Intervention,Masunga,Male,35-39,19,0,28.755441478439423,0
+Intervention,Masunga,Male,40-44,15,0,21.33319644079397,0
+Intervention,Masunga,Male,45-49,7,0,9.0340862422998,0
+Intervention,Masunga,Male,50-54,5,0,8.807871321013003,0
+Intervention,Masunga,Male,55-59,4,0,6.375770020533885,0
+Intervention,Masunga,Male,60-64,4,0,5.506160164271051,0
+Intervention,Mathangwane,Female,15-19,14,1,20.43141839164389,0.048944227993930334
+Intervention,Mathangwane,Female,20-24,45,0,72.21957563312799,0
+Intervention,Mathangwane,Female,25-29,42,3,67.08077210116085,0.04472220438184379
+Intervention,Mathangwane,Female,30-34,30,0,60.015742642026005,0
+Intervention,Mathangwane,Female,35-39,21,1,39.30086219870918,0.025444734391421177
+Intervention,Mathangwane,Female,40-44,13,0,15.409719370294326,0
+Intervention,Mathangwane,Female,45-49,11,0,17.720123203285418,0
+Intervention,Mathangwane,Female,50-54,15,0,21.461464750171118,0
+Intervention,Mathangwane,Female,55-59,13,0,18.86913073237509,0
+Intervention,Mathangwane,Female,60-64,15,0,22.806297056810408,0
+Intervention,Mathangwane,Male,15-19,13,0,20.10588637919233,0
+Intervention,Mathangwane,Male,20-24,25,0,41.86933607118412,0
+Intervention,Mathangwane,Male,25-29,20,0,30.30889801505817,0
+Intervention,Mathangwane,Male,30-34,17,0,25.534839151266258,0
+Intervention,Mathangwane,Male,35-39,10,0,17.36789869952087,0
+Intervention,Mathangwane,Male,40-44,5,0,9.969336071184117,0
+Intervention,Mathangwane,Male,45-49,3,0,5.736344969199173,0
+Intervention,Mathangwane,Male,50-54,7,0,13.827515400410682,0
+Intervention,Mathangwane,Male,55-59,5,0,8.522655715263525,0
+Intervention,Mathangwane,Male,60-64,7,0,11.397741273100628,0
+Intervention,Maunatlala,Female,15-19,14,0,17.715126625598906,0
+Intervention,Maunatlala,Female,20-24,26,1,37.5403858982919,0.026637978701372387
+Intervention,Maunatlala,Female,25-29,24,0,28.795687885010274,0
+Intervention,Maunatlala,Female,30-34,13,0,22.900273785078706,0
+Intervention,Maunatlala,Female,35-39,11,0,19.455646817248464,0
+Intervention,Maunatlala,Female,40-44,5,0,7.270294318959614,0
+Intervention,Maunatlala,Female,45-49,4,0,4.483983572895276,0
+Intervention,Maunatlala,Female,50-54,11,0,15.862080766598226,0
+Intervention,Maunatlala,Female,55-59,19,0,27.75598904859686,0
+Intervention,Maunatlala,Female,60-64,13,0,21.773374401095154,0
+Intervention,Maunatlala,Male,15-19,7,0,9.945722108145105,0
+Intervention,Maunatlala,Male,20-24,13,0,18.758932238193022,0
+Intervention,Maunatlala,Male,25-29,16,0,20.061806981519506,0
+Intervention,Maunatlala,Male,30-34,19,0,27.69137577002052,0
+Intervention,Maunatlala,Male,35-39,9,0,14.399794661190967,0
+Intervention,Maunatlala,Male,40-44,12,0,16.819644079397676,0
+Intervention,Maunatlala,Male,45-49,8,0,7.21307323750856,0
+Intervention,Maunatlala,Male,50-54,7,0,12.391170431211513,0
+Intervention,Maunatlala,Male,55-59,7,0,13.781245722108146,0
+Intervention,Maunatlala,Male,60-64,6,0,6.704517453798779,0
+Intervention,Mmankgodi,Female,15-19,42,1,65.11657029279239,0.015357074174876926
+Intervention,Mmankgodi,Female,20-24,60,3,86.25688338273503,0.034779833009831104
+Intervention,Mmankgodi,Female,25-29,49,2,81.77705037623218,0.024456739278301033
+Intervention,Mmankgodi,Female,30-34,31,0,52.5782340862423,0
+Intervention,Mmankgodi,Female,35-39,23,0,34.18822724161533,0
+Intervention,Mmankgodi,Female,40-44,16,0,23.579123887748125,0
+Intervention,Mmankgodi,Female,45-49,21,0,27.487337440109506,0
+Intervention,Mmankgodi,Female,50-54,24,0,47.1986995208761,0
+Intervention,Mmankgodi,Female,55-59,15,0,27.26522929500343,0
+Intervention,Mmankgodi,Female,60-64,14,0,20.674743326488716,0
+Intervention,Mmankgodi,Male,15-19,22,0,31.737303216974677,0
+Intervention,Mmankgodi,Male,20-24,45,0,68.36125941136208,0
+Intervention,Mmankgodi,Male,25-29,38,0,63.92019164955509,0
+Intervention,Mmankgodi,Male,30-34,22,0,32.94496919917866,0
+Intervention,Mmankgodi,Male,35-39,22,0,35.734565366187546,0
+Intervention,Mmankgodi,Male,40-44,15,0,23.47850787132102,0
+Intervention,Mmankgodi,Male,45-49,13,0,14.555030800821363,0
+Intervention,Mmankgodi,Male,50-54,8,0,11.332785763175899,0
+Intervention,Mmankgodi,Male,55-59,10,0,16.474127310061604,0
+Intervention,Mmankgodi,Male,60-64,16,0,26.450102669404494,0
+Intervention,Nkange,Female,15-19,10,0,14.07357973990418,0
+Intervention,Nkange,Female,20-24,17,1,31.089489396332084,0.03216521144017178
+Intervention,Nkange,Female,25-29,8,0,12.91526351813826,0
+Intervention,Nkange,Female,30-34,5,0,7.789869952087614,0
+Intervention,Nkange,Female,35-39,5,0,7.88720054757016,0
+Intervention,Nkange,Female,40-44,4,0,4.920465434633812,0
+Intervention,Nkange,Female,45-49,6,0,9.61731690622861,0
+Intervention,Nkange,Female,50-54,11,0,16.88548939082819,0
+Intervention,Nkange,Female,55-59,14,0,20.615674195756334,0
+Intervention,Nkange,Female,60-64,12,0,19.262902121834358,0
+Intervention,Nkange,Male,15-19,8,0,12.801711156741952,0
+Intervention,Nkange,Male,20-24,12,0,22.89260780287474,0
+Intervention,Nkange,Male,25-29,11,0,15.47679671457906,0
+Intervention,Nkange,Male,30-34,5,0,9.112936344969196,0
+Intervention,Nkange,Male,35-39,3,0,3.033744010951402,0
+Intervention,Nkange,Male,40-44,4,0,7.88720054757016,0
+Intervention,Nkange,Male,45-49,4,0,3.5746064339493486,0
+Intervention,Nkange,Male,50-54,3,0,5.573511293634496,0
+Intervention,Nkange,Male,55-59,3,0,3.911841204654351,0
+Intervention,Nkange,Male,60-64,4,0,7.001300479123884,0
+Intervention,Oodi,Female,15-19,22,0,30.08898015058179,0
+Intervention,Oodi,Female,20-24,67,0,123.95961670088981,0
+Intervention,Oodi,Female,25-29,51,1,82.79823751683095,0.012077551769102855
+Intervention,Oodi,Female,30-34,57,1,93.43081725175087,0.010703106634564521
+Intervention,Oodi,Female,35-39,35,0,43.530116358658475,0
+Intervention,Oodi,Female,40-44,23,0,39.49466119096509,0
+Intervention,Oodi,Female,45-49,22,1,31.974868184318908,0.03127456207905242
+Intervention,Oodi,Female,50-54,14,1,15.347902066684611,0.06515548481187408
+Intervention,Oodi,Female,55-59,15,0,24.03682409308692,0
+Intervention,Oodi,Female,60-64,8,0,12.271868583162217,0
+Intervention,Oodi,Male,15-19,15,0,16.909240246406576,0
+Intervention,Oodi,Male,20-24,51,0,89.98891170431213,0
+Intervention,Oodi,Male,25-29,43,0,64.36009582477753,0
+Intervention,Oodi,Male,30-34,34,0,56.69445585215607,0
+Intervention,Oodi,Male,35-39,23,1,40.353378992023096,0.02478107224174898
+Intervention,Oodi,Male,40-44,14,0,20.326214921286777,0
+Intervention,Oodi,Male,45-49,13,0,20.30465434633814,0
+Intervention,Oodi,Male,50-54,9,0,15.561875427789175,0
+Intervention,Oodi,Male,55-59,2,0,1.9349075975359327,0
+Intervention,Oodi,Male,60-64,6,0,12.597535934291578,0
+Intervention,Otse,Female,15-19,38,1,48.2136278960196,0.0207410237237625
+Intervention,Otse,Female,20-24,61,0,77.64715947980834,0
+Intervention,Otse,Female,25-29,54,1,84.51537499603938,0.011832166632957171
+Intervention,Otse,Female,30-34,33,1,44.02386045636014,0.022714954791192777
+Intervention,Otse,Female,35-39,25,0,35.38247775496236,0
+Intervention,Otse,Female,40-44,14,0,22.45325119780972,0
+Intervention,Otse,Female,45-49,17,0,24.94175222450376,0
+Intervention,Otse,Female,50-54,17,0,19.310814510609163,0
+Intervention,Otse,Female,55-59,16,0,22.428678986995223,0
+Intervention,Otse,Female,60-64,9,0,11.321834360027374,0
+Intervention,Otse,Male,15-19,32,0,37.30260095824777,0
+Intervention,Otse,Male,20-24,55,1,73.25319756245332,0.013651281217416237
+Intervention,Otse,Male,25-29,37,0,46.276043805612616,0
+Intervention,Otse,Male,30-34,21,0,33.14086242299795,0
+Intervention,Otse,Male,35-39,15,0,19.20054757015742,0
+Intervention,Otse,Male,40-44,20,0,29.479329226557155,0
+Intervention,Otse,Male,45-49,14,0,21.665571526351798,0
+Intervention,Otse,Male,50-54,10,0,15.355373032169744,0
+Intervention,Otse,Male,55-59,8,0,11.0835728952772,0
+Intervention,Otse,Male,60-64,2,0,2.771184120465435,0
+Intervention,Sefhare,Female,15-19,18,0,30.530869267624915,0
+Intervention,Sefhare,Female,20-24,33,1,51.698106005607585,0.019343068388066906
+Intervention,Sefhare,Female,25-29,36,1,57.115826919702926,0.017508281923430152
+Intervention,Sefhare,Female,30-34,23,0,41.785900068446274,0
+Intervention,Sefhare,Female,35-39,19,1,23.232401722416405,0.04304333283954552
+Intervention,Sefhare,Female,40-44,12,0,19.84079397672828,0
+Intervention,Sefhare,Female,45-49,19,0,34.695550992470906,0
+Intervention,Sefhare,Female,50-54,24,0,36.18672142368241,0
+Intervention,Sefhare,Female,55-59,29,0,49.12026009582479,0
+Intervention,Sefhare,Female,60-64,34,0,55.060095824777534,0
+Intervention,Sefhare,Male,15-19,14,0,20.619575633127994,0
+Intervention,Sefhare,Male,20-24,26,0,42.98370978781657,0
+Intervention,Sefhare,Male,25-29,26,0,33.509445585215595,0
+Intervention,Sefhare,Male,30-34,21,0,28.56488706365502,0
+Intervention,Sefhare,Male,35-39,14,0,22.34010951403149,0
+Intervention,Sefhare,Male,40-44,7,0,11.322450376454483,0
+Intervention,Sefhare,Male,45-49,5,0,7.271252566735107,0
+Intervention,Sefhare,Male,50-54,7,0,15.306297056810408,0
+Intervention,Sefhare,Male,55-59,7,0,12.392950034223148,0
+Intervention,Sefhare,Male,60-64,11,0,18.43894592744695,0
+Intervention,Shoshong,Female,15-19,34,0,62.850855578371,0
+Intervention,Shoshong,Female,20-24,43,1,62.83895585026764,0.015913695357745842
+Intervention,Shoshong,Female,25-29,43,1,76.1871000928418,0.013125581611340992
+Intervention,Shoshong,Female,30-34,23,0,34.217385352498276,0
+Intervention,Shoshong,Female,35-39,21,0,36.63340177960301,0
+Intervention,Shoshong,Female,40-44,12,0,15.954209445585235,0
+Intervention,Shoshong,Female,45-49,17,0,27.3366187542779,0
+Intervention,Shoshong,Female,50-54,28,1,48.67352819844982,0.020545048551295454
+Intervention,Shoshong,Female,55-59,28,0,44.74845995893224,0
+Intervention,Shoshong,Female,60-64,27,0,41.50855578370979,0
+Intervention,Shoshong,Male,15-19,25,0,39.3703627652293,0
+Intervention,Shoshong,Male,20-24,34,0,53.71998631074606,0
+Intervention,Shoshong,Male,25-29,24,0,37.02997946611909,0
+Intervention,Shoshong,Male,30-34,19,0,24.889527720739224,0
+Intervention,Shoshong,Male,35-39,16,1,30.288116561603445,0.033016249061445777
+Intervention,Shoshong,Male,40-44,7,0,12.143668720054755,0
+Intervention,Shoshong,Male,45-49,10,0,16.713963039014374,0
+Intervention,Shoshong,Male,50-54,12,0,18.496440793976724,0
+Intervention,Shoshong,Male,55-59,14,0,23.244832306639296,0
+Intervention,Shoshong,Male,60-64,12,0,15.602258726899393,0
+Intervention,Tati_siding,Female,15-19,32,0,44.68945927446952,0
+Intervention,Tati_siding,Female,20-24,63,0,101.6908281998631,0
+Intervention,Tati_siding,Female,25-29,52,1,77.44636887950104,0.012912161208692716
+Intervention,Tati_siding,Female,30-34,50,0,86.50896646132789,0
+Intervention,Tati_siding,Female,35-39,22,1,34.9190017888107,0.02863770293457919
+Intervention,Tati_siding,Female,40-44,17,0,21.221492128678996,0
+Intervention,Tati_siding,Female,45-49,18,0,27.172895277207395,0
+Intervention,Tati_siding,Female,50-54,10,0,13.64592744695414,0
+Intervention,Tati_siding,Female,55-59,9,0,12.746475017111571,0
+Intervention,Tati_siding,Female,60-64,14,0,22.215126625598884,0
+Intervention,Tati_siding,Male,15-19,21,0,33.96386036960985,0
+Intervention,Tati_siding,Male,20-24,41,0,57.336413415468854,0
+Intervention,Tati_siding,Male,25-29,33,1,47.54698178924961,0.02103182920069388
+Intervention,Tati_siding,Male,30-34,33,1,52.13567801371093,0.019180723030724073
+Intervention,Tati_siding,Male,35-39,23,0,30.389869952087622,0
+Intervention,Tati_siding,Male,40-44,7,0,12.918617385352498,0
+Intervention,Tati_siding,Male,45-49,12,0,20.61594798083503,0
+Intervention,Tati_siding,Male,50-54,9,0,13.415879534565377,0
+Intervention,Tati_siding,Male,55-59,3,0,3.336481861738534,0
+Intervention,Tati_siding,Male,60-64,6,0,9.441889117043125,0
+Standard of Care,Bokaa,Female,15-19,33,0,51.239767282683104,0
+Standard of Care,Bokaa,Female,20-24,62,3,95.67304486110885,0.03135679442788908
+Standard of Care,Bokaa,Female,25-29,49,0,69.35229295003424,0
+Standard of Care,Bokaa,Female,30-34,44,0,79.97412731006159,0
+Standard of Care,Bokaa,Female,35-39,38,0,56.40663928815879,0
+Standard of Care,Bokaa,Female,40-44,22,0,33.40177960301165,0
+Standard of Care,Bokaa,Female,45-49,16,0,20.931895961670087,0
+Standard of Care,Bokaa,Female,50-54,18,0,33.05181382614648,0
+Standard of Care,Bokaa,Female,55-59,24,0,45.49500342231348,0
+Standard of Care,Bokaa,Female,60-64,21,0,34.45708418891169,0
+Standard of Care,Bokaa,Male,15-19,21,0,32.724229979466116,0
+Standard of Care,Bokaa,Male,20-24,51,0,79.48172484599593,0
+Standard of Care,Bokaa,Male,25-29,41,0,74.1683778234086,0
+Standard of Care,Bokaa,Male,30-34,23,0,33.94866529774128,0
+Standard of Care,Bokaa,Male,35-39,22,0,42.51403148528406,0
+Standard of Care,Bokaa,Male,40-44,16,0,20.970636550308036,0
+Standard of Care,Bokaa,Male,45-49,8,0,14.690691307323746,0
+Standard of Care,Bokaa,Male,50-54,8,0,11.079055441478438,0
+Standard of Care,Bokaa,Male,55-59,6,0,12.167077344284742,0
+Standard of Care,Bokaa,Male,60-64,4,0,7.1386036960985635,0
+Standard of Care,Letlhakeng,Female,15-19,20,1,25.934651734060836,0.03855845107365243
+Standard of Care,Letlhakeng,Female,20-24,65,2,117.86072910691155,0.016969180618132768
+Standard of Care,Letlhakeng,Female,25-29,73,2,113.65491634676131,0.01759712702526653
+Standard of Care,Letlhakeng,Female,30-34,46,2,73.28443521549853,0.027290924657041374
+Standard of Care,Letlhakeng,Female,35-39,26,1,40.568887308124694,0.024649431284740484
+Standard of Care,Letlhakeng,Female,40-44,24,2,38.8793229029804,0.05144122506944905
+Standard of Care,Letlhakeng,Female,45-49,27,0,44.75989048596852,0
+Standard of Care,Letlhakeng,Female,50-54,28,0,45.354962354551674,0
+Standard of Care,Letlhakeng,Female,55-59,22,1,40.035447640495185,0.024977864840669765
+Standard of Care,Letlhakeng,Female,60-64,17,0,32.79472963723479,0
+Standard of Care,Letlhakeng,Male,15-19,31,0,43.75865845311429,0
+Standard of Care,Letlhakeng,Male,20-24,58,0,96.10773442847363,0
+Standard of Care,Letlhakeng,Male,25-29,47,0,73.8570841889117,0
+Standard of Care,Letlhakeng,Male,30-34,38,0,68.91560574948667,0
+Standard of Care,Letlhakeng,Male,35-39,21,0,29.30082135523614,0
+Standard of Care,Letlhakeng,Male,40-44,10,0,18.219096509240245,0
+Standard of Care,Letlhakeng,Male,45-49,10,0,15.956741957563295,0
+Standard of Care,Letlhakeng,Male,50-54,8,0,12.839425051334715,0
+Standard of Care,Letlhakeng,Male,55-59,15,0,29.331622176591367,0
+Standard of Care,Letlhakeng,Male,60-64,8,0,12.047227926078037,0
+Standard of Care,Metsimotlhabe,Female,15-19,31,0,35.736687200547564,0
+Standard of Care,Metsimotlhabe,Female,20-24,77,0,130.53182751540044,0
+Standard of Care,Metsimotlhabe,Female,25-29,77,1,117.64022618184887,0.008500493687033504
+Standard of Care,Metsimotlhabe,Female,30-34,54,0,73.87508555783714,0
+Standard of Care,Metsimotlhabe,Female,35-39,23,0,33.561054072553034,0
+Standard of Care,Metsimotlhabe,Female,40-44,18,0,33.3514031485284,0
+Standard of Care,Metsimotlhabe,Female,45-49,18,0,24.072484599589323,0
+Standard of Care,Metsimotlhabe,Female,50-54,20,0,33.748870636550315,0
+Standard of Care,Metsimotlhabe,Female,55-59,13,0,14.739219712525674,0
+Standard of Care,Metsimotlhabe,Female,60-64,8,0,11.329568788501021,0
+Standard of Care,Metsimotlhabe,Male,15-19,16,0,21.361806981519518,0
+Standard of Care,Metsimotlhabe,Male,20-24,47,0,73.53059548254618,0
+Standard of Care,Metsimotlhabe,Male,25-29,38,1,58.020330448400706,0.01723533789400478
+Standard of Care,Metsimotlhabe,Male,30-34,27,0,41.83593429158111,0
+Standard of Care,Metsimotlhabe,Male,35-39,28,0,35.065366187542764,0
+Standard of Care,Metsimotlhabe,Male,40-44,17,0,22.790075290896645,0
+Standard of Care,Metsimotlhabe,Male,45-49,9,0,17.213347022587264,0
+Standard of Care,Metsimotlhabe,Male,50-54,10,0,14.717522245037635,0
+Standard of Care,Metsimotlhabe,Male,55-59,11,0,18.06899383983572,0
+Standard of Care,Metsimotlhabe,Male,60-64,8,0,13.394934976043814,0
+Standard of Care,Mmadinare,Female,15-19,30,0,55.14722792607803,0
+Standard of Care,Mmadinare,Female,20-24,55,0,78.47898699520879,0
+Standard of Care,Mmadinare,Female,25-29,40,0,63.05290896646132,0
+Standard of Care,Mmadinare,Female,30-34,29,0,50.090759753593424,0
+Standard of Care,Mmadinare,Female,35-39,18,0,29.56078028747435,0
+Standard of Care,Mmadinare,Female,40-44,18,0,23.169062286105394,0
+Standard of Care,Mmadinare,Female,45-49,15,0,21.134907597535936,0
+Standard of Care,Mmadinare,Female,50-54,15,0,26.7520876112252,0
+Standard of Care,Mmadinare,Female,55-59,18,1,27.74083730882515,0.03604793859923873
+Standard of Care,Mmadinare,Female,60-64,19,0,27.261738535249812,0
+Standard of Care,Mmadinare,Male,15-19,33,0,47.93853524982889,0
+Standard of Care,Mmadinare,Male,20-24,46,1,65.02535647533676,0.015378616192273955
+Standard of Care,Mmadinare,Male,25-29,29,1,40.81952819016997,0.02449807835458561
+Standard of Care,Mmadinare,Male,30-34,28,1,42.74631893190106,0.02339382723441274
+Standard of Care,Mmadinare,Male,35-39,14,0,14.566735112936357,0
+Standard of Care,Mmadinare,Male,40-44,5,0,10.553319644079401,0
+Standard of Care,Mmadinare,Male,45-49,4,0,7.4295687885010295,0
+Standard of Care,Mmadinare,Male,50-54,5,0,7.144353182751544,0
+Standard of Care,Mmadinare,Male,55-59,10,0,12.137919233401782,0
+Standard of Care,Mmadinare,Male,60-64,7,0,12.975975359342925,0
+Standard of Care,Mmandunyane,Female,15-19,30,0,47.252703627652295,0
+Standard of Care,Mmandunyane,Female,20-24,55,3,101.23974429598982,0.029632631145620467
+Standard of Care,Mmandunyane,Female,25-29,27,1,38.63711760384143,0.025881847871089034
+Standard of Care,Mmandunyane,Female,30-34,17,0,27.181724845995895,0
+Standard of Care,Mmandunyane,Female,35-39,15,0,22.096714579055444,0
+Standard of Care,Mmandunyane,Female,40-44,11,0,18.58877481177276,0
+Standard of Care,Mmandunyane,Female,45-49,7,0,10.195550992470913,0
+Standard of Care,Mmandunyane,Female,50-54,6,0,10.85448323066393,0
+Standard of Care,Mmandunyane,Female,55-59,9,0,9.501848049281307,0
+Standard of Care,Mmandunyane,Female,60-64,20,1,33.04603047253414,0.030260820609941015
+Standard of Care,Mmandunyane,Male,15-19,25,0,41.57864476386038,0
+Standard of Care,Mmandunyane,Male,20-24,31,0,46.298288843258064,0
+Standard of Care,Mmandunyane,Male,25-29,16,0,35.80547570157427,0
+Standard of Care,Mmandunyane,Male,30-34,9,0,14.67378507871322,0
+Standard of Care,Mmandunyane,Male,35-39,7,0,11.626420260095827,0
+Standard of Care,Mmandunyane,Male,40-44,4,0,6.4352498288843165,0
+Standard of Care,Mmandunyane,Male,45-49,6,0,12.823750855578375,0
+Standard of Care,Mmandunyane,Male,50-54,5,0,6.49993155373032,0
+Standard of Care,Mmandunyane,Male,55-59,5,0,9.846406570841893,0
+Standard of Care,Mmandunyane,Male,60-64,3,0,4.544832306639293,0
+Standard of Care,Mmathethe,Female,15-19,29,0,44.32717316906229,0
+Standard of Care,Mmathethe,Female,20-24,55,0,77.22950034223138,0
+Standard of Care,Mmathethe,Female,25-29,42,2,65.07876529542945,0.030731990549004193
+Standard of Care,Mmathethe,Female,30-34,24,0,31.035181382614642,0
+Standard of Care,Mmathethe,Female,35-39,13,0,16.189322381930182,0
+Standard of Care,Mmathethe,Female,40-44,15,0,25.71902806297056,0
+Standard of Care,Mmathethe,Female,45-49,14,0,20.689253935660524,0
+Standard of Care,Mmathethe,Female,50-54,23,1,42.47485072090151,0.023543343485087485
+Standard of Care,Mmathethe,Female,55-59,25,0,40.84339493497603,0
+Standard of Care,Mmathethe,Female,60-64,16,0,24.49938398357289,0
+Standard of Care,Mmathethe,Male,15-19,18,0,31.454962354551686,0
+Standard of Care,Mmathethe,Male,20-24,17,0,27.276249144421623,0
+Standard of Care,Mmathethe,Male,25-29,16,0,23.436618754277884,0
+Standard of Care,Mmathethe,Male,30-34,21,0,34.886242299794645,0
+Standard of Care,Mmathethe,Male,35-39,13,0,16.81670088980151,0
+Standard of Care,Mmathethe,Male,40-44,14,0,25.57221081451059,0
+Standard of Care,Mmathethe,Male,45-49,9,0,12.30643394934976,0
+Standard of Care,Mmathethe,Male,50-54,4,0,4.935044490075292,0
+Standard of Care,Mmathethe,Male,55-59,11,0,16.955373032169746,0
+Standard of Care,Mmathethe,Male,60-64,12,0,18.540314852840538,0
+Standard of Care,Molapowabojang,Female,15-19,32,0,43.80540725530458,0
+Standard of Care,Molapowabojang,Female,20-24,52,2,74.53104542311203,0.02683445520784016
+Standard of Care,Molapowabojang,Female,25-29,46,1,65.93244621260763,0.015167039256747304
+Standard of Care,Molapowabojang,Female,30-34,36,0,49.46605065023955,0
+Standard of Care,Molapowabojang,Female,35-39,25,1,34.93851385613064,0.028621709673107076
+Standard of Care,Molapowabojang,Female,40-44,13,0,14.917727583846691,0
+Standard of Care,Molapowabojang,Female,45-49,20,0,25.567008898015054,0
+Standard of Care,Molapowabojang,Female,50-54,22,0,30.346269678302534,0
+Standard of Care,Molapowabojang,Female,55-59,23,2,25.052145632407274,0.07983348130520264
+Standard of Care,Molapowabojang,Female,60-64,19,0,25.242231348391527,0
+Standard of Care,Molapowabojang,Male,15-19,23,0,34.94709103353867,0
+Standard of Care,Molapowabojang,Male,20-24,46,1,61.82046721219842,0.016175872572549564
+Standard of Care,Molapowabojang,Male,25-29,27,0,31.751745379876805,0
+Standard of Care,Molapowabojang,Male,30-34,32,0,44.022245037645426,0
+Standard of Care,Molapowabojang,Male,35-39,25,0,27.329842573579754,0
+Standard of Care,Molapowabojang,Male,40-44,16,0,18.464202600958245,0
+Standard of Care,Molapowabojang,Male,45-49,9,0,13.947980835044483,0
+Standard of Care,Molapowabojang,Male,50-54,3,0,3.897262149212871,0
+Standard of Care,Molapowabojang,Male,55-59,6,0,7.136276522929499,0
+Standard of Care,Molapowabojang,Male,60-64,4,0,6.8451060917179944,0
+Standard of Care,Nata,Female,15-19,29,3,42.13796591315378,0.07119470375440028
+Standard of Care,Nata,Female,20-24,54,4,83.66980802962706,0.04780696997157708
+Standard of Care,Nata,Female,25-29,44,0,57.55797399041752,0
+Standard of Care,Nata,Female,30-34,36,2,60.19072241688594,0.03322771217377712
+Standard of Care,Nata,Female,35-39,19,0,31.659137577002042,0
+Standard of Care,Nata,Female,40-44,10,0,16.072347707049964,0
+Standard of Care,Nata,Female,45-49,16,0,28.972210814510618,0
+Standard of Care,Nata,Female,50-54,20,0,30.744284736481866,0
+Standard of Care,Nata,Female,55-59,18,1,30.03724587877177,0.03329200033970925
+Standard of Care,Nata,Female,60-64,6,0,5.533333333333331,0
+Standard of Care,Nata,Male,15-19,36,0,61.086789869952085,0
+Standard of Care,Nata,Male,20-24,44,1,57.93320878401383,0.017261256902378612
+Standard of Care,Nata,Male,25-29,31,1,50.40992207702003,0.019837364526612947
+Standard of Care,Nata,Male,30-34,29,1,49.6580604740461,0.020137717632420466
+Standard of Care,Nata,Male,35-39,20,0,32.61252566735115,0
+Standard of Care,Nata,Male,40-44,13,0,22.64873374401096,0
+Standard of Care,Nata,Male,45-49,10,0,16.285831622176595,0
+Standard of Care,Nata,Male,50-54,7,0,12.055236139630402,0
+Standard of Care,Nata,Male,55-59,7,0,12.459958932238187,0
+Standard of Care,Nata,Male,60-64,6,0,8.838877481177278,0
+Standard of Care,Rakops,Female,15-19,23,1,35.986142231602514,0.027788474617927075
+Standard of Care,Rakops,Female,20-24,49,0,82.28199863107461,0
+Standard of Care,Rakops,Female,25-29,51,0,74.77789185489391,0
+Standard of Care,Rakops,Female,30-34,48,2,81.95447423411501,0.024403792699428536
+Standard of Care,Rakops,Female,35-39,41,1,64.4562055113193,0.01551441001013297
+Standard of Care,Rakops,Female,40-44,30,0,52.37453798767968,0
+Standard of Care,Rakops,Female,45-49,17,0,28.27823408624228,0
+Standard of Care,Rakops,Female,50-54,22,0,45.04469541409994,0
+Standard of Care,Rakops,Female,55-59,31,0,61.07104722792608,0
+Standard of Care,Rakops,Female,60-64,15,0,21.736755646817265,0
+Standard of Care,Rakops,Male,15-19,21,0,39.15701574264203,0
+Standard of Care,Rakops,Male,20-24,39,0,59.36447638603696,0
+Standard of Care,Rakops,Male,25-29,38,0,55.41964407939767,0
+Standard of Care,Rakops,Male,30-34,31,0,46.094592744695404,0
+Standard of Care,Rakops,Male,35-39,17,0,27.825941136208073,0
+Standard of Care,Rakops,Male,40-44,14,0,22.681793292265574,0
+Standard of Care,Rakops,Male,45-49,6,0,10.181108829568785,0
+Standard of Care,Rakops,Male,50-54,11,0,19.907597535934293,0
+Standard of Care,Rakops,Male,55-59,8,0,13.762217659137576,0
+Standard of Care,Rakops,Male,60-64,7,0,14.113620807665981,0
+Standard of Care,Ramokgonami,Female,15-19,13,0,14.713278576317595,0
+Standard of Care,Ramokgonami,Female,20-24,39,1,63.951349730964054,0.015636886542768597
+Standard of Care,Ramokgonami,Female,25-29,33,2,51.03361495752742,0.039189855581747333
+Standard of Care,Ramokgonami,Female,30-34,30,1,53.1414807199371,0.018817691687405876
+Standard of Care,Ramokgonami,Female,35-39,12,0,19.51416837782341,0
+Standard of Care,Ramokgonami,Female,40-44,14,0,23.82464065708419,0
+Standard of Care,Ramokgonami,Female,45-49,11,0,13.847296372347706,0
+Standard of Care,Ramokgonami,Female,50-54,14,0,21.30383299110197,0
+Standard of Care,Ramokgonami,Female,55-59,20,0,36.57008898015059,0
+Standard of Care,Ramokgonami,Female,60-64,25,1,40.06921500692006,0.024956815346327533
+Standard of Care,Ramokgonami,Male,15-19,17,0,25.807255304585894,0
+Standard of Care,Ramokgonami,Male,20-24,31,0,52.246680355920596,0
+Standard of Care,Ramokgonami,Male,25-29,25,0,46.36892539356606,0
+Standard of Care,Ramokgonami,Male,30-34,17,0,17.777207392197123,0
+Standard of Care,Ramokgonami,Male,35-39,11,1,19.12325020048214,0.05229236607356566
+Standard of Care,Ramokgonami,Male,40-44,4,0,3.3239561943873923,0
+Standard of Care,Ramokgonami,Male,45-49,4,0,7.156125941136217,0
+Standard of Care,Ramokgonami,Male,50-54,5,0,10.268514715947973,0
+Standard of Care,Ramokgonami,Male,55-59,9,0,16.900752908966467,0
+Standard of Care,Ramokgonami,Male,60-64,6,0,12.148049281314165,0
+Standard of Care,Ranaka,Female,15-19,7,0,11.008692676249144,0
+Standard of Care,Ranaka,Female,20-24,16,1,18.644498411483788,0.0536351248464837
+Standard of Care,Ranaka,Female,25-29,21,0,32.91505817932922,0
+Standard of Care,Ranaka,Female,30-34,9,0,14.013894592744705,0
+Standard of Care,Ranaka,Female,35-39,7,0,8.113415468856942,0
+Standard of Care,Ranaka,Female,40-44,7,0,8.335318275154002,0
+Standard of Care,Ranaka,Female,45-49,11,0,14.752977412731006,0
+Standard of Care,Ranaka,Female,50-54,16,0,25.098151950718673,0
+Standard of Care,Ranaka,Female,55-59,17,0,20.95537303216976,0
+Standard of Care,Ranaka,Female,60-64,8,0,11.773648186173858,0
+Standard of Care,Ranaka,Male,15-19,14,0,24.11594798083505,0
+Standard of Care,Ranaka,Male,20-24,14,0,19.59048596851472,0
+Standard of Care,Ranaka,Male,25-29,10,0,13.689322381930182,0
+Standard of Care,Ranaka,Male,30-34,10,0,13.109103353867216,0
+Standard of Care,Ranaka,Male,35-39,4,0,4.742231348391513,0
+Standard of Care,Ranaka,Male,40-44,2,0,3.2087611225188226,0
+Standard of Care,Ranaka,Male,50-54,2,0,4.243668720054757,0
+Standard of Care,Ranaka,Male,55-59,7,0,12.39151266255989,0
+Standard of Care,Ranaka,Male,60-64,6,0,8.033949349760434,0
+Standard of Care,Sebina,Female,15-19,14,0,21.582272416153316,0
+Standard of Care,Sebina,Female,20-24,35,3,51.44598895636368,0.058313584029740205
+Standard of Care,Sebina,Female,25-29,29,1,40.144204067527056,0.024910196209591996
+Standard of Care,Sebina,Female,30-34,22,1,37.94887781217605,0.026351240343637936
+Standard of Care,Sebina,Female,35-39,15,0,23.24202600958248,0
+Standard of Care,Sebina,Female,40-44,7,0,9.461806981519508,0
+Standard of Care,Sebina,Female,45-49,8,0,11.62320328542095,0
+Standard of Care,Sebina,Female,50-54,12,0,21.740520191649566,0
+Standard of Care,Sebina,Female,55-59,12,0,24.50444900752909,0
+Standard of Care,Sebina,Female,60-64,9,0,15.313620807665984,0
+Standard of Care,Sebina,Male,15-19,15,0,19.455373032169742,0
+Standard of Care,Sebina,Male,20-24,21,1,32.23710082417762,0.03102015920892013
+Standard of Care,Sebina,Male,25-29,21,1,29.237605376678285,0.03420252743398957
+Standard of Care,Sebina,Male,30-34,19,0,31.076249144421627,0
+Standard of Care,Sebina,Male,35-39,6,0,9.798494182067081,0
+Standard of Care,Sebina,Male,40-44,4,0,9.374401095140314,0
+Standard of Care,Sebina,Male,45-49,3,0,3.1381245722108133,0
+Standard of Care,Sebina,Male,50-54,4,0,6.220054757015745,0
+Standard of Care,Sebina,Male,55-59,7,0,8.510198494182063,0
+Standard of Care,Sebina,Male,60-64,7,0,11.185763175906914,0
+Standard of Care,Sefophe,Female,15-19,22,1,33.12838538364137,0.03018559426967409
+Standard of Care,Sefophe,Female,20-24,43,2,73.28506229678251,0.02729069113567237
+Standard of Care,Sefophe,Female,25-29,38,0,60.81437371663242,0
+Standard of Care,Sefophe,Female,30-34,30,1,48.966275174227334,0.020422219097570547
+Standard of Care,Sefophe,Female,35-39,15,0,26.022450376454493,0
+Standard of Care,Sefophe,Female,40-44,14,0,28.37624914442162,0
+Standard of Care,Sefophe,Female,45-49,20,0,34.20465434633813,0
+Standard of Care,Sefophe,Female,50-54,20,0,34.17973990417523,0
+Standard of Care,Sefophe,Female,55-59,22,0,34.988706365503084,0
+Standard of Care,Sefophe,Female,60-64,23,0,33.545174537987684,0
+Standard of Care,Sefophe,Male,15-19,25,1,39.6439663430941,0.025224519447565267
+Standard of Care,Sefophe,Male,20-24,34,0,60.090965092402456,0
+Standard of Care,Sefophe,Male,25-29,28,0,40.51841204654346,0
+Standard of Care,Sefophe,Male,30-34,24,2,37.6335312378466,0.053144096081759046
+Standard of Care,Sefophe,Male,35-39,14,2,19.424872522740976,0.10296077864390468
+Standard of Care,Sefophe,Male,40-44,9,0,16.312457221081438,0
+Standard of Care,Sefophe,Male,45-49,8,0,12.355578370978783,0
+Standard of Care,Sefophe,Male,50-54,10,0,17.269130732375082,0
+Standard of Care,Sefophe,Male,55-59,12,0,19.1820670773443,0
+Standard of Care,Sefophe,Male,60-64,8,0,14.258316221765917,0
+Standard of Care,Shakawe,Female,15-19,29,0,37.477275838466795,0
+Standard of Care,Shakawe,Female,20-24,71,3,121.9259971448931,0.02460508890843757
+Standard of Care,Shakawe,Female,25-29,72,3,122.0416079028307,0.02458178035796279
+Standard of Care,Shakawe,Female,30-34,63,1,103.47847557935273,0.009663845494449205
+Standard of Care,Shakawe,Female,35-39,27,1,36.89765445063147,0.02710199374158012
+Standard of Care,Shakawe,Female,40-44,15,0,25.794592744695414,0
+Standard of Care,Shakawe,Female,45-49,11,0,18.34976043805613,0
+Standard of Care,Shakawe,Female,50-54,11,0,19.883983572895268,0
+Standard of Care,Shakawe,Female,55-59,14,0,25.96646132785763,0
+Standard of Care,Shakawe,Female,60-64,6,0,9.421629021218344,0
+Standard of Care,Shakawe,Male,15-19,19,0,30.2419575633128,0
+Standard of Care,Shakawe,Male,20-24,44,0,66.71567419575635,0
+Standard of Care,Shakawe,Male,25-29,46,1,63.07615692370423,0.015853851102716702
+Standard of Care,Shakawe,Male,30-34,37,1,59.01268350754156,0.016945509686442314
+Standard of Care,Shakawe,Male,35-39,31,0,50.754209445585204,0
+Standard of Care,Shakawe,Male,40-44,19,0,32.501711156741976,0
+Standard of Care,Shakawe,Male,45-49,10,0,17.924366872005464,0
+Standard of Care,Shakawe,Male,50-54,9,0,17.2284052019165,0
+Standard of Care,Shakawe,Male,55-59,4,0,2.34873374401095,0
+Standard of Care,Shakawe,Male,60-64,1,0,2.409308692676248,0
+Standard of Care,Tsetsebjwe,Female,15-19,20,0,30.92395619438741,0
+Standard of Care,Tsetsebjwe,Female,20-24,37,5,50.1196415840553,0.09976128802945518
+Standard of Care,Tsetsebjwe,Female,25-29,27,0,41.794661190965094,0
+Standard of Care,Tsetsebjwe,Female,30-34,19,0,28.454004106776186,0
+Standard of Care,Tsetsebjwe,Female,35-39,13,0,22.680698151950715,0
+Standard of Care,Tsetsebjwe,Female,40-44,7,0,10.350444900752912,0
+Standard of Care,Tsetsebjwe,Female,45-49,13,0,23.632101300479135,0
+Standard of Care,Tsetsebjwe,Female,50-54,16,0,29.114168377823404,0
+Standard of Care,Tsetsebjwe,Female,55-59,22,0,39.84229979466119,0
+Standard of Care,Tsetsebjwe,Female,60-64,21,0,36.12450376454484,0
+Standard of Care,Tsetsebjwe,Male,15-19,22,0,38.40136892539355,0
+Standard of Care,Tsetsebjwe,Male,20-24,35,0,56.1448323066393,0
+Standard of Care,Tsetsebjwe,Male,25-29,22,1,30.782302702966927,0.032486198633334074
+Standard of Care,Tsetsebjwe,Male,30-34,16,1,22.594191310565446,0.044259163174049175
+Standard of Care,Tsetsebjwe,Male,35-39,8,0,11.987611225188218,0
+Standard of Care,Tsetsebjwe,Male,40-44,6,0,9.45222450376454,0
+Standard of Care,Tsetsebjwe,Male,45-49,7,0,12.060095824777555,0
+Standard of Care,Tsetsebjwe,Male,50-54,6,0,10.497672826830936,0
+Standard of Care,Tsetsebjwe,Male,55-59,6,0,7.5773442847364905,0
+Standard of Care,Tsetsebjwe,Male,60-64,5,0,8.418275154004107,0

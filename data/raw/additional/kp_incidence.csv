@@ -1,0 +1,152 @@
+iso3,area_id,kp,year,method,age_group,infections,pys,ref
+BEN,BEN,MSM2,2018,cohort,Y015_024,31,365.5,Hessou 2020
+BEN,BEN,MSM2,2018,cohort,Y025_044,17,448,Hessou 2020
+BEN,BEN,MSM2,2014,cohort,Y015_049,11,196.1,PLAN Benin 2015
+BEN,BEN_1_3xj,FSW,2010,prospective cohort,Y015_039,6,425.102,Diabate et al
+BEN,BEN_1_3xj,FSW,1998,RCT,Y015_039,10,121.1,Van Damme et al
+BFA,BFA_2_10,MSM2,2017,cohort,Y015_029,9,123.7,Dah 2021
+BFA,BFA_2_45,FSW,2000,prospective cohort,Y015_039,19,593.75,Nagot et al
+BWA,BWA_02_08sk,FSW,2012,cross-sectional,Y015_039,46,449.75,Botswana MoH 
+BWA,BWA_02_16ms,FSW,2012,cross-sectional,Y015_039,46,449.75,Botswana MoH 
+BWA,BWA_02_20od,FSW,2012,cross-sectional,Y015_039,46,449.75,Botswana MoH 
+CAF,CAF_2_17,MSM2,2011,cohort,Y015_039,12,128,Mbeko Simaleko 2018
+CAF,CAF_2_17,MSM2,2016,cohort,Y020_029,9,171.228,Mbeko Simaleko 2020
+CIV,CIV_1_01df,MSM2,2015,cohort,Y015_034,7,44,Couderc 2017
+CIV,CIV_1_01df,MSM2,2017,cohort,Y015_029,23,159.8,Dah 2021
+CIV,CIV_1_01df,FSW,1996,RCT,Y015_039,11,68,Ghys et al 2001
+CIV,CIV_1_01df,FSW,2017,cross-sectional,Y015_039,3,293,Nouaman et al
+CIV,CIV_1_01df,FSW,1998,RCT,Y015_039,5,67.3,Van Damme et al
+CIV,CIV_1_29es,FSW,2017,cross-sectional,Y015_039,4,187.5,Nouaman et al
+CMR,CMR_1_12,FSW,1995,RCT,Y015_039,46,698,Roddy et al
+CMR,CMR_1_3,FSW,1995,RCT,Y015_039,46,698,Roddy et al
+COD,COD_1_10,FSW,1988,prospective cohort,Y015_039,70,879.8,Laga et al
+GNB,GNB,FSW,1994,prospective cohort,Y015_039,3,125.5,van der Loeff et al
+GNB,GNB,FSW,1994,prospective cohort,Y040_049,7,159.5,van der Loeff et al
+GNB,GNB,FSW,1994,prospective cohort,Y050_059,5,66.8,van der Loeff et al
+KEN,KEN_1_8,MSM2,2007,cohort,Y015_029,19,338,Kamali 2015
+KEN,KEN_1_8,MSM2,2006,cohort,Y015_029,5,64,Kamali 2015
+KEN,KEN_1_8,MSM2,2008,cohort,Y015_029,14,274,Kamali 2015
+KEN,KEN_1_8,MSM2,2011,cohort,Y020_034,28,256,McKinnon 2014
+KEN,KEN_1_8,MSM2,2007,cohort,Y015_029,11,114,Price 2012
+KEN,KEN_2_01,FSW,2007,prospective cohort,Y015_039,10,381.3,Chersich et al
+KEN,KEN_2_01,FSW,1993,prospective cohort,Y015_039,20,335.4962,McClelland et al
+KEN,KEN_2_01,FSW,1994,prospective cohort,Y015_039,36,227.5537,McClelland et al
+KEN,KEN_2_01,FSW,1995,prospective cohort,Y015_039,24,213.1636,McClelland et al
+KEN,KEN_2_01,FSW,1996,prospective cohort,Y015_039,29,324.8816,McClelland et al
+KEN,KEN_2_01,FSW,1997,prospective cohort,Y015_039,41,363.8795,McClelland et al
+KEN,KEN_2_01,FSW,1998,prospective cohort,Y015_039,30.99071212,271.1348392,McClelland et al
+KEN,KEN_2_01,FSW,1999,prospective cohort,Y015_039,23.99996115,206.6913073,McClelland et al
+KEN,KEN_2_01,FSW,2000,prospective cohort,Y015_039,15.99993478,187.6605065,McClelland et al
+KEN,KEN_2_01,FSW,2001,prospective cohort,Y015_039,7.999974578,215.5920602,McClelland et al
+KEN,KEN_2_01,FSW,2002,prospective cohort,Y015_039,18.99998897,250.954141,McClelland et al
+KEN,KEN_2_01,FSW,2003,prospective cohort,Y015_039,13.99999742,245.3935661,McClelland et al
+KEN,KEN_2_01,FSW,2004,prospective cohort,Y015_039,12.9999984,262.6995209,McClelland et al
+KEN,KEN_2_01,FSW,2005,prospective cohort,Y015_039,14.00000074,270.6173854,McClelland et al
+KEN,KEN_2_01,FSW,2006,prospective cohort,Y015_039,7.999999999,228.1998631,McClelland et al
+KEN,KEN_2_01,FSW,2007,prospective cohort,Y015_039,6.999999519,243.9616701,McClelland et al
+KEN,KEN_2_01,FSW,2008,prospective cohort,Y015_039,4.000000001,211.0061602,McClelland et al
+KEN,KEN_2_01,FSW,2009,prospective cohort,Y015_039,8.999999943,162.5078713,McClelland et al
+KEN,KEN_2_01,FSW,2010,prospective cohort,Y015_039,3,187.1430527,McClelland et al
+KEN,KEN_2_01,FSW,2011,prospective cohort,Y015_039,2.999999999,283.1211499,McClelland et al
+KEN,KEN_2_01,FSW,2012,prospective cohort,Y015_039,1.999999981,333.99589,McClelland et al
+KEN,KEN_2_01,FSW,2013,prospective cohort,Y015_039,4,279.515,McClelland et al
+KEN,KEN_2_01,FSW,2014,prospective cohort,Y015_039,5,224.578,McClelland et al
+KEN,KEN_2_01,FSW,2015,prospective cohort,Y015_039,5,222.379,McClelland et al
+KEN,KEN_2_01,FSW,2016,prospective cohort,Y015_039,4,215.518,McClelland et al
+KEN,KEN_2_01,FSW,2017,prospective cohort,Y015_039,3,236.942,McClelland et al
+KEN,KEN_2_03,MSM2,2009,cohort,Y015_029,73,996,Kamali 2015
+KEN,KEN_2_03,MSM2,2005,cohort,Y015_029,15,94,Kamali 2015
+KEN,KEN_2_03,MSM2,2009,cohort,Y015_029,43,829,Kamali 2015
+KEN,KEN_2_03,MSM2,2007,cohort,Y015_029,25,304,Kamali 2015
+KEN,KEN_2_03,MSM2,2011,cohort,Y015_029,48,692,Kamali 2015
+KEN,KEN_2_03,MSM2,2007,cohort,Y015_029,28,461,Price 2012
+KEN,KEN_2_03,FSW,2007,prospective cohort,Y015_039,9.153,339,Price et al 2012
+KEN,KEN_2_03,MSM2,2008,cohort,Y015_024,33,275.9,Sanders 2013
+KEN,KEN_2_03,MSM2,2008,cohort,Y025_034,29,342.1,Sanders 2013
+KEN,KEN_2_03,MSM2,2008,cohort,Y035_049,2,125.9,Sanders 2013
+KEN,KEN_2_03,MSM2,2011,cohort,Y015_024,79,747.15,Wahome 2018
+KEN,KEN_2_03,MSM2,2011,cohort,Y025_034,30.5,526.59,Wahome 2018
+KEN,KEN_2_03,MSM2,2011,cohort,Y035_049,1.68,104.77,Wahome 2018
+KEN,KEN_2_03,MSM2,2019,cohort,Y015_049,9,233.7,Wahome 2020
+KEN,KEN_2_03,MSM2,2018,cohort,Y015_049,9,225.3,Wahome 2020
+KEN,KEN_2_41,FSW,2018,cohort,Y015_039,0,939.21,Thirumurthy 2021
+KEN,KEN_2_42,MSM2,2010,cohort,Y015_029,1,97.08737864,Mdodo 2016
+KEN,KEN_2_42,MSM2,2016,cohort,Y015_029,3,80.1,Sandfort 2021
+KEN,KEN_2_47,FSW,1990,prospective cohort,Y015_039,238.98,569,Fowke et al
+KEN,KEN_2_47,FSW,2000,RCT,Y015_039,15.84,495,Kaul et al
+KEN,KEN_2_47,FSW,2010,prospective cohort,Y015_039,34,1514,McKinnon et al
+KEN,KEN_2_47,FSW,2007,prospective cohort,Y015_039,2.108,527,Price et al 2012
+KEN,KEN_2_47,FSW,2008,prospective cohort,Y015_039,5.0008,89.3,Priddy et al
+KEN,KEN_3_3042le,MSM2,2017,cohort,Y015_034,6,162.09,Kimani 2019
+KEN,KEN_3_3042le,MSM2,2017,cohort,Y015_024,2,66.176475,Kimani 2019
+KEN,KEN_3_3042le,MSM2,2017,cohort,Y025_034,4,91.41146,Kimani 2019
+KEN,KEN_3_3042le,MSM2,2017,cohort,Y035_049,3,18.8823542,Kimani 2019
+MLI,MLI_1_01qa,MSM2,2014,cohort,Y020_029,1,89.2,Couderc 2017
+MLI,MLI_1_01qa,MSM2,2017,cohort,Y020_029,35,389.7,Dah 2021
+MWI,MWI_5_27,MSM2,2016,cohort,Y015_029,1,74.4,Sandfort 2021
+MWI,MWI_5_27,MSM2,2012,cohort,Y015_029,7,124.83,Wirtz 2015
+MWI,MWI_5_27,MSM2,2012,cohort,Y015_029,7,79.58,Wirtz 2015
+MWI,MWI_5_27,MSM2,2013,cohort,Y015_029,0,22.125,Wirtz 2015
+MWI,MWI_5_27,MSM2,2013,cohort,Y015_029,0,23.125,Wirtz 2015
+NGA,NGA_2_FC,MSM2,2016,cohort,Y015_019,27,117,Ramadhani 2020
+NGA,NGA_2_LA,MSM2,2016,cohort,Y020_024,43,317,Ramadhani 2020
+NGA,NGA_2_LA,MSM2,2016,cohort,Y025_049,19,330,Ramadhani 2020
+NGA,NGA_2_NA,FSW,2006,cross-sectional,Y015_034,70.623,590,Forbi et al
+RWA,RWA_1_1,FSW,2007,prospective cohort,Y015_039,3,90.8,Braunstein et al. 
+SEN,SEN_1_01dq,MSM2,2014,cohort,Y020_034,0,27,Couderc 2017
+SEN,SEN_1_01dq,MSM2,2012,cohort,Y020_034,8,50,Drame 2013
+SEN,SEN_1_01dq,FSW,1987,prospective cohort,Y015_024,34,1628,Gilbert et al
+SEN,SEN_1_01dq,FSW,1987,prospective cohort,Y025_034,91,5474,Gilbert et al
+SEN,SEN_1_01dq,FSW,1987,prospective cohort,Y035_044,58,1939,Gilbert et al
+SEN,SEN_1_01dq,FSW,1987,prospective cohort,Y045_049,12,260,Gilbert et al
+SEN,SEN_1_01dq,MSM2,2017,cohort,Y015_029,8,249.5,Lyons 2020
+SEN,SEN_1_01dq,FSW,2016,prospective cohort,Y015_039,4,303,Lyons et al
+SEN,SEN_1_13gi,FSW,2016,prospective cohort,Y015_039,4,303,Lyons et al
+SEN,SEN_2_68vy,MSM2,2017,cohort,Y015_029,8,249.5,Lyons 2020
+SEN,SEN_2_73ur,MSM2,2017,cohort,Y015_029,8,249.5,Lyons 2020
+TGO,TGO_1_3,MSM2,2016,cohort,Y015_019,11,107.6,Dah 2021
+TZA,TZA_2_7zj,FSW,2019,prospective cohort,Y015_024,12,278,Faini et al
+TZA,TZA_2_7zj,FSW,2019,prospective cohort,Y025_034,5,234,Faini et al
+TZA,TZA_2_7zj,FSW,2019,prospective cohort,Y035_044,4,97,Faini et al
+TZA,TZA_3_12hu,FSW,2002,prospective cohort,Y015_039,19,99,Riedner et al
+TZA,TZA_4_083ht,FSW,2002,RCT,Y015_039,10,144,Kerrigan et al
+UGA,UGA_3_049,FSW,2010,prospective cohort,Y015_039,59,2007,Kasamba et al
+UGA,UGA_3_049,FSW,2014,prospective cohort,Y015_039,46,1394,Kasamba et al
+UGA,UGA_3_049,FSW,2016,prospective cohort,Y015_039,65,2138,Kasamba et al
+UGA,UGA_3_049,MSM2,2013,cohort,Y015_029,4,111,Robb 2016
+ZAF,ZAF,FSW,2019,cross-sectional,Y015_049,190,4130,Kassanjee et al
+ZAF,ZAF_1_KZN,FSW,1998,RCT,Y015_039,30,182.3,Van Damme et al
+ZAF,ZAF_1_MP,FSW,2014,RCT,Y015_019,40.9906,1273,Kilburn et al
+ZAF,ZAF_2_CPT,MSM2,2016,cohort,Y015_029,17,147.4,Sandfort 2021
+ZAF,ZAF_2_CPT,MSM2,2016,cohort,Y015_019,4,16,Sullivan 2020
+ZAF,ZAF_2_CPT,MSM2,2016,cohort,Y020_024,2,20.4,Sullivan 2020
+ZAF,ZAF_2_CPT,MSM2,2016,cohort,Y025_049,0,32,Sullivan 2020
+ZAF,ZAF_2_DC30,MSM2,2014,cohort,Y015_029,18,144.25,Lane 2016
+ZAF,ZAF_2_DC30,MSM2,2015,cohort,Y015_039,6,55,Lippman 2018
+ZAF,ZAF_2_DC32,MSM2,2015,cohort,Y015_039,6,55,Lippman 2018
+ZAF,ZAF_2_DC37,MSM2,2010,cohort,Y015_029,2,21,Kamali 2015
+ZAF,ZAF_2_DC37,MSM2,2014,cohort,Y015_034,0,20.2,Maenetje 2019
+ZAF,ZAF_2_ETH,FSW,2005,prospective cohort,Y025_049,10,248.35,Naiker et al
+ZAF,ZAF_2_ETH,FSW,2005,prospective cohort,Y015_024,8,59.36,Naiker et al
+ZAF,ZAF_2_JHB,MSM2,2016,cohort,Y015_029,17,147.4,Sandfort 2021
+ZAF,ZAF_2_NMA,MSM2,2016,cohort,Y015_019,4,16,Sullivan 2020
+ZAF,ZAF_2_NMA,MSM2,2016,cohort,Y020_024,2,20.4,Sullivan 2020
+ZAF,ZAF_2_NMA,MSM2,2016,cohort,Y025_049,0,32,Sullivan 2020
+ZMB,ZMB_1_14,FSW,2015,prospective cohort,Y015_044,24,883.5,Malama et al
+ZMB,ZMB_2_21,FSW,2015,prospective cohort,Y015_044,24,883.5,Malama et al
+ZWE,ZWE,FSW,2014,prev backcalculation,Y015_024,6.6035,104.8181,Ali et al 2022
+ZWE,ZWE,FSW,2014,prev backcalculation,Y025_039,5.76499,174.6969,Ali et al 2022
+ZWE,ZWE,FSW,2010,retrospective cohort,Y015_039,3,55.87,Jones et al
+ZWE,ZWE,FSW,2011,retrospective cohort,Y015_039,6,138.73,Jones et al
+ZWE,ZWE,FSW,2012,retrospective cohort,Y015_039,15,263.95,Jones et al
+ZWE,ZWE,FSW,2013,retrospective cohort,Y015_039,12,409.57,Jones et al
+ZWE,ZWE,FSW,2014,retrospective cohort,Y015_039,33,730.7,Jones et al
+ZWE,ZWE,FSW,2015,retrospective cohort,Y015_039,62,1401.95369,Jones et al
+ZWE,ZWE,FSW,2016,retrospective cohort,Y015_039,58,1857.069,Jones et al
+ZWE,ZWE,FSW,2017,retrospective cohort,Y015_039,94,2422.11,Jones et al
+ZWE,ZWE,FSW,2018,retrospective cohort,Y015_039,114,2945.5,Jones et al
+ZWE,ZWE,FSW,2019,retrospective cohort,Y015_039,44,1431.9,Jones et al
+ZWE,ZWE_2_29,FSW,2018,non-randomised plausability evaluation,Y015_024,10.9953,192.9,Chabata et al
+ZWE,ZWE_2_31,FSW,2018,non-randomised plausability evaluation,Y015_024,15.995168,226.24,Chabata et al
+ZWE,ZWE_2_60,FSW,2018,non-randomised plausability evaluation,Y015_024,11.999471,278.41,Chabata et al
+ZWE,ZWE_2_63,FSW,2018,non-randomised plausability evaluation,Y015_024,8.990996,210.07,Chabata et al

@@ -1,0 +1,50 @@
+variable,n_studies,pct_studies,n_obs,pct_obs
+Sex,,,,
+Male,91,51,1702,48
+Female,138,77,1793,51
+Both (sex disaggregates unavailable),14,8,51,1
+Year of observation,,,,
+1990-1994,3,2,148,4
+1995-1999,7,4,216,6
+2000-2004,20,11,388,11
+2005-2009,40,22,521,15
+2010-2014,62,35,674,19
+2015-2019,70,39,1260,36
+2020-2024,14,8,339,10
+Study region,,,,
+Eastern and Southern Africa,151,84,3366,95
+Western and Central Africa,29,16,180,5
+South Africa,52,29,705,20
+Kenya,34,19,163,5
+Uganda,18,10,1124,32
+Zimbabwe,14,8,487,14
+Malawi,13,7,90,3
+All other countries,73,41,986,28
+Study method,,,,
+Total population,,,,
+UTT/Cohort,11,6,2556,72
+National HHS,26,15,532,15
+Other HHS,24,13,110,3
+Pregnant/postpartum women,21,12,43,1
+Intervention Trials,21,12,43,1
+Other studies,21,12,119,3
+No inclusion criteria,3,2,5,0
+Key population,,,,
+FSW,28,16,75,2
+MSM,24,13,63,2
+Age group,,,,
+15-19,,,298,8
+20-24,,,316,9
+25-29,,,303,9
+30-34,,,301,8
+35-39,,,286,8
+40-44,,,285,8
+45-49,,,284,8
+50-54,,,230,6
+55-59,,,196,6
+60-64,,,192,5
+65-69,,,141,4
+70-74,,,140,4
+75-79,,,135,4
+"All adults (15-49, 15-59, 15-64, 15-79)",,,94,3
+Other age groups,,,345,10

@@ -48,3 +48,9 @@ po/*~
 # RStudio Connect folder
 rsconnect/
 .DS_Store
+
+# Box/OneDrive copies (UNAIDS-restricted), see prep/copy_private_inputs.R
+private/
+*.log
+outputs/ssa_incidence_analysis_data.zip
+/outputs/zenodo

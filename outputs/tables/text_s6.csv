@@ -1,0 +1,11 @@
+parameter,estimate
+Intercept,"0.95 (0.65, 1.36)"
+Five-calendar years (Reference year = 2014),"1.10 (0.99, 1.21)"
+Sex,
+Female,1.00 (Reference)
+Male,"0.90 (0.83, 0.97)"
+Sex:five-year interaction,"0.88 (0.84, 0.92)"
+Hyperparameters,SD (95% CrI)
+Year (AR1),"0.50 (0.33, 0.74)"
+,Autocorrelation (95% CrI)
+Year,"0.97 (0.94, 0.99)"

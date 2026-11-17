@@ -1,0 +1,24 @@
+parameter,n_studies,estimate
+Study recruitment type/population (N studies),,
+Matched modelled estimates,,1.00 (Reference)
+Studies representative of the total adult population,,
+Population cohort studies and UTT trials [control clusters],11,"1.14 (0.63, 2.05)"
+Nationally-representative household surveys,26,"1.08 (0.72, 1.62)"
+Other household surveys,24,"1.28 (0.85, 1.92)"
+Studies not representative of the total adult population,,
+"Clinical trials, excluding UTT trials [control arms]",21,"2.65 (1.68, 4.19)"
+Pregnant/post-partum women,21,"2.34 (1.48, 3.71)"
+Other studies,21,"1.93 (1.23, 3.03)"
+Convenience sample from total population,3,"1.49 (0.43, 5.22)"
+Female sex workers,28,"5.77 (3.86, 8.59)"
+Men who have sex with men,24,"44.52 (29.24, 67.63)"
+Sex,,
+Female,,1.00 (Reference)
+Male,,"0.87 (0.81, 0.93)"
+Calendar time: Per 5 years [reference year = 2014],,"0.94 (0.86, 1.03)"
+Sex [male] : five-year interaction,,"0.88 (0.84, 0.93)"
+Random effect standard deviation,,Estimate (95% CrI)
+Study (IID),,"1.02 (0.90, 1.16)"
+Observation (IID),,"0.32 (0.30, 0.35)"
+Sex-specific time trend (RW2),,"0.15 (0.06, 0.29)"
+Study type-specific time trend (RW2),,"0.07 (0.04, 0.12)"
