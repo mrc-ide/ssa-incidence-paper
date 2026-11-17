@@ -157,7 +157,8 @@ loo_panel <- function(vars, labels = vars, breaks = waiver(), limits = NULL) {
     coord_flip() +
     labs(x = NULL, y = "IRR") +
     theme_paper() +
-    theme(axis.text.y = element_blank(), aspect.ratio = 1)
+    # Extra space between panels so the end labels of adjacent free axes don't merge
+    theme(axis.text.y = element_blank(), aspect.ratio = 1, panel.spacing.x = unit(1.5, "lines"))
 }
 
 fig_s2 <- loo_panel(c("sex_int", "std_year", "sex_int:std_year"), c("Sex", "Year", "Sex:Year")) /

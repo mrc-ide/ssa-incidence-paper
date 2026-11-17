@@ -1,6 +1,6 @@
 variable,n_studies,pct_studies,n_obs,pct_obs
 Sex,,,,
-Male,86,49,1681,48
+Male,86,49,1679,48
 Female,137,78,1787,51
 Both (sex disaggregates unavailable),14,8,43,1
 Year of observation,,,,
@@ -8,17 +8,17 @@ Year of observation,,,,
 1995-1999,7,4,216,6
 2000-2004,19,11,387,11
 2005-2009,39,22,502,14
-2010-2014,60,34,660,19
+2010-2014,60,34,658,19
 2015-2019,70,40,1259,36
 2020-2024,14,8,339,10
 Study region,,,,
-Eastern and Southern Africa,147,84,3331,95
+Eastern and Southern Africa,147,84,3329,95
 Western and Central Africa,29,17,180,5
 South Africa,52,30,697,20
 Kenya,31,18,151,4
 Uganda,17,10,1120,32
 Zimbabwe,14,8,487,14
-Malawi,13,7,90,3
+Malawi,13,7,88,3
 All other countries,73,42,975,28
 Study method,,,,
 Total population,,,,
@@ -31,7 +31,7 @@ Other studies,20,11,108,3
 No inclusion criteria,3,2,5,0
 Key population,,,,
 FSW,28,16,75,2
-MSM,22,13,52,1
+MSM,22,13,50,1
 Age group,,,,
 15-19,,,298,8
 20-24,,,315,9
@@ -47,4 +47,4 @@ Age group,,,,
 70-74,,,140,4
 75-79,,,135,4
 "All adults (15-49, 15-59, 15-64, 15-79)",,,82,2
-Other age groups,,,323,9
+Other age groups,,,321,9

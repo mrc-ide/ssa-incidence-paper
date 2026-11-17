@@ -8,7 +8,7 @@
 #'
 #' Tables are written to outputs/tables/, as they appear in the manuscript.
 #'
-#' Reads only: outputs/data/ (R/01_data.R) and outputs/fits/ (R/02-04). Run from
+#' Reads only: outputs/data/ (R/01_data.R) and outputs/fits/ (R/02-05). Run from
 #' the repository root: Rscript R/paper_numbers.R
 #'
 #' Zenodo: outputs/data/ can be downloaded rather than regenerated (see
@@ -416,6 +416,27 @@ pwalk(loo_ranges, function(recruitment_type, n, min, max) {
   record("Supplementary Figure S2", paste("Leave-one-out range:", recruitment_type),
          sprintf("%.2f-%.2f (%d refits)", min, max, n))
 })
+
+################################################################################
+#' ## Text S9: participation and attrition (R/05_risk_of_bias.R)
+################################################################################
+
+rob <- read_fit("risk_of_bias.csv")
+rob_iqr <- function(x) {
+  q <- quantile(x, c(0.5, 0.25, 0.75), na.rm = TRUE)
+  sprintf("%s (IQR %.0f-%s)", fmt_pct(q[1]), 100 * q[2], fmt_pct(q[3]))
+}
+record("Supplementary Text S9", "Studies reporting a participation rate",
+       sprintf("%d of %d", sum(!is.na(rob$participation)), nrow(rob)))
+record("Supplementary Text S9", "Longitudinal studies reporting an attrition rate",
+       sprintf("%d of %d", sum(!is.na(rob$attrition)), sum(rob$longitudinal)))
+record("Supplementary Text S9", "Participation", rob_iqr(rob$participation))
+record("Supplementary Text S9", "Attrition", rob_iqr(rob$attrition))
+read_fit("risk_of_bias_correlation.csv") %>%
+  pwalk(function(measure, against, group, n, r, lower, upper) {
+    record("Supplementary Text S9 figure", paste(measure, "vs", against, "-", group),
+           sprintf("R = %.2f, 95%% CI [%.2f, %.2f] (n=%d)", r, lower, upper, n))
+  })
 
 ################################################################################
 #' ## Text S6: cohort incidence relative to modelled incidence

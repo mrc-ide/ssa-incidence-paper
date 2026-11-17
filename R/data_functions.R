@@ -144,7 +144,7 @@ remove_overlapping_review <- function(dat) {
   machekano <- "10.1371/journal.pone.0209782"
   gray <- "10.1097/QAD.0b013e3283504a3f."
   mehta <- "10.1097/01.aids.0000432444.30308.2d"
-  kinuthia_2010 <- "UNKNOWN-KINUTHIA"
+  kinuthia_2010 <- "10.2174/157016210793499213"
 
   # Huerga 2017 reports every stratum three times, in extract order: incidence with no
   # ARV measure, with self-reported ART, and with ARV detection. Keep ARV detection.
@@ -168,7 +168,7 @@ remove_overlapping_review <- function(dat) {
       # Mehta 2013: long-term follow-up of the Kisumu circumcision trial, already
       # included as Bailey 2007 (data/raw/review/new_data.csv)
       !doi %in% mehta) %>%
-    # Kinuthia et al. 2010 (Curr HIV Res, doi:10.2174/157016210793499213) carries the
+    # Kinuthia et al. 2010 (Curr HIV Res) carries the
     # 2011-13 dates of Kinuthia 2015. The paper gives no dates; it was published in
     # October 2010 and cites 2008 Kenyan births, so take 2008-09.
     mutate(TimeLow = ifelse(doi %in% kinuthia_2010, "01/01/2008", TimeLow),
@@ -360,7 +360,11 @@ read_additional_data <- function(inclusion, search_areas, dir = file.path(path_r
            !(ref == "Kamali 2015" & area_id == "KEN_2_03" & !pys %in% c(304, 692)),
            !(ref == "Kamali 2015" & area_id == "KEN_1_8" & pys != 338),
            # Kimani 2019: the 15-34 row is the 15-24 and 25-34 rows combined
-           !(ref == "Kimani 2019" & age_group == "Y015_034")) %>%
+           !(ref == "Kimani 2019" & age_group == "Y015_034"),
+           # Wirtz 2015 (doi:10.1097/QAI.0000000000000693): two sets of 2012-13 rows with the
+           # same 7 seroconversions (all at the first follow-up) but different person-time.
+           # Keep the set totalling ~147 py, consistent with 103 men followed Jan 2012 - May 2013
+           !(ref == "Wirtz 2015" & round(pys, 3) %in% c(79.58, 23.125))) %>%
     mutate(kp = ifelse(kp == "MSM2", "MSM", kp),
            sex = recode(kp, FSW = "female", MSM = "male", PWID = "male", TGW = "female", CFSW = "male"),
            study_type = recode(method,
