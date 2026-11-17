@@ -97,6 +97,7 @@ clean_review_data <- function(dat, inclusion, match_level) {
     filter(is.na(remove),
            !doi %in% notes_doi("long term follow up"),
            !doi %in% notes_doi("eplicate"))
+  dat <- remove_overlapping_review(dat)
   tracker <- track(tracker, dat, "Overlapping observations and duplicates")
 
   dat <- filter(dat, !doi %in% filter(inclusion, str_detect(notes, "Remove"), str_detect(notes, "analysis"))$doi)
@@ -131,6 +132,47 @@ clean_review_data <- function(dat, inclusion, match_level) {
     rename(StudyClass = study_type)
 
   list(dat = dat, tracker = tracker)
+}
+
+#' Overlapping observations not flagged in the review extracts, found when the
+#' final dataset was checked for double counting (peer review, November 2026).
+#' Each study's person-time should enter the model once.
+remove_overlapping_review <- function(dat) {
+
+  huerga <- "10.1186/s12879-017-2740-y"
+  grabbe <- "10.1521/aeap.2015.27.4.350"
+  machekano <- "10.1371/journal.pone.0209782"
+  gray <- "10.1097/QAD.0b013e3283504a3f."
+  mehta <- "10.1097/01.aids.0000432444.30308.2d"
+  kinuthia_2010 <- "UNKNOWN-KINUTHIA"
+
+  # Huerga 2017 reports every stratum three times, in extract order: incidence with no
+  # ARV measure, with self-reported ART, and with ARV detection. Keep ARV detection.
+  huerga_rows <- filter(dat, doi == huerga)
+  stopifnot(nrow(huerga_rows) == 12, all(count(huerga_rows, Sex, AgeLow, AgeHigh)$n == 3))
+
+  dat %>%
+    group_by(doi, Sex, AgeLow, AgeHigh) %>%
+    filter(!doi %in% huerga | row_number() == 3) %>%
+    ungroup() %>%
+    filter(
+      # Grabbe 2015 reports the same 259 infections overall, by district, by year, by
+      # sex/age and by another two-way split: keep the calendar-year rows
+      !(doi %in% grabbe & TimeLow %in% "01/01/2006" & TimeHigh %in% "30/06/2010"),
+      # Machekano 2018: the postpartum-only estimate overlaps the age-specific rows,
+      # which cover pregnancy and postpartum follow-up
+      !(doi %in% machekano & HighRiskGroup %in% "GP"),
+      # Gray 2012: post-trial surveillance of the Rakai circumcision trial ran within the
+      # RCCS, whose men 15-49 come from the study team (read_additional_data)
+      !doi %in% gray,
+      # Mehta 2013: long-term follow-up of the Kisumu circumcision trial, already
+      # included as Bailey 2007 (data/raw/review/new_data.csv)
+      !doi %in% mehta) %>%
+    # Kinuthia et al. 2010 (Curr HIV Res, doi:10.2174/157016210793499213) carries the
+    # 2011-13 dates of Kinuthia 2015. The paper gives no dates; it was published in
+    # October 2010 and cites 2008 Kenyan births, so take 2008-09.
+    mutate(TimeLow = ifelse(doi %in% kinuthia_2010, "01/01/2008", TimeLow),
+           TimeHigh = ifelse(doi %in% kinuthia_2010, "31/12/2009", TimeHigh))
 }
 
 #' Person-years where missing (Supplementary Text S2). `pys_source` records how
@@ -309,6 +351,16 @@ read_additional_data <- function(inclusion, search_areas, dir = file.path(path_r
 
   kp <- read_csv(file.path(dir, "kp_incidence.csv"), show_col_types = FALSE) %>%
     filter(year > 1995) %>%
+    # Overlapping MSM observations (peer review, November 2026). Kamali 2015 reports
+    # the IAVI Kilifi and Nairobi cohorts overall, by time on study and by calendar
+    # period; Price 2012 is earlier follow-up of the same cohorts and Wahome 2018 the
+    # same Kilifi cohort to 2016. Keep Kamali's calendar periods for Kilifi and its
+    # overall estimate for Nairobi.
+    filter(!ref %in% c("Price 2012", "Wahome 2018"),
+           !(ref == "Kamali 2015" & area_id == "KEN_2_03" & !pys %in% c(304, 692)),
+           !(ref == "Kamali 2015" & area_id == "KEN_1_8" & pys != 338),
+           # Kimani 2019: the 15-34 row is the 15-24 and 25-34 rows combined
+           !(ref == "Kimani 2019" & age_group == "Y015_034")) %>%
     mutate(kp = ifelse(kp == "MSM2", "MSM", kp),
            sex = recode(kp, FSW = "female", MSM = "male", PWID = "male", TGW = "female", CFSW = "male"),
            study_type = recode(method,
