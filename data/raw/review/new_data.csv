@@ -1,36 +1,36 @@
-study_type,author,pubyear,doi,year_start,year_end,iso3,area_name,area_id,age_group,sex,ir,lower,upper,pys
-HIVPT,Bailey,2007,10.1016/S0140-6736(07)60312-2,2004,2006,KEN,Kisumu,KEN_2_42,Y015_024,male,0.042,0.03,0.054,
-HIVPT,Paidan,2007,10.1016/S0140-6736(07)60950-7,2004,2006,ZWE,Harare,ZWE_2_3,Y015_049,female,0.025,,,2084
-HIVPT,Paidan,2007,10.1016/S0140-6736(07)60950-7,2004,2006,ZAF,Durban,ZAF_2_ETH,Y015_049,female,0.07,,,1083
-HIVPT,Paidan,2007,10.1016/S0140-6736(07)60950-7,2004,2006,ZAF,Johannesburg,ZAF_2_JHB,Y015_049,female,0.033,,,700
-PC,Ramjee,2008,10.1097/QAI.0b013e31815c71f7,2003,2005,ZAF,Durban,ZAF_2_ETH,Y020_024,female,0.085,0.039,0.162,
-PC,Ramjee,2008,10.1097/QAI.0b013e31815c71f7,2003,2005,ZAF,Durban,ZAF_2_ETH,Y025_034,female,0.031,0.006,0.09,
-PC,Ramjee,2008,10.1097/QAI.0b013e31815c71f7,2003,2005,ZAF,Durban,ZAF_2_ETH,Y035_049,female,0,0,0.102,
-PC,Ramjee,2008,10.1097/QAI.0b013e31815c71f7,2003,2005,ZAF,Hlabisa,ZAF_2_DC27,Y020_024,female,0.089,0.036,0.182,
-PC,Ramjee,2008,10.1097/QAI.0b013e31815c71f7,2003,2005,ZAF,Hlabisa,ZAF_2_DC27,Y025_034,female,0.087,0.032,0.189,
-PC,Ramjee,2008,10.1097/QAI.0b013e31815c71f7,2003,2005,ZAF,Hlabisa,ZAF_2_DC27,Y035_049,female,0.011,0,0.064,
-PC,Ramjee,2008,10.1097/QAI.0b013e31815c71f7,2003,2005,ZMB,Lusaka,ZMB_2_53,Y020_024,female,0.043,0.014,0.099,
-PC,Ramjee,2008,10.1097/QAI.0b013e31815c71f7,2003,2005,ZMB,Lusaka,ZMB_2_53,Y025_034,female,0,0,0.058,
-PC,Ramjee,2008,10.1097/QAI.0b013e31815c71f7,2003,2005,ZMB,Lusaka,ZMB_2_53,Y035_049,female,0.025,0.001,0.142,
-PC,Ramjee,2008,10.1097/QAI.0b013e31815c71f7,2003,2005,ZMB,Moshi,TZA_3_09mr,Y020_024,female,0.01,0,0.053,
-PC,Ramjee,2008,10.1097/QAI.0b013e31815c71f7,2003,2005,ZMB,Moshi,TZA_3_09mr,Y025_034,female,0.024,0.003,0.085,
-PC,Ramjee,2008,10.1097/QAI.0b013e31815c71f7,2003,2005,ZMB,Moshi,TZA_3_09mr,Y035_049,female,0,0,0.096,
-HIVPT,Skoler-Karpoff,2008,10.1016/S0140-6736(08)61842-5,2004,2007,ZAF,Gugulethu,ZAF_2_CPT,Y015_049,female,0.03,0.022,0.04,1545
-HIVPT,Skoler-Karpoff,2008,10.1016/S0140-6736(08)61842-5,2004,2007,ZAF,Soshanguve,ZAF_2_TSH,Y015_049,female,0.033,0.025,0.044,1539
-HIVPT,Skoler-Karpoff,2008,10.1016/S0140-6736(08)61842-5,2004,2007,ZAF,Isipingo,ZAF_2_ETH,Y015_049,female,0.059,0.044,0.077,921
-CSI,SABSSM IV,,https://hsrc.ac.za/uploads/pageContent/4565/SABSSM%20IV%20LEO%20final.pdf,2012,2012,ZAF,South Africa,ZAF,Y015_024,male,0.0055,0.0045,0.0065,
-CSI,SABSSM IV,,https://hsrc.ac.za/uploads/pageContent/4565/SABSSM%20IV%20LEO%20final.pdf,2012,2012,ZAF,South Africa,ZAF,Y025_079,male,0.0129,0.0091,0.0167,
-CSI,SABSSM IV,,https://hsrc.ac.za/uploads/pageContent/4565/SABSSM%20IV%20LEO%20final.pdf,2012,2012,ZAF,South Africa,ZAF,Y015_024,female,0.0254,0.0204,0.0304,
-CSI,SABSSM IV,,https://hsrc.ac.za/uploads/pageContent/4565/SABSSM%20IV%20LEO%20final.pdf,2012,2012,ZAF,South Africa,ZAF,Y025_079,female,0.0162,0.013,0.0194,
-CSI,SABSSM V,2018,https://hsrc.ac.za/uploads/pageContent/10779/SABSSM%20V.pdf,2017,2017,ZAF,South Africa,ZAF,Y025_079,male,0.0054,0.0048,0.006,
-CSI,SABSSM V,2018,https://hsrc.ac.za/uploads/pageContent/10779/SABSSM%20V.pdf,2017,2017,ZAF,South Africa,ZAF,Y025_079,female,0.0045,0.0039,0.0051,
-CT,Jewkes,2008,10.1136/bmj.a506 ,2003,2004,ZAF,Mthatha,ZAF_2_DC15,Y015_019,male,0.0129,,,1007.751938
-CT,Jewkes,2008,10.1136/bmj.a506 ,2003,2004,ZAF,Mthatha,ZAF_2_DC15,Y015_019,female,0.0695,,,978.4172662
-HIVPT,Auvert,2005,10.1371/journal.pmed.0020298,2002,2004,ZAF,Orange Farm,ZAF_2_JHB,Y020_024,male,0.0211,0.016,0.028,2339
-CSI,SABSSM VI,,https://hsrc.ac.za/wp-content/uploads/2024/07/SABSSM_VI_EXEC_REPORT_2PP.pdf,2022,2022,ZAF,South Africa,ZAF,Y015_049,male,0.0064,0.0028,0.01,
-CSI,SABSSM VI,,https://hsrc.ac.za/wp-content/uploads/2024/07/SABSSM_VI_EXEC_REPORT_2PP.pdf,2022,2022,ZAF,South Africa,ZAF,Y015_049,female,0.0087,0.0017,0.0157,
-HIVVT,Gray,,https://www.natap.org/2022/CROI/croi_159a.htm,2016,2021,ZAF,South Africa,ZAF,Y019_034,female,0.047,0.0344,0.0627,
-HIVVT,Gray,,https://www.natap.org/2022/CROI/croi_159a.htm,2016,2021,MWI,Malawi,MWI,Y019_034,female,0.0315,0.0065,0.0921,
-HIVVT,Gray,,https://www.natap.org/2022/CROI/croi_159a.htm,2016,2021,MOZ,Mozambique,MOZ,Y019_034,female,0.0434,0.011,0.242,
-HIVVT,Gray,,https://www.natap.org/2022/CROI/croi_159a.htm,2016,2021,ZMB,Zambia,ZMB,Y019_034,female,0.0454,0.0196,0.0895,
-HIVVT,Gray,,https://www.natap.org/2022/CROI/croi_159a.htm,2016,2021,ZWE,Zimbabwe,ZWE,Y019_034,female,0.0273,0.0089,0.0637,
+study_type,author,pubyear,doi,year_start,year_end,iso3,area_name,area_id,age_group,sex,ir,lower,upper,pys,source
+HIVPT,Bailey,2007,10.1016/S0140-6736(07)60312-2,2004,2006,KEN,Kisumu,KEN_2_42,Y015_024,male,0.042,0.03,0.054,,primary_report
+HIVPT,Paidan,2007,10.1016/S0140-6736(07)60950-7,2004,2006,ZWE,Harare,ZWE_2_3,Y015_049,female,0.025,,,2084,primary_report
+HIVPT,Paidan,2007,10.1016/S0140-6736(07)60950-7,2004,2006,ZAF,Durban,ZAF_2_ETH,Y015_049,female,0.07,,,1083,primary_report
+HIVPT,Paidan,2007,10.1016/S0140-6736(07)60950-7,2004,2006,ZAF,Johannesburg,ZAF_2_JHB,Y015_049,female,0.033,,,700,primary_report
+PC,Ramjee,2008,10.1097/QAI.0b013e31815c71f7,2003,2005,ZAF,Durban,ZAF_2_ETH,Y020_024,female,0.085,0.039,0.162,,additional
+PC,Ramjee,2008,10.1097/QAI.0b013e31815c71f7,2003,2005,ZAF,Durban,ZAF_2_ETH,Y025_034,female,0.031,0.006,0.09,,additional
+PC,Ramjee,2008,10.1097/QAI.0b013e31815c71f7,2003,2005,ZAF,Durban,ZAF_2_ETH,Y035_049,female,0,0,0.102,,additional
+PC,Ramjee,2008,10.1097/QAI.0b013e31815c71f7,2003,2005,ZAF,Hlabisa,ZAF_2_DC27,Y020_024,female,0.089,0.036,0.182,,additional
+PC,Ramjee,2008,10.1097/QAI.0b013e31815c71f7,2003,2005,ZAF,Hlabisa,ZAF_2_DC27,Y025_034,female,0.087,0.032,0.189,,additional
+PC,Ramjee,2008,10.1097/QAI.0b013e31815c71f7,2003,2005,ZAF,Hlabisa,ZAF_2_DC27,Y035_049,female,0.011,0,0.064,,additional
+PC,Ramjee,2008,10.1097/QAI.0b013e31815c71f7,2003,2005,ZMB,Lusaka,ZMB_2_53,Y020_024,female,0.043,0.014,0.099,,additional
+PC,Ramjee,2008,10.1097/QAI.0b013e31815c71f7,2003,2005,ZMB,Lusaka,ZMB_2_53,Y025_034,female,0,0,0.058,,additional
+PC,Ramjee,2008,10.1097/QAI.0b013e31815c71f7,2003,2005,ZMB,Lusaka,ZMB_2_53,Y035_049,female,0.025,0.001,0.142,,additional
+PC,Ramjee,2008,10.1097/QAI.0b013e31815c71f7,2003,2005,ZMB,Moshi,TZA_3_09mr,Y020_024,female,0.01,0,0.053,,additional
+PC,Ramjee,2008,10.1097/QAI.0b013e31815c71f7,2003,2005,ZMB,Moshi,TZA_3_09mr,Y025_034,female,0.024,0.003,0.085,,additional
+PC,Ramjee,2008,10.1097/QAI.0b013e31815c71f7,2003,2005,ZMB,Moshi,TZA_3_09mr,Y035_049,female,0,0,0.096,,additional
+HIVPT,Skoler-Karpoff,2008,10.1016/S0140-6736(08)61842-5,2004,2007,ZAF,Gugulethu,ZAF_2_CPT,Y015_049,female,0.03,0.022,0.04,1545,primary_report
+HIVPT,Skoler-Karpoff,2008,10.1016/S0140-6736(08)61842-5,2004,2007,ZAF,Soshanguve,ZAF_2_TSH,Y015_049,female,0.033,0.025,0.044,1539,primary_report
+HIVPT,Skoler-Karpoff,2008,10.1016/S0140-6736(08)61842-5,2004,2007,ZAF,Isipingo,ZAF_2_ETH,Y015_049,female,0.059,0.044,0.077,921,primary_report
+CSI,SABSSM IV,,https://hsrc.ac.za/uploads/pageContent/4565/SABSSM%20IV%20LEO%20final.pdf,2012,2012,ZAF,South Africa,ZAF,Y015_024,male,0.0055,0.0045,0.0065,,grey_literature
+CSI,SABSSM IV,,https://hsrc.ac.za/uploads/pageContent/4565/SABSSM%20IV%20LEO%20final.pdf,2012,2012,ZAF,South Africa,ZAF,Y025_079,male,0.0129,0.0091,0.0167,,grey_literature
+CSI,SABSSM IV,,https://hsrc.ac.za/uploads/pageContent/4565/SABSSM%20IV%20LEO%20final.pdf,2012,2012,ZAF,South Africa,ZAF,Y015_024,female,0.0254,0.0204,0.0304,,grey_literature
+CSI,SABSSM IV,,https://hsrc.ac.za/uploads/pageContent/4565/SABSSM%20IV%20LEO%20final.pdf,2012,2012,ZAF,South Africa,ZAF,Y025_079,female,0.0162,0.013,0.0194,,grey_literature
+CSI,SABSSM V,2018,https://hsrc.ac.za/uploads/pageContent/10779/SABSSM%20V.pdf,2017,2017,ZAF,South Africa,ZAF,Y025_079,male,0.0054,0.0048,0.006,,grey_literature
+CSI,SABSSM V,2018,https://hsrc.ac.za/uploads/pageContent/10779/SABSSM%20V.pdf,2017,2017,ZAF,South Africa,ZAF,Y025_079,female,0.0045,0.0039,0.0051,,grey_literature
+CT,Jewkes,2008,10.1136/bmj.a506 ,2003,2004,ZAF,Mthatha,ZAF_2_DC15,Y015_019,male,0.0129,,,1007.751938,primary_report
+CT,Jewkes,2008,10.1136/bmj.a506 ,2003,2004,ZAF,Mthatha,ZAF_2_DC15,Y015_019,female,0.0695,,,978.4172662,primary_report
+HIVPT,Auvert,2005,10.1371/journal.pmed.0020298,2002,2004,ZAF,Orange Farm,ZAF_2_JHB,Y020_024,male,0.0211,0.016,0.028,2339,primary_report
+CSI,SABSSM VI,,https://hsrc.ac.za/wp-content/uploads/2024/07/SABSSM_VI_EXEC_REPORT_2PP.pdf,2022,2022,ZAF,South Africa,ZAF,Y015_049,male,0.0064,0.0028,0.01,,grey_literature
+CSI,SABSSM VI,,https://hsrc.ac.za/wp-content/uploads/2024/07/SABSSM_VI_EXEC_REPORT_2PP.pdf,2022,2022,ZAF,South Africa,ZAF,Y015_049,female,0.0087,0.0017,0.0157,,grey_literature
+HIVVT,Gray,2024,10.1016/S1473-3099(24)00358-X,2017,2021,ZAF,South Africa,ZAF,Y019_034,female,0.0425,0.0312,0.0565,1105.9,additional
+HIVVT,Gray,2024,10.1016/S1473-3099(24)00358-X,2017,2021,MWI,Malawi,MWI,Y019_034,female,0.0371,0.0101,0.0949,107.8,additional
+HIVVT,Gray,2024,10.1016/S1473-3099(24)00358-X,2017,2021,MOZ,Mozambique,MOZ,Y019_034,female,0.0384,0.0010,0.2141,26.0,additional
+HIVVT,Gray,2024,10.1016/S1473-3099(24)00358-X,2017,2021,ZMB,Zambia,ZMB,Y019_034,female,0.0402,0.0173,0.0792,199.0,additional
+HIVVT,Gray,2024,10.1016/S1473-3099(24)00358-X,2017,2021,ZWE,Zimbabwe,ZWE,Y019_034,female,0.0238,0.0077,0.0555,210.1,additional

@@ -17,8 +17,7 @@
 #'   phia_spectrum_fit.csv              Fig 4B: fitted relationship of PHIA to modelled incidence
 #'   phia_spectrum_correlation.csv      Fig 4: weighted correlation of log incidence, by PHIA phase
 #'
-#' Namibia's modelled incidence is from a non-public Spectrum file: used here when
-#' private/spectrum_incidence_full.csv.gz is present. outputs/fits is not committed.
+#' outputs/fits is not committed.
 #'
 #' Zenodo: outputs/data/ can be downloaded rather than regenerated (see
 #' R/02_fit_main.R); results then will not exactly reproduce the manuscript.
@@ -144,7 +143,9 @@ cohort_age_fit <- inla(
     f(year_min2, model = "ar", order = 2, replicate = age_int, constr = TRUE) +
     f(year_min_f, model = "ar", order = 2, group = doi_int, control.group = list(model = "iid")) +
     f(year_min_m, model = "ar", order = 2, group = doi_int, control.group = list(model = "iid")) +
-    f(doi3, replicate = age_int) +
+    #' Sum-to-zero within each age group, so the age-group fixed effect is identified
+    #' (unconstrained, it trades off against the mean of the cohort intercepts)
+    f(doi3, replicate = age_int, constr = TRUE) +
     #' PC prior: 1% probability that the SD of cohort slopes exceeds 0.1 per year
     f(slope_id, age_slope, model = "iid", hyper = list(prec = list(prior = "pc.prec", param = c(0.1, 0.01)))),
   family = "xpoisson", data = cohort_age_df, E = pys, control.compute = list(config = TRUE))
@@ -226,11 +227,8 @@ age_sex_trends(phia_age_fit, "year_min:age_groupY025_049") %>%
 #' ## Fig 4: PHIA vs national modelled incidence, adults 15-49 (internal extract)
 ################################################################################
 
-spectrum_file <- file.path(path_private, "spectrum_incidence_full.csv.gz")
-if (!file.exists(spectrum_file)) spectrum_file <- file.path(path_modelled, "spectrum_incidence.csv.gz")
-
 #' National file only (the extract also holds subnational EPP and Thembisa areas)
-spectrum_national <- read_csv(spectrum_file, show_col_types = FALSE) %>%
+spectrum_national <- read_csv(file.path(path_modelled, "spectrum_incidence.csv.gz"), show_col_types = FALSE) %>%
   filter(variant == "published", sex == "both", age_group == "Y015_049", area_id == iso3) %>%
   transmute(iso3, year, modelled = infections / (population - plhiv))
 

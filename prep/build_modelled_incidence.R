@@ -12,8 +12,9 @@
 #' province for South Africa). Observations recorded at a Spectrum area use that
 #' area's Spectrum estimate directly.
 #'
-#' Release rule: values derived from the Namibia 2026 Spectrum file (private) are
-#' written to private/ only, and blank (suppressed = TRUE) in data/modelled/.
+#' The Namibia 2026 Spectrum file is not on the public UNAIDS list, but its
+#' estimates are published on AIDSinfo and we have permission to release values
+#' derived from it, so Namibia is included in data/modelled/ like other countries.
 #'
 #' Writes:
 #'   data/modelled/matched_incidence.csv.gz  one row per area x year x sex x age
@@ -32,8 +33,6 @@ source("R/functions.R")
 source("R/data_functions.R")
 
 dir.create(path_modelled, showWarnings = FALSE, recursive = TRUE)
-
-private_spectrum_iso3 <- "NAM"
 
 areas <- read_csv(file.path(path_geography, "areas.csv"), show_col_types = FALSE)
 aligned <- suppressWarnings(align_observations())$aligned
@@ -350,15 +349,10 @@ matched_incidence <- needed %>%
   left_join(spec_inc, by = c("spectrum_area_id", "year", "sex", "age_group")) %>%
   left_join(spec_inc %>% rename(iso3 = spectrum_area_id, spectrum_national = spectrum), by = c("iso3", "year", "sex", "age_group")) %>%
   filter(if_any(c(naomi, naomi_no_phia, spectrum, spectrum_national), ~ !is.na(.x))) %>%
-  mutate(suppressed = iso3 %in% private_spectrum_iso3) %>%
-  select(area_id, year, sex, age_group, naomi, naomi_no_phia, spectrum, spectrum_national, suppressed) %>%
+  select(area_id, year, sex, age_group, naomi, naomi_no_phia, spectrum, spectrum_national) %>%
   arrange(area_id, sex, age_group, year)
 
-#' Full values (private) and released values (Namibia blank)
-write_csv(matched_incidence, file.path(path_private, "matched_incidence_full.csv.gz"))
-matched_incidence %>%
-  mutate(across(c(naomi, naomi_no_phia, spectrum, spectrum_national), ~ ifelse(suppressed, NA, .x))) %>%
-  write_csv(file.path(path_modelled, "matched_incidence.csv.gz"), na = "")
+write_csv(matched_incidence, file.path(path_modelled, "matched_incidence.csv.gz"), na = "")
 
 ################################################################################
 #' ## Spectrum-area estimates for figures (ages 15-24, 25-49, 15-49)
@@ -379,13 +373,9 @@ spectrum_incidence <- bind_rows(
   spectrum_all(spectrum_national_no_phia, epp_no_phia) %>% mutate(variant = "no_phia")
 ) %>%
   rename(population = totpop, plhiv = hivpop) %>%
-  mutate(suppressed = iso3 %in% private_spectrum_iso3) %>%
-  select(variant, iso3, area_id, year, sex, age_group, population, plhiv, infections, incidence, suppressed)
+  select(variant, iso3, area_id, year, sex, age_group, population, plhiv, infections, incidence)
 
-write_csv(spectrum_incidence, file.path(path_private, "spectrum_incidence_full.csv.gz"))
-spectrum_incidence %>%
-  mutate(across(c(population, plhiv, infections, incidence), ~ ifelse(suppressed, NA, .x))) %>%
-  write_csv(file.path(path_modelled, "spectrum_incidence.csv.gz"), na = "")
+write_csv(spectrum_incidence, file.path(path_modelled, "spectrum_incidence.csv.gz"), na = "")
 
 ################################################################################
 #' ## Cohort districts: population and HIV prevalence, ages 15-24 and 25-49

@@ -12,11 +12,10 @@
 #'   - Naomi subnational results for this estimates cycle can be downloaded from
 #'     https://naomi-spectrum.unaids.org/
 #'
-#' Release rule: only extracts derived from *public* Spectrum files may be
-#' written to data/ and committed. The Namibia 2026 file (from "Non public
-#' Spectrum files") is private: it is used in the analysis, but values derived
-#' from it are suppressed in published datasets and kept only in private/. The
-#' Côte d'Ivoire 2025 file ("2025 final shared") is public.
+#' Extracts derived from the Spectrum files are written to data/ and committed.
+#' The Namibia 2026 file comes from "Non public Spectrum files", but its estimates
+#' are on AIDSinfo and we have permission to release derived values. The Côte
+#' d'Ivoire 2025 file ("2025 final shared") is public.
 ################################################################################
 
 library(tidyverse)

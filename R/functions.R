@@ -129,7 +129,7 @@ region_names <- c(ESA = "Eastern and Southern Africa", WCA = "Western and Centra
 
 country_name <- function(iso3) {
   countrycode::countrycode(iso3, "iso3c", "country.name",
-                           custom_match = c(CIV = "Côte d'Ivoire", SWZ = "eSwatini", COD = "DR Congo"))
+                           custom_match = c(CIV = "C\u00f4te d'Ivoire", SWZ = "eSwatini", COD = "DR Congo"))
 }
 
 ################################################################################
@@ -248,6 +248,16 @@ theme_paper <- function() {
           plot.tag = element_text(size = 16, face = "bold"),
           panel.background = element_rect(fill = NA, color = "black"),
           panel.grid = element_blank())
+}
+
+#' Larger text for figures shown small on the page (Figure S2, Text S7 and S9 figures);
+#' add after theme_paper()
+theme_large <- function(scale = 1.6) {
+  theme(plot.title = element_text(size = 16 * scale),
+        axis.text = element_text(size = 12 * scale),
+        axis.title = element_text(size = 14 * scale),
+        legend.text = element_text(size = 12 * scale),
+        strip.text = element_text(size = 13 * scale))
 }
 
 pal_two <- wesanderson::wes_palette("Zissou1")[c(1, 4)]

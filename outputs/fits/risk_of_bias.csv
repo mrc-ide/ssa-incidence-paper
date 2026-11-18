@@ -14,6 +14,7 @@ doi,participation,attrition,kp_cross_sectional,recruitment_type,study_type,media
 10.1016/S0140-6736(19)31288-7,0.877409233527566,0.064,NA,Intervention Trials,Intervention Trials,3.5199626002539195,9567,TRUE,Remaining studies
 10.1016/S1473-3099(15)00429-6,NA,NA,NA,Non-representative - Other,Prospective Cohort,2.8569523923534157,171.0748309254187,TRUE,Remaining studies
 10.1016/S1473-3099(18)30428-6,0.990262901655307,0.9299802761341223,NA,Intervention Trials,Intervention Trials,2.3921103998803313,1520,TRUE,Remaining studies
+10.1016/S1473-3099(24)00358-X,NA,NA,NA,Intervention Trials,Intervention Trials,4.937270815970471,1648.8,TRUE,Remaining studies
 10.1016/S2214-109X(16)30253-4,0.827932598833441,0.13,NA,Intervention Trials,Intervention Trials,0.5120421370288568,2830,TRUE,Remaining studies
 10.1016/S2352-3018(16)30190-4,0.74,0.06,NA,Other HHS,Prospective Cohort,0.8306509610074011,4936.247995183448,TRUE,Remaining studies
 10.1016/S2352-3018(17)30124-8,0.994234284910702,0.08299999999999996,NA,Other HHS,Prospective Cohort,1.1465549263288797,12114.140719964864,TRUE,Remaining studies
@@ -116,7 +117,6 @@ https://hsrc.ac.za/uploads/pageContent/10779/SABSSM%20V.pdf,NA,NA,NA,National HH
 https://hsrc.ac.za/uploads/pageContent/4565/SABSSM%20IV%20LEO%20final.pdf,NA,NA,NA,National HHS,Cross-sectional incidence,0.7161274904179087,34183.223340944896,FALSE,Remaining studies
 https://hsrc.ac.za/wp-content/uploads/2024/07/SABSSM_VI_EXEC_REPORT_2PP.pdf,NA,NA,NA,National HHS,Cross-sectional incidence,1.8474198854151564,2561.090970666667,FALSE,Remaining studies
 https://pubmed.ncbi.nlm.nih.gov/24689325/,NA,NA,NA,ANC,Prospective Cohort,9.66713566423393,800.1449336452507,TRUE,Remaining studies
-https://www.natap.org/2022/CROI/croi_159a.htm,NA,NA,NA,Intervention Trials,Intervention Trials,4.928431007169436,896.6353064899183,TRUE,Remaining studies
 AHRI,0.41,NA,NA,UTT/Cohort,Prospective Cohort,1.2160877796349185,157132.29712069363,TRUE,Population-representative cohorts
 Karonga,0.7,NA,NA,UTT/Cohort,Prospective Cohort,0.4636966331911686,28890.255471800003,TRUE,Population-representative cohorts
 Kisesa,0.6,NA,NA,UTT/Cohort,Prospective Cohort,1.1285155005087806,72097.7759988,TRUE,Population-representative cohorts
@@ -172,5 +172,5 @@ Stannah | Robb 2016,NA,NA,FALSE,MSM,MSM,6.3878379163067764,111,TRUE,Key populati
 Stannah | Sanders 2013,NA,0.257,FALSE,MSM,MSM,25.724918220027064,743.9,TRUE,Key population
 Stannah | Sandfort 2021,NA,0.07076923076923076,FALSE,MSM,MSM,20.799617088458362,449.29999999999995,TRUE,Key population
 Stannah | Sullivan 2020,NA,0.11986301369863012,FALSE,MSM,MSM,15.056176350492613,136.8,TRUE,Key population
-Stannah | Wahome 2020,1.0406976744186047,0.3470588235294117,FALSE,MSM,MSM,71.29551686526658,459,TRUE,Key population
+Stannah | Wahome 2020,NA,0.3470588235294117,FALSE,MSM,MSM,71.29551686526658,459,TRUE,Key population
 Stannah | Wirtz 2015,NA,0.06796116504854369,FALSE,MSM,MSM,11.42656820620392,146.95499999999998,TRUE,Key population

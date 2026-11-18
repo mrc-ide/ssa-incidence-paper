@@ -196,27 +196,26 @@ write_table(table_s5, "table_s5")
 
 ################################################################################
 #' ## Figure 1: flowchart
-#' Screening counts (titles, abstracts, full texts) come from Covidence. The
-#' study counts for the review steps are from the code; the pptx box definitions
-#' differ from the code's steps (flowchart_counts.csv), so both are reported.
+#' Screening counts (titles, abstracts, full texts) come from Covidence; the study
+#' counts for the review steps and additional sources are from the code
+#' (flowchart_counts.csv).
 ################################################################################
 
 fc <- function(step, col) flowchart[[col]][flowchart$step == step]
 
-record("Figure 1", "Pooled systematic review dataset (studies)", fc("Pooled systematic review data", "studies"),
-       note = "Pptx box counts studies before de-duplication across reviews; code counts after")
+record("Figure 1", "Pooled systematic review dataset (studies)", fc("Pooled systematic review data", "studies"))
 review_steps <- flowchart %>%
   filter(box == "review") %>%
   mutate(excluded_studies = lag(studies) - studies, excluded_obs = lag(observations) - observations)
-pptx_steps <- c("Risk-based inclusion criteria", "PrEP", "BED assay", "Secondary analyses",
-                "Sex/age/year stratified data available", "Unable to calculate incidence rate")
 for (i in seq_len(nrow(review_steps))[-1]) {
-  s <- review_steps$step[i]
-  record("Figure 1", paste("Studies excluded:", s), review_steps$excluded_studies[i],
-         note = if (s %in% pptx_steps) "Pptx step definitions differ from the code's" else
-           "Step not a separate box in the pptx")
+  record("Figure 1", paste("Studies excluded:", review_steps$step[i]), review_steps$excluded_studies[i])
 }
-record("Figure 1", "Review studies retained", fc("Unable to calculate incidence rate", "studies"))
+record("Figure 1", "Studies excluded: total", sum(review_steps$excluded_studies, na.rm = TRUE))
+record("Figure 1", "Review studies retained", fc("Matched to location, year and person-years", "studies"))
+record("Figure 1", "Additional studies identified (new_data.csv)", fc("Additional studies identified", "studies"))
+for (s in c("primary_report", "grey_literature", "additional")) {
+  record("Figure 1", paste("Additional studies identified:", s), fc(s, "studies"))
+}
 record("Figure 1", "PHIA surveys", fc("PHIA surveys", "studies"))
 record("Figure 1", "PHIA survey years", paste(range(data$year[str_detect(data$doi, "PHIA$")]), collapse = "-"),
        note = "Data years are survey midpoint years")
@@ -489,9 +488,11 @@ record("Abstract; Discussion", "Median decline since 2010 across cohorts",
 cohort_trends <- read_fit("cohort_trends.csv")
 table_s8 <- cohort_trends %>%
   transmute(cohort = cohort_short[doi], year,
-            seroconversions = round(infections), person_years = round(pys),
-            incidence = round(100 * ir, 1), crude_irr = round(crude_irr, 2),
-            smoothed_incidence = round(100 * smoothed, 2), smoothed_irr = round(smoothed_irr, 2)) %>%
+            seroconversions = format(round(infections), big.mark = ",", trim = TRUE),
+            person_years = format(round(pys), big.mark = ",", trim = TRUE),
+            #' Fixed two decimal places in every rate and ratio column
+            incidence = sprintf("%.2f", 100 * ir), crude_irr = sprintf("%.2f", crude_irr),
+            smoothed_incidence = sprintf("%.2f", 100 * smoothed), smoothed_irr = sprintf("%.2f", smoothed_irr)) %>%
   mutate(across(-cohort, as.character))
 write_table(table_s8, "table_s8")
 
@@ -509,7 +510,7 @@ trend_of <- function(trends, s, a) filter(trends, sex == s, age_group == a)
 #' Abstract: "declined 4% faster per year (95%CrI 1-6%) among young adults 15-24 years than 25+ years"
 #' = 1 - 1/exp(year:age 25-49), with 15-24 as the reference age group
 age_int <- filter(cohort_age, var == "year_min:age_group2Y025_049")
-record("Abstract", "Faster annual decline among 15-24 than 25+ (cohorts)",
+record("Abstract", "Faster annual decline among 15-24 than 25-49 (cohorts)",
        sprintf("%.0f%% (%.0f-%.0f%%)", 100 * (1 - 1 / age_int$mean), 100 * (1 - 1 / age_int$lower), 100 * (1 - 1 / age_int$upper)))
 
 f1524 <- trend_of(cohort_trend, "female", "Y015_024")
@@ -525,16 +526,16 @@ table_s9_rows <- tribble(
   "Year (Reference year = 2014)", "year_min",
   "Age group", NA,
   "15-24", "reference",
-  "25+", "age_group2Y025_049",
+  "25-49", "age_group2Y025_049",
   "Gender", NA,
   "Female", "reference",
   "Male", "sexmale",
   "Sex : year interaction", NA,
   "Male : year", "year_min:sexmale",
   "Year : age interaction", NA,
-  "Year : 25+", "year_min:age_group2Y025_049",
+  "Year : 25-49", "year_min:age_group2Y025_049",
   "Sex : age interaction", NA,
-  "Male: 25+", "sexmale:age_group2Y025_049",
+  "Male: 25-49", "sexmale:age_group2Y025_049",
   "Hyperparameters", "header",
   #' Labels follow the model terms ; AR2 SDs are marginal SDs
   "Age-specific cohort intercepts (IID)", "SD for doi3",
@@ -607,10 +608,16 @@ latest_sex <- data %>%
   group_by(doi, sex) %>%
   summarise(infections = sum(infections), years = paste(range(year), collapse = "-"), .groups = "drop") %>%
   pivot_wider(names_from = sex, values_from = infections)
-kya <- filter(latest_sex, doi == "Kyamulibwa GPC")
-record("Results", "Kyamulibwa: female:male new infections, latest three years of data",
-       sprintf("%.1f:1 (%s)", kya$female / kya$male, kya$years),
-       note = "Text reads the latest point of Fig S3B; crude ratio over the last three data years here")
+#' Kyamulibwa: female:male incidence rate ratio, ages 15-49, pooled over the last three data
+#' years (the quantity plotted in Supplementary Figure S3B)
+kya <- data %>%
+  filter(doi == "Kyamulibwa GPC", sex != "both", age_group %in% age_groups_15to49) %>%
+  filter(year >= max(year) - 2) %>%
+  group_by(sex) %>%
+  summarise(ir = sum(infections) / sum(pys), years = paste(range(year), collapse = "-"), .groups = "drop")
+record("Results", "Kyamulibwa: female:male incidence rate ratio 15-49, latest three years of data",
+       sprintf("%.1f:1 (%s)", kya$ir[kya$sex == "female"] / kya$ir[kya$sex == "male"], kya$years[1]),
+       note = "Text: 'about 3:1 (2020-2022)'")
 siaya <- filter(latest_sex, doi == "Kisumu HDSS")
 record("Results", "Siaya: male infections, latest data", sprintf("%.0f (%s)", siaya$male, siaya$years))
 
@@ -618,15 +625,13 @@ record("Results", "Siaya: male infections, latest data", sprintf("%.0f (%s)", si
 cohort_population <- read_fit("cohort_population.csv")
 table_s11 <- cohort_population %>%
   transmute(cohort = cohort_short[doi], year = as.character(year), sex,
-            age_group = recode(age_group, Y015_024 = "15-24", Y025_049 = "25+"),
+            age_group = recode(age_group, Y015_024 = "15-24", Y025_049 = "25-49"),
             population = as.character(round(population)), prevalence = sprintf("%.1f%%", 100 * prevalence),
             hiv_negative = as.character(round(hiv_negative)))
 write_table(table_s11, "table_s11")
 
 ################################################################################
 #' ## PHIA vs national modelled incidence (Results, Figure 4)
-#' Namibia's modelled value is from a non-public Spectrum file: only the summaries
-#' are recorded here.
 ################################################################################
 
 phia_cor <- read_fit("phia_spectrum_correlation.csv")
@@ -659,10 +664,7 @@ record("Text S3", "Unique geocoding search strings; with >1 location; same distr
 #' Discussion: 15-24 incidence decline 2010-2020 in the 2026 Spectrum files, all
 #' sub-Saharan African national files pooled (infections / HIV-negative population),
 #' with its annual equivalent, to compare with the cohort and PHIA annual declines.
-#' Namibia's file is private: it is included when private/ is present, otherwise
-#' left out (the pooled figure moves by <0.5 percentage points).
-spectrum_file <- file.path(path_private, "spectrum_incidence_full.csv.gz")
-if (!file.exists(spectrum_file)) spectrum_file <- file.path(path_modelled, "spectrum_incidence.csv.gz")
+spectrum_file <- file.path(path_modelled, "spectrum_incidence.csv.gz")
 ssa_1524 <- read_csv(spectrum_file, show_col_types = FALSE) %>%
   filter(variant == "published", area_id == iso3, sex == "both", age_group == "Y015_024",
          year %in% c(2010, 2020), !is.na(infections)) %>%
@@ -672,9 +674,25 @@ ssa_ratio <- ssa_1524$incidence[ssa_1524$year == 2020] / ssa_1524$incidence[ssa_
 record("Discussion", "Spectrum 2026: 15-24 incidence decline 2010-2020, sub-Saharan Africa; per year",
        sprintf("%.0f%%; %.0f%%/year", 100 * (1 - ssa_ratio), 100 * (1 - ssa_ratio^(1 / 10))),
        note = sprintf("%d national Spectrum files (%s)", max(ssa_1524$n_iso3), basename(spectrum_file)))
-record("Discussion", "Median modelled decline across countries 2010-2023", "75%",
-       note = "Cited UNAIDS estimates (refs 40, 51)")
-record("Introduction", "UNAIDS incidence decline 2010-2024", "nearly 70%", note = "Cited (refs 1, 2)")
+#' Discussion: median across countries of the 15-49 incidence decline 2010-2025, 2026 Spectrum files
+ctry_decline <- read_csv(spectrum_file, show_col_types = FALSE) %>%
+  filter(variant == "published", area_id == iso3, sex == "both", age_group == "Y015_049",
+         year %in% c(2010, 2025)) %>%
+  group_by(iso3) %>%
+  summarise(decline = 1 - incidence[year == 2025] / incidence[year == 2010])
+record("Discussion", "Median modelled 15-49 incidence decline across countries 2010-2025",
+       sprintf("%.0f%%", 100 * median(ctry_decline$decline)),
+       note = sprintf("%d national Spectrum files (refs 1, 2)", nrow(ctry_decline)))
+#' Introduction: sub-Saharan Africa 15-49 incidence decline 2010-2024 in the 2026 Spectrum
+#' files, all national files pooled (text: "nearly 70%"; refs 1, 2 = AIDSinfo, Spectrum files)
+ssa_1549 <- read_csv(spectrum_file, show_col_types = FALSE) %>%
+  filter(variant == "published", area_id == iso3, sex == "both", age_group == "Y015_049",
+         year %in% c(2010, 2024), !is.na(infections)) %>%
+  group_by(year) %>%
+  summarise(incidence = sum(infections) / sum(population - plhiv))
+record("Introduction", "Spectrum 2026: 15-49 incidence decline 2010-2024, sub-Saharan Africa",
+       sprintf("%.0f%%", 100 * (1 - ssa_1549$incidence[2] / ssa_1549$incidence[1])),
+       note = "Text: 'nearly 70%' (refs 1, 2)")
 record("Results", "Share of new infections among 15-24 in modelled estimates", "40-50%",
        note = "Read from Supplementary Figure S3A")
 record("Results", "Modelled female:male sex ratio of new infections 1995-2008", "1.5:1",

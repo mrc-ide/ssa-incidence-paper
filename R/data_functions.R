@@ -22,7 +22,10 @@ track <- function(tracker, dat, step) {
 #' Joshi et al. review extract plus the 2024 update (three extraction sheets)
 read_review_data <- function(dir = file.path(path_raw, "review")) {
 
-  joshi <- read_csv(file.path(dir, "data.combine.csv"), show_col_types = FALSE)
+  # Studies without a DOI (PHIA, SHIMS and THIS survey reports and three papers) are
+  # keyed by author and year, so each counts as its own study in Figure 1
+  joshi <- read_csv(file.path(dir, "data.combine.csv"), show_col_types = FALSE) %>%
+    mutate(`doi/url` = ifelse(is.na(`doi/url`), paste(author, pubyear), `doi/url`))
 
   #' Rows reporting cumulative incidence over a period, not a rate, are dropped
   read_update <- function(file) {
@@ -51,6 +54,30 @@ read_review_data <- function(dir = file.path(path_raw, "review")) {
   bind_rows(joshi, update)
 }
 
+#' 2024 update studies extracted in Covidence that give no incidence rate (Figure 1):
+#' those reporting only cumulative incidence over a period (rows dropped in
+#' read_review_data) and those with nothing to extract (extracted_no_rate.csv)
+read_update_no_rate <- function(dir = file.path(path_raw, "review")) {
+  sheets <- bind_rows(lapply(c("2024_i.csv", "2024_ii_fixed.csv", "2024_iii.csv"), function(f)
+    read_csv(file.path(dir, f), show_col_types = FALSE, col_types = cols(.default = "c"))))
+  rate_rows <- filter(sheets, !str_detect(IR_PER_100, "year|period") | is.na(IR_PER_100))
+  cumulative <- setdiff(unique(sheets$`doi/url`), rate_rows$`doi/url`)
+  bind_rows(tibble(doi = cumulative, reason = "Cumulative incidence only"),
+            read_csv(file.path(dir, "extracted_no_rate.csv"), show_col_types = FALSE) %>%
+              select(doi, reason))
+}
+
+#' Joshi et al. papers that are secondary analyses of trials whose primary reports
+#' are extracted by hand (new_data.csv, source "primary_report"). One row per Joshi
+#' paper; `primary_report_doi` lists the primary report(s), separated by "; "
+read_primary_reports <- function(dir = file.path(path_raw, "review")) {
+  read_csv(file.path(dir, "replaced_by_primary_report.csv"), show_col_types = FALSE)
+}
+
+primary_report_dois <- function(primary = read_primary_reports()) {
+  unique(str_trim(unlist(str_split(primary$primary_report_doi, ";"))))
+}
+
 read_inclusion <- function(dir = file.path(path_raw, "review")) {
   read_csv(file.path(dir, "inclusion.csv"), show_col_types = FALSE) %>%
     rename(doi = `doi/url`)
@@ -58,7 +85,8 @@ read_inclusion <- function(dir = file.path(path_raw, "review")) {
 
 #' Apply the review exclusion criteria (Figure 1). Returns the cleaned
 #' observations and a tracker of studies/observations after each step.
-clean_review_data <- function(dat, inclusion, match_level) {
+clean_review_data <- function(dat, inclusion, match_level, no_rate = read_update_no_rate(),
+                              primary = read_primary_reports()) {
 
   notes_doi <- function(pattern, exclude = NULL) {
     x <- filter(inclusion, str_detect(notes, pattern))
@@ -70,12 +98,41 @@ clean_review_data <- function(dat, inclusion, match_level) {
     rename(iso3 = `Country (ISO0)`, area_name = `ISO3 [Name]`, pys = PersonYears, N_neg = N_Neg, doi = `doi/url`) %>%
     left_join(match_level, by = c("iso3", "ISO1", "ISO2", "area_name"))
 
+  # Extracted update studies with no incidence rate have no observations; they are
+  # counted in the pooled data and excluded at "Unable to calculate incidence rate"
+  stopifnot(!any(no_rate$doi %in% dat$doi))
+  n_no_rate <- n_distinct(no_rate$doi)
+  # Joshi et al. secondary analyses replaced by the trials' primary reports, which join
+  # after the exclusions (new_data.csv; read_additional_data)
+  stopifnot(all(primary$doi %in% dat$doi))
+  track <- function(tracker, dat, step) {
+    bind_rows(tracker, tibble(step = step, studies = n_distinct(dat$doi) + n_no_rate,
+                              observations = nrow(dat)))
+  }
+
   tracker <- track(tibble(), dat, "Pooled systematic review data")
 
-  # Total population studies with risk-based inclusion criteria, and key populations
-  # (FSW and MSM come from the dedicated reviews instead)
-  dat <- filter(dat, HighRiskGroup %in% c("GP", "PW", "PW/GP") | is.na(HighRiskGroup),
-                !doi %in% notes_doi("HR", exclude = "AHRI"))
+  dat <- filter(dat, !doi %in% primary$doi)
+  tracker <- track(tracker, dat, "Replaced by primary trial report")
+
+  # Total population studies with risk-based inclusion criteria, and key populations.
+  # Studies of FSW, MSM or transgender people only are counted first (these populations
+  # come from the dedicated reviews instead); then all other risk-based studies
+  risk_ok <- function(x) {
+    (x$HighRiskGroup %in% c("GP", "PW", "PW/GP") | is.na(x$HighRiskGroup)) &
+      !x$doi %in% notes_doi("HR", exclude = "AHRI")
+  }
+  kp_groups <- c("SW", "MSM", "MSM*", "MSM/TG", "TG", "SW/MSM")
+  kp_only <- dat %>%
+    filter(!doi %in% dat$doi[risk_ok(dat)]) %>%
+    group_by(doi) %>%
+    filter(all(HighRiskGroup %in% kp_groups)) %>%
+    pull(doi) %>%
+    unique()
+  dat <- filter(dat, !doi %in% kp_only)
+  tracker <- track(tracker, dat, "FSW and MSM studies")
+
+  dat <- dat[risk_ok(dat), ]
   tracker <- track(tracker, dat, "Risk-based inclusion criteria")
 
   dat <- filter(dat, !doi %in% filter(inclusion, remove == "PrEP")$doi)
@@ -103,19 +160,23 @@ clean_review_data <- function(dat, inclusion, match_level) {
   dat <- filter(dat, !doi %in% filter(inclusion, str_detect(notes, "Remove"), str_detect(notes, "analysis"))$doi)
   tracker <- track(tracker, dat, "Secondary analyses")
 
-  dat <- impute_person_years(dat, inclusion)
-
   # Replaced by more finely stratified data from study teams (read_additional_data)
-  dat <- dat %>%
-    filter(!doi %in% c("10.1056/NEJMoa1814556",         # HPTN071/PopART
-                       "10.1056/NEJMoa1809866",         # SEARCH
-                       "10.1056/NEJMoa1812281",         # Ya Tsie/BCPP
-                       "10.1016/S2352-3018(17)30205-9", # TasP
-                       notes_doi("agg")),
+  replaced <- function(x) {
+    filter(x, !doi %in% c("10.1056/NEJMoa1814556",         # HPTN071/PopART
+                          "10.1056/NEJMoa1809866",         # SEARCH
+                          "10.1056/NEJMoa1812281",         # Ya Tsie/BCPP
+                          "10.1016/S2352-3018(17)30205-9", # TasP
+                          notes_doi("agg")),
            !str_detect(author, "PHIA|SHIMS|THIS"))
-  tracker <- track(tracker, dat, "Sex/age/year stratified data available")
+  }
+  tracker <- track(tracker, replaced(dat), "Sex/age/year stratified data available")
 
-  dat <- filter(dat, !doi %in% filter(inclusion, notes == "Remove: No incidence data")$doi)
+  # Person-years are imputed from all studies left after the secondary-analysis step;
+  # observations with no incidence data drop out here and are counted at the next step
+  dat <- impute_person_years(dat, inclusion) %>%
+    replaced() %>%
+    filter(!doi %in% filter(inclusion, notes == "Remove: No incidence data")$doi)
+  n_no_rate <- 0
   tracker <- track(tracker, dat, "Unable to calculate incidence rate")
 
   stopifnot(!any(dat$doi %in% filter(inclusion, str_detect(notes, "Remove"))$doi))
@@ -392,7 +453,8 @@ read_additional_data <- function(inclusion, search_areas, dir = file.path(path_r
            pys = ifelse(is.na(pys) & !is.na(upper), (ir * (1 - ir)) / (se^2), pys),
            year = round((year_start + year_end) / 2)) %>%
     left_join(inclusion %>% select(doi, sexual_activity), by = "doi") %>%
-    mutate(sexual_activity = ifelse(is.na(sexual_activity), 0, 1))
+    mutate(sexual_activity = ifelse(is.na(sexual_activity), 0, 1)) %>%
+    select(-source)
 
   bind_rows(add_data, new_data)
 }
@@ -554,13 +616,8 @@ match_modelled <- function(aligned, modelled, offset_col = "naomi") {
     left_join(modelled %>% select(area_id, year, sex, age_group, offset = all_of(offset_col)),
               by = c("area_id", "year", "sex", "age_group"))
 
-  suppressed <- modelled %>%
-    filter(suppressed) %>%
-    distinct(area_id) %>%
-    pull(area_id)
-
   matched %>%
-    filter(!is.na(offset) | area_id %in% suppressed,
+    filter(!is.na(offset),
            pys != 0) %>%  # pys = 0 arises from imputing pys from intervals when ir = 0
     group_by(doi, idx, year, sex, age_group) %>%
     mutate(area_id = toString(area_id)) %>%
@@ -692,16 +749,33 @@ align_observations <- function(geography = path_geography) {
   aligned <- bind_rows(aligned, add_data)
   if (any(is.na(aligned$area_id))) stop("Unmatched areas")
 
-  # Figure 1: additional data sources (observations before matching)
+  # Figure 1: additional data sources (observations before matching). Rows of
+  # new_data.csv for a study already in the review data (SABSSM V) are not a new study.
+  # new_data.csv studies (primary trial reports for Joshi et al. secondary analyses, grey
+  # literature survey reports and other published reports) form one box, "Additional
+  # studies identified"; additional_sources gives the breakdown by report type
+  new_data_source <- read_csv(file.path(path_raw, "review", "new_data.csv"), show_col_types = FALSE) %>%
+    distinct(doi = str_trim(doi), report_source = source)
+  primary_dois <- primary_report_dois()
+  stopifnot(setequal(primary_dois, new_data_source$doi[new_data_source$report_source == "primary_report"]))
   additional_counts <- add_data %>%
-    filter(!doi %in% read_csv(file.path(path_raw, "review", "new_data.csv"), show_col_types = FALSE)$doi) %>%
+    filter(!doi %in% dat$doi) %>%
+    left_join(new_data_source, by = "doi") %>%
     mutate(source = case_when(str_detect(doi, "PHIA") ~ "PHIA surveys",
+                              !is.na(report_source) ~ "Additional studies identified",
                               str_detect(doi, "Jones & Anderson") ~ "FSW: Jones and Anderson et al.",
                               str_detect(doi, "Stannah") ~ "MSM: Stannah et al.",
                               TRUE ~ doi)) %>%
     group_by(source) %>%
     summarise(studies = n_distinct(doi), observations = n_distinct(idx), .groups = "drop")
+  additional_sources <- add_data %>%
+    filter(!doi %in% dat$doi) %>%
+    inner_join(new_data_source, by = "doi") %>%
+    group_by(source = report_source) %>%
+    summarise(studies = n_distinct(doi), observations = n_distinct(idx), .groups = "drop")
 
   list(aligned = aligned, tracker = review$tracker, additional_counts = additional_counts,
+       additional_sources = additional_sources, primary_report_dois = primary_dois,
+       review_max_idx = max(dat$idx),
        inclusion = inclusion, searches = searches)
 }

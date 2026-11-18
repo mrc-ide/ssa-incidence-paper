@@ -1,14 +1,18 @@
 step,studies,observations,box
-Pooled systematic review data,353,2957,review
-Risk-based inclusion criteria,216,2271,review
-PrEP,201,2240,review
-Intervention arms or intervention study,182,1902,review
-BED assay,170,1807,review
-Overlapping observations and duplicates,153,1082,review
-Secondary analyses,129,1017,review
-Sex/age/year stratified data available,96,321,review
+Pooled systematic review data,376,2957,review
+Replaced by primary trial report,367,2929,review
+FSW and MSM studies,333,2814,review
+Risk-based inclusion criteria,229,2244,review
+PrEP,214,2213,review
+Intervention arms or intervention study,198,1888,review
+BED assay,186,1793,review
+Overlapping observations and duplicates,170,1074,review
+Secondary analyses,149,1017,review
+Sex/age/year stratified data available,109,365,review
 Unable to calculate incidence rate,92,317,review
+"Matched to location, year and person-years",83,275,review
 AHRI,1,272,additional
+Additional studies identified,9,33,additional
 BCCP/YaTsie,1,299,additional
 FSW: Jones and Anderson et al.,27,74,additional
 Karonga,1,28,additional
@@ -22,4 +26,7 @@ PopART,1,84,additional
 RCCS,1,182,additional
 SEARCH,1,16,additional
 TasP,1,286,additional
+additional,2,17,additional studies identified
+grey_literature,2,6,additional studies identified
+primary_report,5,10,additional studies identified
 Final data,175,3509,final

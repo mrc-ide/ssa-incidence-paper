@@ -5,12 +5,6 @@
 #' observation to UNAIDS areas (data/geography/) and to modelled incidence
 #' (data/modelled/), and classifies studies by recruitment type.
 #'
-#' Namibia's modelled incidence comes from a non-public Spectrum file and is blank
-#' in data/modelled/. When private/matched_incidence_full.csv.gz is present
-#' (prep/build_modelled_incidence.R) its values are used; otherwise Namibia
-#' observations have no offset and are dropped here (INLA would read a missing
-#' offset as zero).
-#'
 #' Writes (outputs/data/, not committed):
 #'   analysis_data.csv                       one row per observation. extrapolated_value is the
 #'                                           main offset (Naomi-extrapolated incidence);
@@ -21,8 +15,7 @@
 #'
 #' Zenodo: rather than regenerate these from the original files, they can be
 #' downloaded from https://doi.org/10.5281/zenodo.24284889 into outputs/data/,
-#' then start at R/02_fit_main.R. That copy has no Namibia observations
-#' (prep/export_zenodo.R), so its results will not exactly reproduce the manuscript.
+#' then start at R/02_fit_main.R.
 ################################################################################
 
 library(tidyverse)
@@ -34,14 +27,7 @@ dir.create(path_derived, showWarnings = FALSE, recursive = TRUE)
 
 pipeline <- align_observations()
 
-#' Modelled incidence, with Namibia filled in from the private copy when available
 modelled <- read_csv(file.path(path_modelled, "matched_incidence.csv.gz"), show_col_types = FALSE)
-full_file <- file.path(path_private, "matched_incidence_full.csv.gz")
-if (file.exists(full_file)) {
-  modelled <- read_csv(full_file, show_col_types = FALSE)
-} else {
-  message("Private modelled incidence not found: Namibia observations will have no offset")
-}
 
 build_dataset <- function(offset_col) {
   pipeline$aligned %>%
@@ -74,9 +60,16 @@ write_csv(analysis_data, file.path(path_derived, "analysis_data.csv"), na = "")
 #' ## Figure 1 counts
 ################################################################################
 
+#' Review studies that pass the exclusions but cannot be matched to an area, a year
+#' or person-years (and so to modelled incidence) drop out in build_dataset()
+review_final <- filter(analysis_data, idx <= pipeline$review_max_idx)
+stopifnot(all(pipeline$primary_report_dois %in% str_trim(analysis_data$doi)))
 flowchart_counts <- bind_rows(
   pipeline$tracker %>% mutate(box = "review"),
+  tibble(step = "Matched to location, year and person-years", studies = n_distinct(review_final$doi),
+         observations = nrow(review_final), box = "review"),
   pipeline$additional_counts %>% rename(step = source) %>% mutate(box = "additional"),
+  pipeline$additional_sources %>% rename(step = source) %>% mutate(box = "additional studies identified"),
   tibble(step = "Final data", studies = n_distinct(analysis_data$doi), observations = nrow(analysis_data),
          box = "final")
 )

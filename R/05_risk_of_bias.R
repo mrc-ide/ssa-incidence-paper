@@ -67,7 +67,11 @@ kp_rob <- readxl::read_excel(file.path(ref, "kp_participation_attrition_extracti
               !str_detect(`Design / relevance`, "(?i)longitudinal|nested cohort"),
             participation = `Consented / enrolled (n)` / `Eligible (n)`,
             attrition = as_rate(as.character(`Attrition / LTFU rate`))) %>%
-  filter(!is.na(doi))
+  filter(!is.na(doi)) %>%
+  #' Wahome 2020 (doi:10.1016/j.eclinm.2020.100541) does not report a study participation
+  #' rate: 179 is the number of registered cohort MSM and 172 the number assessed for PrEP
+  #' eligibility, so 179/172 (104%) is not a participation rate. Recorded as not reported.
+  mutate(participation = ifelse(doi == "Stannah | Wahome 2020", NA_real_, participation))
 
 stopifnot(!anyDuplicated(kp_rob$doi))
 
@@ -128,24 +132,27 @@ rob_panel <- function(measure, against) {
            row = row_number())
   y_top <- measure == "attrition"
   ggplot(d, aes(x = .data[[against]], y = .data[[measure]], color = group)) +
-    geom_point(show.legend = FALSE) +
+    geom_point() +
     geom_text(data = labels, aes(label = label, color = group,
-                                 y = if (y_top) 0.97 - 0.06 * (row - 1) else 0.03 + 0.06 * (nrow(labels) - row)),
-              x = -Inf, hjust = -0.05, size = 4.2, inherit.aes = FALSE, show.legend = FALSE) +
+                                 y = if (y_top) 0.99 - 0.08 * (row - 1) else 0.03 + 0.08 * (nrow(labels) - row)),
+              x = -Inf, hjust = -0.04, size = 6.2, inherit.aes = FALSE, show.legend = FALSE) +
     scale_color_manual(values = group_colours, drop = FALSE) +
     scale_y_continuous(labels = scales::label_percent(), limits = c(0, 1.05), breaks = seq(0, 1, 0.25)) +
-    scale_x_log10() +
+    scale_x_log10(labels = scales::label_number(big.mark = ",", drop0trailing = TRUE)) +
     expand_limits(x = if (against == "pys") c(50, 1e6) else c(0.1, 1500)) +
-    labs(x = xlab, y = str_to_sentence(measure)) +
+    labs(x = xlab, y = str_to_sentence(measure), color = NULL) +
     theme_paper() +
-    theme(aspect.ratio = 1)
+    theme_large() +
+    theme(aspect.ratio = 1, plot.margin = margin(5, 30, 5, 5))
 }
 
 library(patchwork)
 fig <- (rob_panel("participation", "median_irr") | rob_panel("participation", "pys")) /
-  (rob_panel("attrition", "median_irr") | rob_panel("attrition", "pys"))
+  (rob_panel("attrition", "median_irr") | rob_panel("attrition", "pys")) +
+  plot_layout(guides = "collect") &
+  theme(legend.position = "bottom")
 
-if (out_suffix == "") save_png(fig, "figure_text_s9.png", width = 1000, height = 930)
+if (out_suffix == "") save_png(fig, "figure_text_s9.png", width = 1100, height = 1023)
 
 ################################################################################
 #' Text S9 numbers

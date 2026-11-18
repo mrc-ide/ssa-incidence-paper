@@ -6,11 +6,6 @@
 #' pixel sizes and font sizes of the original figure code. Figure 1 (the review
 #' flowchart) is flowchart.pptx; its numbers are recorded in paper_numbers.R.
 #'
-#' Namibia's modelled incidence is from a non-public Spectrum file, so Namibia is
-#' left out of Figure 4 and the Text S7 figure, and figures read only the public
-#' Spectrum extract. The Figure 4B regression line and the correlations quoted in
-#' the text are fitted with Namibia (R/04_fit_cohort_phia.R).
-#'
 #' Zenodo: outputs/data/ can be downloaded rather than regenerated (see
 #' R/02_fit_main.R); figures then will not exactly reproduce the manuscript.
 #'
@@ -23,9 +18,7 @@ library(patchwork)
 data <- read_csv(file.path(path_derived, "analysis_data.csv"), show_col_types = FALSE)
 read_fit <- function(file) read_csv(file.path(path_fits, file), show_col_types = FALSE)
 
-private_iso3 <- "NAM"
-spectrum <- read_csv(file.path(path_modelled, "spectrum_incidence.csv.gz"), show_col_types = FALSE) %>%
-  filter(!iso3 %in% private_iso3)
+spectrum <- read_csv(file.path(path_modelled, "spectrum_incidence.csv.gz"), show_col_types = FALSE)
 
 #' Cohort labels as factors in the paper's panel order
 cohort_factor <- function(doi, short = FALSE) {
@@ -68,17 +61,22 @@ ratio_points <- data %>%
   mutate(irr = ir / extrapolated_value, sex = str_to_sentence(sex))
 
 ratio_panel <- function(types, title, facets, y_breaks = c(1, 10), y_max = 16) {
-  ggplot(filter(ratio_points, recruitment_type %in% types), aes(x = year)) +
+  #' Zoom with coord_cartesian (not scale limits), so points and ribbons beyond y_max
+  #' are cut at the panel edge rather than dropped
+  #' Zero-incidence observations cannot be shown on the log scale
+  pts <- filter(ratio_points, recruitment_type %in% types, irr > 0)
+  y_lim <- if (is.na(y_max)) NULL else c(min(pts$irr), y_max)
+  ggplot(pts, aes(x = year)) +
     geom_hline(yintercept = 1, linetype = 2) +
     geom_point(aes(y = irr, size = pys), shape = 16, alpha = 0.4, show.legend = FALSE) +
     geom_ribbon(data = filter(predictions, recruitment_type %in% types), aes(ymin = lower, ymax = upper),
                 fill = pal_blue, alpha = 0.5) +
     geom_line(data = filter(predictions, recruitment_type %in% types), aes(y = mean), linewidth = 1.5, color = pal_blue) +
     facets +
-    scale_x_continuous(breaks = seq(1990, 2020, 10), limits = c(1990, 2023)) +
+    scale_x_continuous(breaks = seq(1990, 2020, 10)) +
     scale_y_continuous(transform = "log", labels = scales::label_number(accuracy = 1, big.mark = ""),
-                       breaks = y_breaks, limits = c(NA, y_max)) +
-    coord_cartesian(clip = "off") +
+                       breaks = y_breaks) +
+    coord_cartesian(xlim = c(1990, 2023), ylim = y_lim) +
     labs(x = NULL, y = "Incidence rate ratio (log scale)", title = title) +
     theme_paper() +
     larger_text() +
@@ -143,7 +141,7 @@ loo <- read_fit("loo_coefficients.csv") %>%
   bind_rows(main_coefs) %>%
   mutate(main = doi == "00000")
 
-loo_panel <- function(vars, labels = vars, breaks = waiver(), limits = NULL) {
+loo_panel <- function(vars, labels = vars, breaks = scales::breaks_pretty(n = 3), limits = NULL) {
   loo %>%
     filter(var %in% vars) %>%
     mutate(var = factor(var, levels = vars, labels = labels)) %>%
@@ -151,22 +149,24 @@ loo_panel <- function(vars, labels = vars, breaks = waiver(), limits = NULL) {
     geom_point(show.legend = FALSE) +
     geom_linerange(aes(ymin = lower, ymax = upper), show.legend = FALSE) +
     geom_hline(yintercept = 1, linetype = 2, color = "red") +
-    scale_y_continuous(transform = "log", labels = scales::label_number(accuracy = 0.01), breaks = breaks, limits = limits) +
+    scale_y_continuous(transform = "log", labels = function(x) format(x, drop0trailing = TRUE, trim = TRUE),
+                       breaks = breaks, limits = limits) +
     scale_color_manual(values = c("black", "blue")) +
-    facet_wrap(~var, scales = "free", nrow = 1) +
+    facet_wrap(~var, scales = "free", nrow = 1, labeller = label_wrap_gen(16)) +
     coord_flip() +
     labs(x = NULL, y = "IRR") +
     theme_paper() +
+    theme_large() +
     # Extra space between panels so the end labels of adjacent free axes don't merge
-    theme(axis.text.y = element_blank(), aspect.ratio = 1, panel.spacing.x = unit(1.5, "lines"))
+    theme(axis.text.y = element_blank(), aspect.ratio = 1, panel.spacing.x = unit(2.5, "lines"))
 }
 
 fig_s2 <- loo_panel(c("sex_int", "std_year", "sex_int:std_year"), c("Sex", "Year", "Sex:Year")) /
   loo_panel(c("UTT/Cohort", "National HHS", "Other HHS"), breaks = c(0.6, 1, 1.5, 2.5), limits = c(0.5, 3)) /
-  loo_panel(c("ANC", "Intervention Trials", "Non-representative - Other", "No inclusion criteria")) /
-  loo_panel(c("FSW", "MSM"))
+  loo_panel(c("ANC", "Intervention Trials", "Non-representative - Other", "No inclusion criteria"), breaks = c(0.3, 1, 3, 10)) /
+  loo_panel(c("FSW", "MSM"), breaks = c(1, 3, 10, 30, 100))
 
-save_png(fig_s2, "figure_s2.png", width = 1000, height = 1400)
+save_png(fig_s2, "figure_s2.png", width = 1100, height = 1500)
 
 ################################################################################
 #' ## Figure 3: incidence trends in population cohorts (ages 15-49, both sexes)
@@ -223,7 +223,7 @@ cohort_modelled <- read_csv(file.path(path_modelled, "figure_incidence.csv"), sh
 
 fig3b_order <- c("Kisumu HDSS", "Kisesa", "Kyamulibwa GPC", "RCCS", "Karonga", "Manicaland", "AHRI")
 fig3b <- cohort_trends %>%
-  mutate(source = "Surveillance data") %>%
+  mutate(source = "Cohort data") %>%
   ggplot(aes(x = year, color = source)) +
   geom_line(data = cohort_modelled, aes(y = incidence), linewidth = 1.5) +
   geom_pointrange(aes(y = ir, ymin = lower, ymax = upper)) +
@@ -243,8 +243,7 @@ save_png(ggpubr::ggarrange(fig3a, fig3b, nrow = 2, heights = c(1, 1.3)), "figure
 #' ## Figure 4: PHIA surveys and national modelled incidence (ages 15-49)
 ################################################################################
 
-phia_spectrum <- read_fit("phia_spectrum.csv") %>%
-  filter(!iso3 %in% private_iso3)
+phia_spectrum <- read_fit("phia_spectrum.csv")
 
 fig4a <- phia_spectrum %>%
   select(iso3, year, PHIA = incid, lower, upper, `National modelled estimates` = modelled) %>%
@@ -260,7 +259,7 @@ fig4a <- phia_spectrum %>%
   geom_col(aes(fill = source), position = position_dodge2(0.9)) +
   geom_linerange(aes(ymin = lower, ymax = upper), position = position_dodge2(0.9), na.rm = TRUE) +
   scale_fill_manual(values = pal_two) +
-  scale_y_continuous(labels = scales::label_percent()) +
+  scale_y_continuous(labels = scales::label_number(scale = 100)) +
   ggh4x::facet_grid2(~region, space = "free_x", scales = "free_x") +
   labs(x = NULL, y = "Incidence/100py, adults age 15-49 years", fill = NULL, tag = "A") +
   theme_paper() +
@@ -299,6 +298,7 @@ fig4c <- phia_spectrum %>%
   scale_color_manual(values = pal_two, guide = "none") +
   scale_x_continuous(breaks = c(2016, 2020)) +
   scale_y_continuous(labels = scales::label_number(scale = 100)) +
+  expand_limits(y = 0) +
   labs(x = NULL, y = "Incidence/100py\nadults 15-49", tag = "C") +
   theme_paper() +
   theme(plot.tag = element_text(size = 25), axis.text = element_text(size = 20), strip.text = element_text(size = 18),
@@ -328,7 +328,8 @@ cohort_age_ratio <- read_fit("cohort_age_predictions.csv") %>%
 cohort_age_points <- cohort_age_data %>%
   group_by(doi, year, sex) %>%
   filter(n() == 2) %>%
-  summarise(ratio = ir[age_group == "Y025_049"] / ir[age_group == "Y015_024"], .groups = "drop")
+  summarise(ratio = ir[age_group == "Y025_049"] / ir[age_group == "Y015_024"], .groups = "drop") %>%
+  filter(is.finite(ratio), ratio > 0)  # a zero in either age group cannot be shown on the log scale
 
 fig5a <- ggplot(cohort_age_ratio, aes(x = year, y = ratio, color = cohort_factor(doi))) +
   geom_point(data = cohort_age_points, alpha = 0.6) +
@@ -342,7 +343,8 @@ fig5a <- ggplot(cohort_age_ratio, aes(x = year, y = ratio, color = cohort_factor
   geom_segment(data = tibble(sex = "male"), aes(x = 2020, xend = 2020, y = 0.8, yend = 0.25), inherit.aes = FALSE,
                arrow = arrow(angle = 15, type = "closed")) +
   facet_wrap(~str_to_title(sex)) +
-  scale_y_log10(limits = c(NA, 4)) +
+  scale_y_log10() +
+  coord_cartesian(ylim = c(min(cohort_age_points$ratio), 4)) +
   scale_x_continuous(breaks = c(1990, 2000, 2010, 2020)) +
   guides(color = guide_legend(override.aes = list(alpha = 1), ncol = 3, position = "bottom")) +
   labs(x = NULL, y = "Incidence rate ratio,\nages 25-49 : 15-24 years", title = "Population-based cohorts", color = NULL, tag = "A") +
@@ -353,7 +355,8 @@ fig5a <- ggplot(cohort_age_ratio, aes(x = year, y = ratio, color = cohort_factor
 phia_age_data <- read_csv(file.path(path_raw, "phia-incid-extract_2025-11-13b.csv"), show_col_types = FALSE) %>%
   filter(age_group %in% c("Y015_024", "Y025_049"), sex != "both") %>%
   group_by(survey_id, iso3, year = survey_year, sex) %>%
-  summarise(ratio = incid[age_group == "Y025_049"] / incid[age_group == "Y015_024"], .groups = "drop")
+  summarise(ratio = incid[age_group == "Y025_049"] / incid[age_group == "Y015_024"], .groups = "drop") %>%
+  filter(is.finite(ratio), ratio > 0)
 
 phia_coef <- read_fit("coefficients_phia_age.csv") %>% select(var, mean) %>% deframe() %>% log()
 phia_age_line <- crossing(year = 2016:2022, sex = c("female", "male")) %>%
@@ -361,14 +364,15 @@ phia_age_line <- crossing(year = 2016:2022, sex = c("female", "male")) %>%
                        (year - reference_year) * phia_coef["year_min:age_groupY025_049"]))
 
 fig5b <- ggplot(phia_age_data, aes(x = year, y = ratio)) +
+  geom_line(aes(group = iso3), linewidth = 0.8, color = "grey75") +
   geom_point(size = 2, alpha = 0.5) +
-  geom_line(aes(group = iso3), linewidth = 1, alpha = 0.3) +
   geom_line(data = phia_age_line, linewidth = 2, color = pal_blue) +
   geom_hline(yintercept = 1, linetype = 2) +
   facet_wrap(~str_to_title(sex)) +
   scale_x_continuous(breaks = c(2017, 2019, 2021)) +
-  scale_y_log10(limits = c(NA, 4)) +
-  labs(x = NULL, y = "Incidence rate ratio,\nages 25-49 : 15-24 years", title = "PHIA surveys: national incidence", tag = "B") +
+  scale_y_log10() +
+  coord_cartesian(ylim = c(min(phia_age_data$ratio), 4)) +
+  labs(x = NULL, y = "Incidence rate ratio,\nages 25-49 : 15-24 years", title = "PHIA surveys (national incidence rate)", tag = "B") +
   age_ratio_theme()
 
 #' C / S4: share of new 15-49 infections by sex and age, over the years with data
@@ -391,7 +395,7 @@ share_plot <- function(dois, nrow) {
     mutate(lab = paste0(round(100 * share), "%"))
   key <- tibble(doi = intersect(c("Kyamulibwa GPC", dois), dois)[1],
                 label = levels(shares$group), x = c(2005, 2005, 2002, 2005), y = c(0.85, 0.55, 0.37, 0.125),
-                color = c("black", "white", "white", "white"))
+                color = "white")
   ggplot(d, aes(x = year)) +
     geom_rect(aes(xmin = year - 0.5, xmax = year + 0.5, ymin = start, ymax = end, fill = group)) +
     geom_label(data = labels, aes(y = mid, label = lab, color = group), size = 5, fontface = "bold",
@@ -445,7 +449,7 @@ s3_panel <- function(points, lines, y, ylab, tag) {
 u25_points <- cohort_age_data %>%
   group_by(doi, year) %>%
   summarise(prop = sum(infections[age_group == "Y015_024"]) / sum(infections), .groups = "drop") %>%
-  mutate(source = "Surveillance data")
+  mutate(source = "Cohort data")
 u25_lines <- cohort_spectrum %>%
   filter(sex == "both", age_group %in% c("Y015_024", "Y025_049")) %>%
   group_by(doi, year) %>%
@@ -461,13 +465,13 @@ sr_points <- cohort_age_data %>%
   group_by(doi, year) %>%
   filter(n() == 2) %>%
   summarise(sr = ir[sex == "female"] / ir[sex == "male"], .groups = "drop") %>%
-  mutate(source = "Surveillance data")
+  mutate(source = "Cohort data")
 sr_lines <- cohort_spectrum %>%
   filter(sex != "both", age_group == "Y015_049", year >= 1995) %>%
   group_by(doi, year) %>%
   summarise(sr = incidence[sex == "female"] / incidence[sex == "male"], .groups = "drop") %>%
   mutate(source = "National modelled estimates")
-fig_s3b <- s3_panel(sr_points, sr_lines, "sr", "Female : male sex ratio of\nnew HIV infections (15-49)", "B") +
+fig_s3b <- s3_panel(sr_points, sr_lines, "sr", "Female : male HIV incidence\nrate ratio (15-49)", "B") +
   geom_hline(yintercept = 1, linetype = 2) +
   scale_y_log10(breaks = c(0.6, 1, 2, 4))
 
@@ -490,7 +494,8 @@ fig_text_s4 <- ggplot(kzn, aes(x = year, y = incidence, group = area_id, color =
   scale_color_manual(values = c("black", "red")) +
   scale_y_continuous(labels = scales::label_number(scale = 100)) +
   labs(x = NULL, y = "HIV incidence/100py, adults 15-49", color = NULL) +
-  theme_paper()
+  theme_paper() +
+  larger_text()
 
 save_png(fig_text_s4, "figure_text_s4.png", width = 700, height = 500)
 
@@ -499,16 +504,42 @@ save_png(fig_text_s4, "figure_text_s4.png", width = 700, height = 500)
 ################################################################################
 
 phia_countries <- unique(phia_spectrum$iso3)
-fig_text_s7 <- spectrum %>%
+#' Panels for Western and Central, Eastern and Southern Africa; y axes start at 0 and
+#' share an upper limit within each region
+fig_text_s7_data <- spectrum %>%
   filter(sex == "both", age_group == "Y015_049", area_id == iso3, iso3 %in% phia_countries, year %in% 2000:2025) %>%
+  left_join(select(region_lookup, iso3, four_region), by = "iso3") %>%
   mutate(variant = factor(variant, levels = c("published", "no_phia"),
-                          labels = c("Published estimates", "Without PHIA incidence"))) %>%
-  ggplot(aes(x = year, y = incidence, color = variant)) +
-  geom_line(linewidth = 1) +
-  facet_wrap(~country_name(iso3), scales = "free_y", ncol = 4) +
-  scale_color_manual(values = pal_two) +
-  scale_y_continuous(labels = scales::label_number(scale = 100)) +
-  labs(x = NULL, y = "HIV incidence/100py, adults 15-49", color = NULL) +
-  theme_paper()
+                          labels = c("Published estimates", "Without PHIA incidence")),
+         region = case_when(four_region %in% c("Western", "Central") ~ "Western and Central Africa",
+                            TRUE ~ paste(four_region, "Africa")) %>%
+           factor(levels = c("Western and Central Africa", "Eastern Africa", "Southern Africa"))) %>%
+  arrange(region, country_name(iso3)) %>%
+  mutate(country = fct_inorder(country_name(iso3)))
 
-save_png(fig_text_s7, "figure_text_s7.png", width = 1000, height = 900)
+#' One panel per region, titled with the region; countries within a region share the y axis
+text_s7_region <- function(region, ncol, y_title = NULL) {
+  fig_text_s7_data %>%
+    filter(region == !!region) %>%
+    ggplot(aes(x = year, y = incidence, color = variant)) +
+    geom_line(linewidth = 1) +
+    facet_wrap(~country, ncol = ncol) +
+    scale_color_manual(values = pal_two) +
+    scale_x_continuous(breaks = seq(2000, 2020, 10)) +
+    scale_y_continuous(labels = scales::label_number(scale = 100), limits = c(0, NA),
+                       expand = expansion(mult = c(0, 0.05))) +
+    labs(title = region, x = NULL, y = y_title, color = NULL) +
+    theme_paper() +
+    theme_large() +
+    theme(panel.spacing.x = unit(1, "lines"))
+}
+
+#' Four countries per row: Western and Central Africa one row, Eastern and Southern two each
+#' (the three-country row keeps the width of three columns of four)
+fig_text_s7 <- (text_s7_region("Western and Central Africa", 3) + plot_spacer() + plot_layout(widths = c(3, 1))) /
+  text_s7_region("Eastern Africa", 4, y_title = "HIV incidence/100py, adults 15-49") /
+  text_s7_region("Southern Africa", 4) +
+  plot_layout(heights = c(1, 2, 2), guides = "collect") &
+  theme(legend.position = "bottom", legend.text = element_text(size = 12 * 1.6))
+
+save_png(fig_text_s7, "figure_text_s7.png", width = 1100, height = 1350)

@@ -11,8 +11,7 @@
 #'
 #' Zenodo: to start here without regenerating the data from the original files,
 #' download the analysis datasets from https://doi.org/10.5281/zenodo.24284889
-#' into outputs/data/ and skip R/01_data.R. That copy has no Namibia observations (non-public
-#' modelled incidence), so results will not exactly reproduce the manuscript.
+#' into outputs/data/ and skip R/01_data.R.
 #'
 #' Run all variants:   Rscript R/02_fit_main.R
 #' Run some variants:  Rscript R/02_fit_main.R main nb
