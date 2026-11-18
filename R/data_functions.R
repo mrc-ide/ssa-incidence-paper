@@ -411,7 +411,7 @@ read_additional_data <- function(inclusion, search_areas, dir = file.path(path_r
     select(-age_group_label)
 
   kp <- read_csv(file.path(dir, "kp_incidence.csv"), show_col_types = FALSE) %>%
-    filter(year > 1995) %>%
+    filter(year >= 1990) %>%
     # Overlapping MSM observations (peer review, November 2026). Kamali 2015 reports
     # the IAVI Kilifi and Nairobi cohorts overall, by time on study and by calendar
     # period; Price 2012 is earlier follow-up of the same cohorts and Wahome 2018 the
@@ -425,7 +425,30 @@ read_additional_data <- function(inclusion, search_areas, dir = file.path(path_r
            # Wirtz 2015 (doi:10.1097/QAI.0000000000000693): two sets of 2012-13 rows with the
            # same 7 seroconversions (all at the first follow-up) but different person-time.
            # Keep the set totalling ~147 py, consistent with 103 men followed Jan 2012 - May 2013
-           !(ref == "Wirtz 2015" & round(pys, 3) %in% c(79.58, 23.125))) %>%
+           !(ref == "Wirtz 2015" & round(pys, 3) %in% c(79.58, 23.125)),
+           # BED-based incidence is excluded, as for the review studies: Botswana MoH 2012 BBSS
+           # (BED-CEIA in a RITA) and Forbi 2011 (doi:10.1016/j.trstmh.2011.08.001, BED-CEIA)
+           !str_trim(ref) %in% c("Botswana MoH", "Forbi et al")) %>%
+    # Multi-site studies checked against the primary reports (November 2026). Site-specific
+    # numbers replace pooled totals repeated for each site where published:
+    #   Sandfort 2021 (HPTN 075, doi:10.1371/journal.pone.0247195) Table 2: the South Africa
+    #     17/147.4 is Cape Town 10/69.3 plus Soweto 7/78.1.
+    #   Sullivan 2020 (Sibanye, doi:10.1002/jia2.25591) Table S1: the age rows are Cape Town's;
+    #     Port Elizabeth is 18-19 1/6.9, 20-24 1/45.4, 25+ 1/23.9 (sums match Table 3).
+    mutate(
+      infections = case_when(ref == "Sandfort 2021" & area_id == "ZAF_2_CPT" ~ 10,
+                             ref == "Sandfort 2021" & area_id == "ZAF_2_JHB" ~ 7,
+                             ref == "Sullivan 2020" & area_id == "ZAF_2_NMA" ~ 1,
+                             TRUE ~ infections),
+      pys = case_when(ref == "Sandfort 2021" & area_id == "ZAF_2_CPT" ~ 69.3,
+                      ref == "Sandfort 2021" & area_id == "ZAF_2_JHB" ~ 78.1,
+                      ref == "Sullivan 2020" & area_id == "ZAF_2_NMA" & age_group == "Y015_019" ~ 6.9,
+                      ref == "Sullivan 2020" & area_id == "ZAF_2_NMA" & age_group == "Y020_024" ~ 45.4,
+                      ref == "Sullivan 2020" & area_id == "ZAF_2_NMA" & age_group == "Y025_049" ~ 23.9,
+                      TRUE ~ pys)) %>%
+    # Lyons et al (FSW, doi:10.1097/QAD.0000000000002641) recruited in Dakar, Mbour and Thies;
+    # the extraction omits Mbour. The pooled rate is matched to all three (see idx below).
+    bind_rows(filter(., ref == "Lyons et al", area_id == "SEN_1_01dq") %>% mutate(area_id = "SEN_2_68vy")) %>%
     mutate(kp = ifelse(kp == "MSM2", "MSM", kp),
            sex = recode(kp, FSW = "female", MSM = "male", PWID = "male", TGW = "female", CFSW = "male"),
            study_type = recode(method,
@@ -433,7 +456,9 @@ read_additional_data <- function(inclusion, search_areas, dir = file.path(path_r
                                "retrospective cohort" = "RC", "prev backcalculation" = "RC",
                                "non-randomised plausability evaluation" = "CT", "cross-sectional" = "CSI - Other"),
            area_id = recode(area_id,
-                            CMR_1_12 = "CMR_1_2",        # Yaounde merged into Centre
+                            # Old Naomi Cameroon IDs (level-1 areas numbered alphabetically)
+                            CMR_1_3 = "CMR_02_11",       # Douala
+                            CMR_1_12 = "CMR_02_12",      # Yaounde
                             ZMB_1_14 = "ZMB_1_14fz",
                             KEN_3_3042le = "KEN_2_03"),
            doi = ifelse(kp == "FSW", paste0("Jones & Anderson | ", ref), paste0("Stannah | ", ref)),
@@ -741,10 +766,17 @@ align_observations <- function(geography = path_geography) {
                 distinct(value, area_id),
               by = "value", relationship = "many-to-many")
 
+  # Multi-site key-population studies report one pooled rate, which kp_incidence.csv
+  # repeats on a row per site. Each pooled rate is one observation matched to all its
+  # sites (median modelled incidence across them), as for multi-site review studies.
   add_data <- add_data %>%
     filter(doi != "BCCP/YaTsie") %>%
     bind_rows(bcpp) %>%
-    mutate(idx = row_number() + max(aligned$idx))
+    mutate(obs_key = ifelse(str_detect(doi, "^(Jones & Anderson|Stannah) \\|"),
+                            paste(doi, year, sex, age_group, ir, pys),
+                            as.character(row_number())),
+           idx = match(obs_key, unique(obs_key)) + max(aligned$idx)) %>%
+    select(-obs_key)
 
   aligned <- bind_rows(aligned, add_data)
   if (any(is.na(aligned$area_id))) stop("Unmatched areas")

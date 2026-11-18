@@ -2,23 +2,23 @@ parameter,n_studies,estimate
 Study recruitment type/population (N studies),,
 Matched modelled estimates,,1.00 (Reference)
 Studies representative of the total adult population,,
-Population cohort studies and UTT trials [control clusters],11,"1.07 (0.59, 1.96)"
-Nationally-representative household surveys,26,"1.11 (0.74, 1.65)"
-Other household surveys,24,"1.32 (0.87, 1.99)"
+Population cohort studies and UTT trials [control clusters],11,"1.06 (0.59, 1.91)"
+Nationally-representative household surveys,26,"1.12 (0.76, 1.65)"
+Other household surveys,24,"1.31 (0.88, 1.95)"
 Studies not representative of the total adult population,,
-"Clinical trials, excluding UTT trials [control arms]",20,"2.71 (1.70, 4.32)"
-Pregnant/post-partum women,21,"2.32 (1.46, 3.68)"
-Other studies,20,"2.12 (1.33, 3.37)"
-Convenience sample from total population,3,"1.55 (0.44, 5.40)"
-Female sex workers,28,"6.30 (4.21, 9.41)"
-Men who have sex with men,22,"45.11 (28.86, 70.35)"
+"Clinical trials, excluding UTT trials [control arms]",20,"2.68 (1.70, 4.20)"
+Pregnant/post-partum women,21,"2.30 (1.47, 3.61)"
+Other studies,20,"2.10 (1.34, 3.30)"
+Convenience sample from total population,3,"1.50 (0.45, 5.06)"
+Female sex workers,29,"6.06 (4.07, 9.03)"
+Men who have sex with men,22,"44.07 (28.43, 68.15)"
 Sex,,
 Female,,1.00 (Reference)
 Male,,"0.88 (0.82, 0.94)"
-Calendar time: Per 5 years [reference year = 2014],,"1.07 (0.95, 1.20)"
+Calendar time: Per 5 years [reference year = 2014],,"1.04 (0.94, 1.16)"
 Sex [male] : five-year interaction,,"0.89 (0.85, 0.93)"
 Random effect standard deviation,,Estimate (95% CrI)
-Study (IID),,"1.04 (0.92, 1.18)"
-Study slope per 5 years (IID),,"0.23 (0.16, 0.33)"
-Observation (IID),,"0.30 (0.27, 0.33)"
-Sex-specific time trend (RW2),,"0.03 (0.00, 0.10)"
+Study (IID),,"1.01 (0.88, 1.15)"
+Study slope per 5 years (IID),,"0.22 (0.15, 0.32)"
+Observation (IID),,"0.30 (0.28, 0.33)"
+Sex-specific time trend (RW2),,"0.11 (0.00, 0.69)"
