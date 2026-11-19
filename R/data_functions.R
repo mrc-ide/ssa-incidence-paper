@@ -316,7 +316,7 @@ clean_year <- function(dat) {
 ################################################################################
 
 read_additional_data <- function(inclusion, search_areas, dir = file.path(path_raw, "additional"),
-                                 phia_file = file.path(path_raw, "phia-incid-extract_INTERNAL_2024-05-07.csv")) {
+                                 phia_file = file.path(path_raw, "phia-incid-extract_2024-05-07.csv")) {
 
   # HPTN071/PopART: Arm C (standard of care) communities
   popart_areas <- tribble(

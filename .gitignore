@@ -54,3 +54,6 @@ private/
 *.log
 outputs/ssa_incidence_analysis_data.zip
 /outputs/zenodo
+
+# Manuscript drafts and reviews
+paper/

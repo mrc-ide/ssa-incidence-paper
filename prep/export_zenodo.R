@@ -28,8 +28,18 @@ writeLines(c(
   "",
   "To use them, place the files in outputs/data/ of the repository and run the analysis",
   "from R/02_fit_main.R onwards, skipping R/01_data.R.",
-  "flowchart_counts.csv gives the study counts for Figure 1."
+  "flowchart_counts.csv gives the study counts for Figure 1.",
+  "",
+  "ssa-incidence-paper.zip is the paper repository (code and input data) at the time",
+  "of this deposit."
 ), file.path(path_zenodo, "README.txt"))
+
+#' The repository: tracked files only, as they are in the working tree
+repo_zip <- normalizePath(file.path(path_zenodo, "ssa-incidence-paper.zip"), mustWork = FALSE)
+unlink(repo_zip)
+repo_files <- system2("git", c("ls-files", "--cached", "--exclude-standard"), stdout = TRUE)
+repo_files <- repo_files[file.exists(repo_files)]
+zip(repo_zip, repo_files, flags = "-X -q")
 
 #' The archive uploaded to Zenodo
 zip_file <- normalizePath(file.path(dirname(path_zenodo), "ssa_incidence_analysis_data.zip"), mustWork = FALSE)

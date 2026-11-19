@@ -232,7 +232,7 @@ spectrum_national <- read_csv(file.path(path_modelled, "spectrum_incidence.csv.g
   filter(variant == "published", sex == "both", age_group == "Y015_049", area_id == iso3) %>%
   transmute(iso3, year, modelled = infections / (population - plhiv))
 
-phia_spectrum <- read_csv(file.path(path_raw, "phia-incid-extract_INTERNAL_2024-05-07.csv"), show_col_types = FALSE) %>%
+phia_spectrum <- read_csv(file.path(path_raw, "phia-incid-extract_2024-05-07.csv"), show_col_types = FALSE) %>%
   filter(age_group == "Y015_049", sex == "both") %>%
   select(survey_id, iso3, year = survey_year, phia_phase, incid, lower = ci_l.incid, upper = ci_u.incid,
          pys = n_pys_approx) %>%
